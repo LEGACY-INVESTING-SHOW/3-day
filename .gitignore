@@ -1,0 +1,15 @@
+# Obsidian
+.obsidian/
+
+# Playwright
+.playwright-mcp/
+
+# Personal files
+*.md
+!README.md
+
+# Book files
+Ship Of Magic*
+
+# Keep sales page
+!sales-page.html

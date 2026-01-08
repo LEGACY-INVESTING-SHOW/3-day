@@ -1,0 +1,3019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax-Free Income Challenge | Preston Seo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       LIGHT MODE DIRECT RESPONSE DESIGN SYSTEM
+       Target: 40+ Americans overpaying taxes
+       ============================================ */
+
+    :root {
+      /* Light Mode Core Palette */
+      --white: #ffffff;
+      --cream: #faf9f6;
+      --cream-dark: #f5f3ef;
+      --warm-gray: #e8e5e0;
+      --border-light: #d4d0c8;
+
+      /* Text Colors */
+      --text-primary: #1a1a1a;
+      --text-secondary: #4a4a4a;
+      --text-muted: #6b6b6b;
+      --text-light: #8a8a8a;
+
+      /* Accent Colors */
+      --gold: #b8860b;
+      --gold-dark: #8b6914;
+      --gold-light: #d4a017;
+      --gold-glow: rgba(184, 134, 11, 0.1);
+      --gold-border: rgba(184, 134, 11, 0.3);
+
+      /* Functional Colors */
+      --success: #228b22;
+      --success-light: rgba(34, 139, 34, 0.1);
+      --danger: #c41e3a;
+      --danger-light: rgba(196, 30, 58, 0.08);
+      --navy: #1e3a5f;
+
+      /* Typography */
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+
+      /* Spacing */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 40px;
+      --space-2xl: 64px;
+      --space-3xl: 96px;
+      --space-4xl: 128px;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Utility Classes */
+    .lw-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+
+    @media (max-width: 768px) {
+      .lw-container {
+        padding: 0 var(--space-md);
+      }
+    }
+
+    .lw-container--narrow {
+      max-width: 800px;
+    }
+
+    .lw-container--wide {
+      max-width: 1400px;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .animate-fade-up {
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .delay-4 { animation-delay: 0.4s; opacity: 0; }
+    .delay-5 { animation-delay: 0.5s; opacity: 0; }
+
+    /* ============================================
+       SECTION: HERO
+       ============================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--space-3xl) 0;
+      position: relative;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--white);
+      border: 1px solid var(--gold-border);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-dark);
+      margin-bottom: var(--space-xl);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .hero__badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .hero__preheadline {
+      font-family: var(--font-body);
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--text-secondary);
+      max-width: 650px;
+      margin-bottom: var(--space-lg);
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .hero__headline {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 6vw, 64px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: 900px;
+      margin-bottom: var(--space-md);
+      color: var(--text-primary);
+    }
+
+    .hero__headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero__subheadline {
+      font-family: var(--font-body);
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-sm);
+      max-width: 800px;
+      line-height: 1.5;
+    }
+
+    .hero__subheadline-emphasis {
+      display: block;
+      font-style: italic;
+      color: var(--gold-dark);
+      margin-top: var(--space-sm);
+    }
+
+    .hero__proof {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-2xl);
+      margin-top: var(--space-lg);
+      padding: var(--space-md) var(--space-lg);
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      max-width: fit-content;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .hero__proof-number {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .hero__proof-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .hero__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+
+    @media (max-width: 968px) {
+      .hero__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+      }
+
+      .hero {
+        padding: var(--space-2xl) 0;
+        min-height: auto;
+      }
+    }
+
+    .hero__video {
+      position: relative;
+    }
+
+    .hero__video-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--border-light);
+    }
+
+    .hero__video iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+
+    .hero__cta-group {
+      margin-top: var(--space-xl);
+    }
+
+    /* Primary CTA Button */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      padding: 20px 48px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(184, 134, 11, 0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(184, 134, 11, 0.45);
+    }
+
+    .btn-primary svg {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-primary:hover svg {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .btn-primary {
+        width: 100%;
+        padding: 18px 32px;
+        font-size: 16px;
+      }
+    }
+
+    .btn-subtitle {
+      display: block;
+      margin-top: var(--space-md);
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Countdown */
+    .countdown {
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .countdown__label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--danger);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--space-md);
+    }
+
+    .countdown__timer {
+      display: flex;
+      gap: var(--space-lg);
+    }
+
+    @media (max-width: 480px) {
+      .countdown__timer {
+        gap: var(--space-md);
+      }
+    }
+
+    .countdown__block {
+      text-align: center;
+      background: var(--white);
+      padding: var(--space-md);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      min-width: 70px;
+    }
+
+    .countdown__number {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .countdown__unit {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: var(--space-xs);
+      font-weight: 600;
+    }
+
+    /* ============================================
+       SECTION: SOCIAL PROOF BAR
+       ============================================ */
+    .social-proof-bar {
+      padding: var(--space-xl) 0;
+      background: var(--white);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .social-proof-bar__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2xl);
+      flex-wrap: wrap;
+    }
+
+    .social-proof-bar__label {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .social-proof-bar__logos {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xl);
+      opacity: 0.7;
+    }
+
+    .social-proof-bar__logos img {
+      height: 28px;
+      width: auto;
+    }
+
+    /* ============================================
+       SECTION: TESTIMONIALS
+       ============================================ */
+    .testimonials {
+      padding: var(--space-4xl) 0;
+      background: var(--cream);
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: var(--space-md);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 600;
+      line-height: 1.2;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--text-primary);
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: var(--space-lg) auto 0;
+      line-height: 1.7;
+    }
+
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    @media (max-width: 968px) {
+      .testimonials__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .testimonial-card__stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: var(--space-md);
+    }
+
+    .testimonial-card__star {
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .testimonial-card__quote {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      flex: 1;
+      margin-bottom: var(--space-lg);
+      font-style: italic;
+    }
+
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .testimonial-card__avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold-glow);
+    }
+
+    .testimonial-card__name {
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 15px;
+    }
+
+    .testimonial-card__role {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ============================================
+       SECTION: TARGET AUDIENCE
+       ============================================ */
+    .target-audience {
+      padding: var(--space-3xl) 0;
+      background: var(--white);
+      text-align: center;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .target-audience__headline {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 500;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.4;
+      color: var(--text-primary);
+    }
+
+    .target-audience__highlight {
+      display: inline;
+      background: var(--gold-glow);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: 4px;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    /* ============================================
+       SECTION: PROBLEM
+       ============================================ */
+    .problem {
+      padding: var(--space-4xl) 0;
+      background: var(--cream);
+    }
+
+    .problem__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    @media (max-width: 868px) {
+      .problem__content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .problem__text h3 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 600;
+      margin-bottom: var(--space-lg);
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    .problem__text h3 em {
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+
+    .problem__text p {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-lg);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .problem__list {
+      list-style: none;
+      margin: var(--space-xl) 0;
+    }
+
+    .problem__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .problem__list li:last-child {
+      border-bottom: none;
+    }
+
+    .problem__list-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--danger-light);
+      color: var(--danger);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .problem__emphasis {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      padding: var(--space-lg);
+      margin-top: var(--space-xl);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .problem__emphasis p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .guru-cards {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .guru-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      transition: all 0.3s ease;
+    }
+
+    .guru-card:hover {
+      transform: translateX(8px);
+      border-color: var(--gold-border);
+    }
+
+    .guru-card__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--cream);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .guru-card__text {
+      font-size: 15px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ============================================
+       SECTION: WEALTH PYRAMID
+       ============================================ */
+    .pyramid {
+      padding: var(--space-4xl) 0;
+      background: var(--white);
+    }
+
+    .pyramid__intro {
+      max-width: 800px;
+      margin: 0 auto var(--space-3xl);
+      text-align: center;
+    }
+
+    .pyramid__intro p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+
+    .pyramid__steps {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .pyramid__step {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-lg);
+      padding: var(--space-lg) var(--space-xl);
+      background: var(--cream);
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      transition: all 0.3s ease;
+    }
+
+    .pyramid__step:hover {
+      border-color: var(--gold-border);
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .pyramid__step-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .pyramid__step-content h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .pyramid__step-content p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .pyramid__result {
+      max-width: 600px;
+      margin: var(--space-3xl) auto 0;
+      text-align: center;
+      padding: var(--space-2xl);
+      background: linear-gradient(135deg, var(--gold-glow) 0%, var(--cream) 100%);
+      border: 2px solid var(--gold-border);
+      border-radius: 16px;
+    }
+
+    .pyramid__result-heading {
+      font-family: var(--font-display);
+      font-size: clamp(14px, 2vw, 16px);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-dark);
+      margin-bottom: var(--space-md);
+      font-weight: 600;
+    }
+
+    .pyramid__result-amount {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 8vw, 64px);
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .pyramid__result-text {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-top: var(--space-md);
+    }
+
+    .pyramid__result-note {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: var(--space-md);
+      font-style: italic;
+    }
+
+    /* ============================================
+       SECTION: PICTURE THIS
+       ============================================ */
+    .picture-this {
+      padding: var(--space-3xl) 0;
+      background: var(--cream);
+    }
+
+    .picture-this__content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .picture-this__title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-xl);
+    }
+
+    .picture-this__list {
+      list-style: none;
+      text-align: left;
+      margin-bottom: var(--space-xl);
+    }
+
+    .picture-this__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .picture-this__list li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .picture-this__tagline {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 500;
+      color: var(--gold-dark);
+      font-style: italic;
+      margin-top: var(--space-xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--border-light);
+    }
+
+    /* ============================================
+       SECTION: STORY
+       ============================================ */
+    .story {
+      padding: var(--space-4xl) 0;
+      background: var(--white);
+    }
+
+    .story__header {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .story__content {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    @media (max-width: 868px) {
+      .story__content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .story__images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+
+    .story__image {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+
+    .story__image img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    .story__image:hover img {
+      transform: scale(1.05);
+    }
+
+    .story__image--large {
+      grid-column: span 2;
+    }
+
+    .story__image--large img {
+      height: 220px;
+    }
+
+    .story__text p {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-lg);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .story__pain-points {
+      list-style: none;
+      margin: var(--space-xl) 0;
+      padding: var(--space-lg);
+      background: var(--cream);
+      border-radius: 8px;
+    }
+
+    .story__pain-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .story__pain-points li:last-child {
+      border-bottom: none;
+    }
+
+    .story__pain-points li::before {
+      content: '✕';
+      color: var(--danger);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .story__results {
+      margin-top: var(--space-xl);
+      padding: var(--space-xl);
+      background: var(--success-light);
+      border-radius: 12px;
+      border-left: 4px solid var(--success);
+    }
+
+    .story__results h4 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+      color: var(--text-primary);
+    }
+
+    .story__results-list {
+      list-style: none;
+    }
+
+    .story__results-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-sm) 0;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .story__results-list li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    /* ============================================
+       SECTION: AGENDA
+       ============================================ */
+    .agenda {
+      padding: var(--space-4xl) 0;
+      background: var(--cream);
+    }
+
+    .agenda__days {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-3xl);
+    }
+
+    @media (max-width: 968px) {
+      .agenda__days {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .day-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .day-card__header {
+      padding: var(--space-lg);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .day-card__label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .day-card__title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: var(--space-xs);
+    }
+
+    .day-card__sessions {
+      padding: var(--space-lg);
+    }
+
+    .session {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .session:last-child {
+      border-bottom: none;
+    }
+
+    .session__number {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .session__title {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: var(--space-xs);
+      line-height: 1.5;
+    }
+
+    .session--vip {
+      background: var(--gold-glow);
+      margin: var(--space-md) calc(-1 * var(--space-lg));
+      padding: var(--space-md) var(--space-lg);
+      border-bottom: none;
+    }
+
+    .session--vip .session__number {
+      color: var(--gold-dark);
+    }
+
+    /* ============================================
+       SECTION: SESSION DETAILS
+       ============================================ */
+    .session-details {
+      padding: var(--space-4xl) 0;
+      background: var(--white);
+    }
+
+    .session-details__content {
+      max-width: 900px;
+      margin: var(--space-3xl) auto 0;
+    }
+
+    .session-detail {
+      margin-bottom: var(--space-3xl);
+      padding-bottom: var(--space-3xl);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .session-detail:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .session-detail__day {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--space-sm);
+    }
+
+    .session-detail__title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-lg);
+      line-height: 1.3;
+    }
+
+    .session-detail__intro {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+
+    .session-detail__broken {
+      font-weight: 600;
+      color: var(--danger);
+      margin-bottom: var(--space-sm);
+    }
+
+    .session-detail__list {
+      list-style: none;
+      background: var(--cream);
+      padding: var(--space-lg);
+      border-radius: 8px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .session-detail__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-sm) 0;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .session-detail__list li::before {
+      content: '•';
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .session-detail__outcome {
+      font-size: 16px;
+      color: var(--text-primary);
+      font-weight: 500;
+      padding: var(--space-md);
+      background: var(--success-light);
+      border-radius: 8px;
+      border-left: 3px solid var(--success);
+    }
+
+    /* ============================================
+       SECTION: SCREENSHOTS / SOCIAL PROOF
+       ============================================ */
+    .screenshots {
+      padding: var(--space-4xl) 0;
+      background: var(--cream);
+    }
+
+    .screenshots__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+      margin-top: var(--space-3xl);
+    }
+
+    @media (max-width: 768px) {
+      .screenshots__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .screenshots__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .screenshot {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .screenshot:hover {
+      transform: scale(1.02);
+      border-color: var(--gold-border);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .screenshot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ============================================
+       SECTION: BEFORE/AFTER
+       ============================================ */
+    .before-after {
+      padding: var(--space-4xl) 0;
+      background: var(--white);
+    }
+
+    .before-after__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      margin-top: var(--space-3xl);
+    }
+
+    @media (max-width: 768px) {
+      .before-after__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .before-card,
+    .after-card {
+      padding: var(--space-xl);
+      border-radius: 16px;
+    }
+
+    .before-card {
+      background: var(--danger-light);
+      border: 1px solid rgba(196, 30, 58, 0.2);
+    }
+
+    .after-card {
+      background: var(--success-light);
+      border: 1px solid rgba(34, 139, 34, 0.2);
+    }
+
+    .before-card__header,
+    .after-card__header {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .before-card__header {
+      color: var(--danger);
+    }
+
+    .after-card__header {
+      color: var(--success);
+    }
+
+    .before-card__list,
+    .after-card__list {
+      list-style: none;
+    }
+
+    .before-card__list li,
+    .after-card__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .before-card__list li::before {
+      content: '✕';
+      color: var(--danger);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .after-card__list li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       SECTION: EVENT DETAILS
+       ============================================ */
+    .event-details {
+      padding: var(--space-3xl) 0;
+      background: var(--cream);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .event-details__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .event-details__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+      }
+    }
+
+    .event-detail {
+      padding: var(--space-lg);
+    }
+
+    .event-detail__icon {
+      font-size: 40px;
+      margin-bottom: var(--space-md);
+    }
+
+    .event-detail__label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--space-sm);
+    }
+
+    .event-detail__value {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .event-detail__desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ============================================
+       SECTION: PRICING
+       ============================================ */
+    .pricing {
+      padding: var(--space-4xl) 0;
+      background: var(--white);
+    }
+
+    .pricing__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      max-width: 900px;
+      margin: var(--space-3xl) auto 0;
+    }
+
+    @media (max-width: 768px) {
+      .pricing__cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--border-light);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    }
+
+    .pricing-card--featured {
+      border-color: var(--gold);
+      position: relative;
+    }
+
+    .pricing-card--featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pricing-card__header {
+      padding: var(--space-xl);
+      text-align: center;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--cream);
+    }
+
+    .pricing-card__name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+      color: var(--text-primary);
+    }
+
+    .pricing-card__price {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: var(--space-sm);
+    }
+
+    .pricing-card__price-original {
+      font-size: 22px;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .pricing-card__price-current {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .pricing-card__body {
+      padding: var(--space-xl);
+    }
+
+    .pricing-card__features {
+      list-style: none;
+      margin-bottom: var(--space-xl);
+    }
+
+    .pricing-card__features li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-sm) 0;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .pricing-card__features li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .pricing-card__cta {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ============================================
+       SECTION: CASE STUDIES
+       ============================================ */
+    .case-studies {
+      padding: var(--space-4xl) 0;
+      background: var(--cream);
+    }
+
+    .case-study {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: var(--space-xl);
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: var(--space-xl);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    @media (max-width: 868px) {
+      .case-study {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .case-study__image {
+      background: var(--cream);
+    }
+
+    .case-study__image img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+    }
+
+    .case-study__content {
+      padding: var(--space-xl);
+    }
+
+    .case-study__name {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      color: var(--text-primary);
+    }
+
+    .case-study__tagline {
+      font-size: 16px;
+      color: var(--gold-dark);
+      font-style: italic;
+      margin-bottom: var(--space-lg);
+      line-height: 1.5;
+    }
+
+    .case-study__story {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+    }
+
+    .case-study__results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+
+    @media (max-width: 480px) {
+      .case-study__results {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .case-study__result {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: var(--space-md);
+      background: var(--cream);
+      border-radius: 8px;
+    }
+
+    .case-study__result-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .case-study__roi {
+      margin-top: var(--space-lg);
+      padding: var(--space-md);
+      background: var(--gold-glow);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .case-study__roi-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: var(--space-xs);
+    }
+
+    .case-study__roi-amount {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    /* ============================================
+       SECTION: ABOUT
+       ============================================ */
+    .about {
+      padding: var(--space-4xl) 0;
+      background: var(--white);
+    }
+
+    .about__content {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+
+    @media (max-width: 868px) {
+      .about__content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about__images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+
+    .about__image {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+
+    .about__image img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .about__image--large {
+      grid-column: span 2;
+    }
+
+    .about__image--large img {
+      height: 220px;
+    }
+
+    .about__text h3 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: var(--space-lg);
+      color: var(--text-primary);
+    }
+
+    .about__text p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+
+    /* ============================================
+       SECTION: GUARANTEE
+       ============================================ */
+    .guarantee {
+      padding: var(--space-3xl) 0;
+      background: var(--cream);
+    }
+
+    .guarantee__content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: var(--space-2xl);
+      background: var(--white);
+      border: 2px solid var(--success);
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(34, 139, 34, 0.1);
+    }
+
+    .guarantee__icon {
+      font-size: 56px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .guarantee__title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: var(--space-lg);
+      color: var(--text-primary);
+    }
+
+    .guarantee__text {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* ============================================
+       SECTION: FAQ
+       ============================================ */
+    .faq {
+      padding: var(--space-4xl) 0;
+      background: var(--white);
+    }
+
+    .faq__list {
+      max-width: 800px;
+      margin: var(--space-3xl) auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .faq-item__question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: color 0.3s ease;
+    }
+
+    .faq-item__question:hover {
+      color: var(--gold);
+    }
+
+    .faq-item__icon {
+      font-size: 24px;
+      color: var(--gold);
+      transition: transform 0.3s ease;
+      font-weight: 300;
+    }
+
+    .faq-item__answer {
+      padding-bottom: var(--space-lg);
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      display: none;
+    }
+
+    .faq-item.active .faq-item__answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-item__icon {
+      transform: rotate(45deg);
+    }
+
+    /* ============================================
+       SECTION: COST OF WAITING
+       ============================================ */
+    .cost-waiting {
+      padding: var(--space-4xl) 0;
+      background: var(--cream);
+    }
+
+    .cost-waiting__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      margin: var(--space-3xl) 0;
+    }
+
+    @media (max-width: 968px) {
+      .cost-waiting__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 568px) {
+      .cost-waiting__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cost-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: var(--space-xl);
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .cost-card__icon {
+      font-size: 36px;
+      margin-bottom: var(--space-md);
+    }
+
+    .cost-card__label {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .cost-card__amount {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--danger);
+    }
+
+    .cost-total {
+      text-align: center;
+      padding: var(--space-2xl);
+      background: var(--white);
+      border: 2px solid var(--danger);
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cost-total__label {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: var(--space-md);
+      font-weight: 500;
+    }
+
+    .cost-total__amount {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 10vw, 80px);
+      font-weight: 700;
+      color: var(--danger);
+      line-height: 1;
+    }
+
+    .cost-total__cta {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-top: var(--space-lg);
+    }
+
+    .cost-total__cta strong {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ============================================
+       SECTION: IMPORTANT WARNING
+       ============================================ */
+    .warning {
+      padding: var(--space-2xl) 0;
+      background: var(--white);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .warning__content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: var(--space-xl);
+      background: var(--cream);
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+    }
+
+    .warning__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--danger);
+      margin-bottom: var(--space-md);
+    }
+
+    .warning__text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       SECTION: FINAL CTA
+       ============================================ */
+    .final-cta {
+      padding: var(--space-4xl) 0;
+      background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+      text-align: center;
+    }
+
+    .final-cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 600;
+      margin-bottom: var(--space-xl);
+      color: var(--text-primary);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      padding: var(--space-xl) 0;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .footer__content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer__disclaimer {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+
+    .footer__links {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-lg);
+    }
+
+    .footer__link {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--gold-light);
+    }
+
+    .footer__company {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================
+     HERO SECTION
+     ============================================ -->
+<section class="hero">
+  <div class="lw-container">
+    <div class="hero__content">
+      <div class="hero__text">
+        <div class="hero__badge animate-fade-up">
+          <span class="hero__badge-dot"></span>
+          Live Event - Jan 30 - Feb 1, 2026
+        </div>
+
+        <p class="hero__preheadline animate-fade-up delay-1">
+          Your 2025 tax bill is about to hit. But your 2026 strategy starts now. Join the 3-Day Challenge where...
+        </p>
+
+        <h1 class="hero__headline animate-fade-up delay-2">
+          You'll Build Your Month-By-Month 2026 Roadmap To Cut Taxes By 50%, Wipe Out Debt, And Create $5K-$15K Monthly <em>Cash Flow</em>
+        </h1>
+
+        <p class="hero__subheadline animate-fade-up delay-3">
+          Not learn about it. Actually build it.
+          <span class="hero__subheadline-emphasis">Without leaving your job or risking your family's stability.</span>
+        </p>
+
+        <div class="hero__proof animate-fade-up delay-4">
+          <span class="hero__proof-number">4,400+</span>
+          <span class="hero__proof-text">high-income earners used this system to stop losing<br>money to taxes and start building real wealth.</span>
+        </div>
+
+        <div class="hero__cta-group animate-fade-up delay-5">
+          <a href="https://managemoney101.com/ticket" class="btn-primary">
+            Claim Your Ticket Now
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <span class="btn-subtitle">Jan 30th - Feb 1st | 10 AM - 4 PM EST</span>
+        </div>
+
+        <div class="countdown">
+          <p class="countdown__label">Early Bird Pricing Ends Soon</p>
+          <div class="countdown__timer">
+            <div class="countdown__block">
+              <div class="countdown__number" id="days">6</div>
+              <div class="countdown__unit">Days</div>
+            </div>
+            <div class="countdown__block">
+              <div class="countdown__number" id="hours">20</div>
+              <div class="countdown__unit">Hours</div>
+            </div>
+            <div class="countdown__block">
+              <div class="countdown__number" id="mins">11</div>
+              <div class="countdown__unit">Min</div>
+            </div>
+            <div class="countdown__block">
+              <div class="countdown__number" id="secs">11</div>
+              <div class="countdown__unit">Sec</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__video">
+        <div class="hero__video-wrapper">
+          <iframe src="https://player.vimeo.com/video/1151508707?autoplay=0&title=0&byline=0&wmode=transparent&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SOCIAL PROOF BAR
+     ============================================ -->
+<section class="social-proof-bar">
+  <div class="lw-container">
+    <div class="social-proof-bar__content">
+      <span class="social-proof-bar__label">As Featured In:</span>
+      <div class="social-proof-bar__logos">
+        <img src="assets/images/04-as-featured-in-logos.png" alt="Featured publications">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section class="testimonials">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">Success Stories</p>
+      <h2 class="section-title">We've Helped Over 4,400 People Make Their Money Work For Them And Keep More of What They Earn</h2>
+    </div>
+
+    <div class="testimonials__grid">
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+        </div>
+        <p class="testimonial-card__quote">"We're both full-time & have a daughter. We didn't wanna just stumble around in the dark and spend all this time researching. If you wanna get out of the 9-to-5, here's how to do it. It's such a blessing."</p>
+        <div class="testimonial-card__author">
+          <img src="assets/images/01-testimonial-stephen-ellie.png" alt="Stephen & Ellie" class="testimonial-card__avatar">
+          <div>
+            <div class="testimonial-card__name">Stephen & Ellie</div>
+            <div class="testimonial-card__role">Husband & Wife, Full-time Nurses, Kansas City</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+        </div>
+        <p class="testimonial-card__quote">"When we talk about Preston doing an absolute masterclass on how to do this... I couldn't give it a bigger endorsement. It's about as legit as it gets."</p>
+        <div class="testimonial-card__author">
+          <img src="assets/images/02-testimonial-rob.png" alt="Rob" class="testimonial-card__avatar">
+          <div>
+            <div class="testimonial-card__name">Rob</div>
+            <div class="testimonial-card__role">Marketing Director, Louisville, KY</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+          <span class="testimonial-card__star">★</span>
+        </div>
+        <p class="testimonial-card__quote">"I've never been someone who just 'gets it' the first time. It has been leaps and bounds, and worth it. Every step is well thought out."</p>
+        <div class="testimonial-card__author">
+          <img src="assets/images/03-testimonial-kristopher.webp" alt="Kristopher" class="testimonial-card__avatar">
+          <div>
+            <div class="testimonial-card__name">Kristopher Bamford</div>
+            <div class="testimonial-card__role">Husband & Dad, Louisiana</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TARGET AUDIENCE
+     ============================================ -->
+<section class="target-audience">
+  <div class="lw-container">
+    <h2 class="target-audience__headline">
+      Whether you're making <span class="target-audience__highlight">$60K, $150K, or $300K/year</span>... this challenge is for YOU... because it was built by people like YOU!
+    </h2>
+  </div>
+</section>
+
+<!-- ============================================
+     PROBLEM SECTION
+     ============================================ -->
+<section class="problem">
+  <div class="lw-container">
+    <div class="problem__content">
+      <div class="problem__text">
+        <h3>You Already Know What You're <em>Supposed</em> to Do</h3>
+        <p>Every guru online says the same thing. You've heard it all. And it's not that you don't get it... <strong>It's just not practical when you're actually trying to do it.</strong></p>
+
+        <p>Everyone keeps talking to you like you're missing something obvious. They throw around the same high-level stuff:</p>
+
+        <ul class="problem__list">
+          <li>
+            <span class="problem__list-icon">✕</span>
+            Every raise comes with a bigger tax bill. You work more, earn more, and end up with less.
+          </li>
+          <li>
+            <span class="problem__list-icon">✕</span>
+            You talk about "someday" having nice things. Someday became your favorite word because it doesn't cost anything.
+          </li>
+          <li>
+            <span class="problem__list-icon">✕</span>
+            Every money decision feels like a coin flip. Should you pay off the car loan or max out the 401k?
+          </li>
+          <li>
+            <span class="problem__list-icon">✕</span>
+            You're hoping it'll work out instead of KNOWING it will.
+          </li>
+        </ul>
+
+        <div class="problem__emphasis">
+          <p><strong>We're not going to give you theory.</strong> We're going step by step. Detailed how-to. Not more Rich Dad Poor Dad advice. Actual implementation.</p>
+        </div>
+      </div>
+
+      <div class="problem__visual">
+        <div class="guru-cards">
+          <div class="guru-card">
+            <div class="guru-card__icon">💭</div>
+            <span class="guru-card__text">"Think like a millionaire"</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-card__icon">📊</div>
+            <span class="guru-card__text">"Assets vs. Liabilities"</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-card__icon">💰</div>
+            <span class="guru-card__text">"Make your money work for you"</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-card__icon">📚</div>
+            <span class="guru-card__text">"Read Rich Dad Poor Dad"</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-card__icon">☕</div>
+            <span class="guru-card__text">"Cut your daily coffee"</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-card__icon">🏃</div>
+            <span class="guru-card__text">"Quit your job and start a business"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WEALTH PYRAMID SECTION
+     ============================================ -->
+<section class="pyramid">
+  <div class="lw-container">
+    <div class="pyramid__intro">
+      <p class="section-label">The System</p>
+      <h2 class="section-title">The 5-Pillar Wealth Building Framework</h2>
+      <p>If it's 2026 and you still don't have a complete wealth plan, you're not behind. <strong>You're exactly where the system wants you.</strong></p>
+      <p>The IRS isn't worried about you learning these strategies. They're counting on you never implementing them. Your bank loves that you keep money sitting there "until you figure out what to do with it."</p>
+      <p>The financial industry profits when you stay confused about which moves to make first. Confused people procrastinate. And procrastination keeps you exactly where you are.</p>
+      <p><strong>I've broken wealth building into specific pillars that stack on each other.</strong> For each one, we'll teach you exactly how to do it step by step. Think of it like a pyramid...</p>
+    </div>
+
+    <div class="pyramid__steps">
+      <div class="pyramid__step">
+        <span class="pyramid__step-icon">🏦</span>
+        <div class="pyramid__step-content">
+          <h4>1. Cut Taxes Legally</h4>
+          <p>At the base, you cut taxes legally so you keep 50-70% more of what you already earn.</p>
+        </div>
+      </div>
+      <div class="pyramid__step">
+        <span class="pyramid__step-icon">🪪</span>
+        <div class="pyramid__step-content">
+          <h4>2. Eliminate High-Interest Debt</h4>
+          <p>After that, you eliminate high-interest debt so your money stops bleeding out every month.</p>
+        </div>
+      </div>
+      <div class="pyramid__step">
+        <span class="pyramid__step-icon">💵</span>
+        <div class="pyramid__step-content">
+          <h4>3. Create $5K-$15K/Month Income</h4>
+          <p>Then, create income streams that grow without putting in more hours.</p>
+        </div>
+      </div>
+      <div class="pyramid__step">
+        <span class="pyramid__step-icon">🏗️</span>
+        <div class="pyramid__step-content">
+          <h4>4. Tax-Free Investment Vehicles</h4>
+          <p>Use investment vehicles that grow tax-free and compound over time.</p>
+        </div>
+      </div>
+      <div class="pyramid__step">
+        <span class="pyramid__step-icon">🛡️</span>
+        <div class="pyramid__step-content">
+          <h4>5. Protect & Pass It On</h4>
+          <p>And finally, you protect it all through the right entity structures so you can pass it across generations like the wealthy!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pyramid__result">
+      <p class="pyramid__result-heading">This Way, It's Realistic For Anyone To Add</p>
+      <div class="pyramid__result-amount">+$100,000</div>
+      <p class="pyramid__result-text">to your net worth in 12 months</p>
+      <p class="pyramid__result-note">(Most students end up adding much more... but $100K is the baseline we aim for)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PICTURE THIS SECTION
+     ============================================ -->
+<section class="picture-this">
+  <div class="lw-container">
+    <div class="picture-this__content">
+      <h2 class="picture-this__title">Picture This...</h2>
+
+      <ul class="picture-this__list">
+        <li>In 3 days, we'll lay out the pieces - taxes, debt, income, investments - and show you how they fit into a plan that builds $100K+ net worth.</li>
+        <li>We'll map out your tax optimization, debt elimination, and income strategies with you</li>
+        <li>All that's left is to implement what we teach and potentially start building serious wealth as soon as!</li>
+      </ul>
+
+      <p class="picture-this__tagline">...all WITHOUT having to quit your job and risk your family's financial stability!</p>
+
+      <div style="margin-top: var(--space-xl);">
+        <a href="https://managemoney101.com/ticket" class="btn-primary">
+          Claim Your Ticket Now
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <span class="btn-subtitle">Jan 30th - Feb 1st | 10 AM - 4 PM EST</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     STORY SECTION
+     ============================================ -->
+<section class="story">
+  <div class="lw-container">
+    <div class="story__header">
+      <p class="section-label">The Journey</p>
+      <h2 class="section-title">You're Making More Money Than Ever... Why Does It Feel Like You're Falling Behind?</h2>
+    </div>
+
+    <div class="story__content">
+      <div class="story__images">
+        <div class="story__image">
+          <img src="assets/images/06-preston-basement.png" alt="Preston in parents' basement">
+        </div>
+        <div class="story__image">
+          <img src="assets/images/07-preston-wife-bridget.png" alt="Preston with wife Bridget">
+        </div>
+        <div class="story__image story__image--large">
+          <img src="assets/images/10-preston-family.png" alt="Preston family">
+        </div>
+      </div>
+
+      <div class="story__text">
+        <p>Hi, my name's Preston. I was in my 20s doing everything "right" with money but getting nowhere.</p>
+
+        <p>I was living with my wife in my parents' basement as I was struggling with money at that time. My wife Bridget was working long shifts as a respiratory therapist. I was in sales.</p>
+
+        <p>We were both doing what we thought we were "supposed to do" but somehow still feeling financially stuck.</p>
+
+        <ul class="story__pain-points">
+          <li>Every raise came with a bigger tax bill. We worked more, earned more, and ended up with less.</li>
+          <li>We talked about "someday" having nice things. Someday became our favorite word because it didn't cost anything.</li>
+          <li>We tried investing. Roth IRA, index funds, even some crypto. No clue if we were doing it right.</li>
+          <li>Every money decision was a coin flip. Should we pay off the car loan or max out the 401k?</li>
+        </ul>
+
+        <p>We were hoping it'll work out rather than KNOWING it will. If you're in a similar situation, then I have good news!</p>
+
+        <p><strong>None of this means you lack discipline or intelligence.</strong> It just means... You're Doing What Everyone Else Does With Money (just like we did!) So, you also struggle like everyone else.</p>
+
+        <p>Until... we started learning everything we could about how money really worked. We changed the plan we were following and...</p>
+
+        <div class="story__results">
+          <h4>The Results</h4>
+          <ul class="story__results-list">
+            <li>By 28, we became financially free. We both quit our jobs.</li>
+            <li>Built a $20M+ investment portfolio from scratch</li>
+            <li>Now we've got two sons, and life looks a whole lot different than being stuck in a 9-5</li>
+            <li>I was answering work emails in the hospital the day my son was born... now we choose when and IF we want to work</li>
+            <li>We don't have to research "cheapest" everything before buying it anymore</li>
+            <li>We're setting up our family for generational wealth instead of generational struggle</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     AGENDA SECTION
+     ============================================ -->
+<section class="agenda">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">The Challenge</p>
+      <h2 class="section-title">The 3-Day Challenge That Shows You How To Add $100K To Your Net Worth!</h2>
+    </div>
+
+    <div class="agenda__days">
+      <!-- Day 1 -->
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__label">Day 1</span>
+          <h3 class="day-card__title">Find & Fix the Leaks</h3>
+        </div>
+        <div class="day-card__sessions">
+          <div class="session">
+            <span class="session__number">Session 1</span>
+            <p class="session__title">The Middle-Class Money Trap: Why Working Harder Isn't Making You Richer</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 2</span>
+            <p class="session__title">Why Your 401(k) Is Bleeding Money & What To Do Instead</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 3</span>
+            <p class="session__title">Debt Elimination & Credit Mastery: From High-Interest Trap to Smart Funding</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 4</span>
+            <p class="session__title">Expert Deep Dive - Entity Structure & Business Credit with Tommy Thornburgh (Prime Corporate Services)</p>
+          </div>
+          <div class="session session--vip">
+            <span class="session__number">VIP Only</span>
+            <p class="session__title">Roundtable Q&A with Preston: Get All Your Questions Answered Directly</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__label">Day 2</span>
+          <h3 class="day-card__title">Accelerate Growth</h3>
+        </div>
+        <div class="day-card__sessions">
+          <div class="session">
+            <span class="session__number">Session 5</span>
+            <p class="session__title">The W-2 Taxes Playbook: How High-Earners Keep Losing Half Their Income</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 6</span>
+            <p class="session__title">The Investor Playbook: How to Build Wealth Without Paying Taxes</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 7</span>
+            <p class="session__title">How To Start A 100% Tax-Free Airbnb Business (Without Buying Property Or Quitting Your Job)</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 8</span>
+            <p class="session__title">The Complete Wealth Acceleration System: How Everything Works Together To Add $100K</p>
+          </div>
+          <div class="session session--vip">
+            <span class="session__number">VIP Only</span>
+            <p class="session__title">Roundtable Q&A with Preston: Get All Your Questions Answered Directly</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__label">Day 3</span>
+          <h3 class="day-card__title">Protect & Scale</h3>
+        </div>
+        <div class="day-card__sessions">
+          <div class="session">
+            <span class="session__number">Session 9</span>
+            <p class="session__title">Beyond the Basics: Advanced Tax Optimization with Garrett Maughan (Prime Corporate Services)</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 10</span>
+            <p class="session__title">Your 12-Month Wealth Implementation Roadmap</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 11</span>
+            <p class="session__title">How Students Hit $100K+ Net Worth (Real Numbers, Real Strategies)</p>
+          </div>
+          <div class="session">
+            <span class="session__number">Session 12</span>
+            <p class="session__title">Your Next Steps and Beyond</p>
+          </div>
+          <div class="session session--vip">
+            <span class="session__number">VIP Only</span>
+            <p class="session__title">Roundtable Q&A with Preston: Get All Your Questions Answered Directly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     IMPORTANT WARNING
+     ============================================ -->
+<section class="warning">
+  <div class="lw-container">
+    <div class="warning__content">
+      <p class="warning__title">⚠️ Important:</p>
+      <p class="warning__text">This is NOT for you if you're looking for get-rich-quick schemes, or "passive income" that requires zero work. This is a real system that requires real implementation. The results are worth it, but you have to do the work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SCREENSHOTS / SOCIAL PROOF
+     ============================================ -->
+<section class="screenshots">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">Why Attend This Challenge?</p>
+      <h2 class="section-title">See What People Are Saying After Attending Our 3-Day Live Tax-Free Income Challenge</h2>
+    </div>
+
+    <div class="screenshots__grid">
+      <div class="screenshot"><img src="assets/images/11-social-proof-1.png" alt="Testimonial"></div>
+      <div class="screenshot"><img src="assets/images/12-social-proof-2.png" alt="Testimonial"></div>
+      <div class="screenshot"><img src="assets/images/13-social-proof-3.png" alt="Testimonial"></div>
+      <div class="screenshot"><img src="assets/images/14-social-proof-4.png" alt="Testimonial"></div>
+      <div class="screenshot"><img src="assets/images/15-social-proof-5.png" alt="Testimonial"></div>
+      <div class="screenshot"><img src="assets/images/16-social-proof-6.png" alt="Testimonial"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     BEFORE / AFTER
+     ============================================ -->
+<section class="before-after">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">The Transformation</p>
+      <h2 class="section-title">Here's What You Can Expect From The Challenge</h2>
+    </div>
+
+    <div class="before-after__grid">
+      <div class="before-card">
+        <div class="before-card__header">Before the Challenge</div>
+        <ul class="before-card__list">
+          <li>You're losing $20K-$50K every year to taxes without knowing why</li>
+          <li>Stuck making minimum payments while your money sits idle</li>
+          <li>Every financial decision feels like a coin toss. Should you pay debt or invest?</li>
+          <li>Watching friends buy homes and build wealth while you feel left behind</li>
+          <li>Constant second-guessing because every "expert" says something different</li>
+        </ul>
+      </div>
+
+      <div class="after-card">
+        <div class="after-card__header">After the Challenge</div>
+        <ul class="after-card__list">
+          <li>Keeping more of every paycheck and actually seeing your savings grow</li>
+          <li>High-interest debts gone and cash flow freed up so you can breathe again</li>
+          <li>Every decision feels clear because you know exactly WHAT to do and WHEN</li>
+          <li>Knowing the EXACT steps to take and HOW to take them - for creating $5K-$15K monthly income streams</li>
+          <li>Wealth protection strategies the ultra-wealthy use to pass money across generations tax-free</li>
+          <li>A predictable plan to add $100K to your net worth within 12 months using strategies most people will never know about</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     EVENT DETAILS
+     ============================================ -->
+<section class="event-details">
+  <div class="lw-container">
+    <div class="event-details__grid">
+      <div class="event-detail">
+        <div class="event-detail__icon">📅</div>
+        <div class="event-detail__label">When</div>
+        <div class="event-detail__value">January 30 - February 1, 2026</div>
+        <div class="event-detail__desc">Starting From 10 AM EST | 4-6 Hours Daily</div>
+      </div>
+      <div class="event-detail">
+        <div class="event-detail__icon">💻</div>
+        <div class="event-detail__label">Where</div>
+        <div class="event-detail__value">Streaming Online on Zoom</div>
+        <div class="event-detail__desc">Join from anywhere. We'll send you a private link with all the details.</div>
+      </div>
+      <div class="event-detail">
+        <div class="event-detail__icon">🎯</div>
+        <div class="event-detail__label">Why</div>
+        <div class="event-detail__value">$100K+ Net Worth</div>
+        <div class="event-detail__desc">Cut your tax bill in half, wipe out high-interest debt, and start building $5K-$15K in monthly income.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PRICING
+     ============================================ -->
+<section class="pricing">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">Choose Your Ticket</p>
+      <h2 class="section-title">General Admission vs VIP</h2>
+    </div>
+
+    <div class="pricing__cards">
+      <!-- General Admission -->
+      <div class="pricing-card">
+        <div class="pricing-card__header">
+          <h3 class="pricing-card__name">General Admission</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-original">$97</span>
+            <span class="pricing-card__price-current">$47</span>
+          </div>
+        </div>
+        <div class="pricing-card__body">
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: var(--space-lg);">Over 3 days, we'll move you past theory towards actionable wealth-building with:</p>
+          <ul class="pricing-card__features">
+            <li>The complete middle-class money trap breakdown and exactly how to escape it</li>
+            <li>Why your 401k is bleeding money and the alternatives that actually work</li>
+            <li>Advanced tax strategies that save high earners $20K-$50K annually</li>
+            <li>How to eliminate high-interest debt while accessing $50K-$100K in business funding</li>
+            <li>Step-by-step income generation that creates $5K-$15K monthly alongside your job</li>
+            <li>Wealth protection strategies to ensure your money lasts generations</li>
+          </ul>
+          <a href="https://managemoney101.com/ticket" class="btn-primary pricing-card__cta">
+            Claim Your Ticket →
+          </a>
+        </div>
+      </div>
+
+      <!-- VIP -->
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-card__header">
+          <h3 class="pricing-card__name">VIP Access</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-original">$197</span>
+            <span class="pricing-card__price-current">$147</span>
+          </div>
+        </div>
+        <div class="pricing-card__body">
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: var(--space-lg);">Everything in General Admission plus...</p>
+          <ul class="pricing-card__features">
+            <li>Dedicated VIP-only Q&A sessions after each day with Preston and tax experts</li>
+            <li>Exclusive bonus session with Preston's tax optimization expert from Prime Corporate Services</li>
+            <li>Lifetime access to replays and notes of all sessions. Perfect for deeper review and implementation</li>
+            <li>Direct answers to your specific situation</li>
+            <li>Priority support throughout the challenge</li>
+          </ul>
+          <a href="https://managemoney101.com/vip" class="btn-primary pricing-card__cta">
+            Claim VIP Access →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CASE STUDIES
+     ============================================ -->
+<section class="case-studies">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">Proof It Works</p>
+      <h2 class="section-title">We've Helped Over 4,400 People Make Their Money Work For Them</h2>
+    </div>
+
+    <!-- Case Study 1: Dustin -->
+    <div class="case-study">
+      <div class="case-study__image">
+        <img src="assets/images/20-dustin-cotten.png" alt="Dustin Cotten">
+      </div>
+      <div class="case-study__content">
+        <h3 class="case-study__name">Dustin Cotten</h3>
+        <p class="case-study__tagline">"I didn't want to work my whole life just to be told I couldn't use my own money."</p>
+        <p class="case-study__story">Dustin was in corporate sales, looking for a way out. The turning point came when his girlfriend's mom passed away at 62. She had savings, but most of it was locked up and couldn't be used for medical bills. That hit him hard. So, he decided to take his finances in his own hands and build something of his own.</p>
+        <div class="case-study__results">
+          <div class="case-study__result">
+            <span class="case-study__result-icon">🏠</span>
+            <span>Got his first property within 30 days, netting $3,000/month</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">📈</span>
+            <span>Scaled to 7 properties in under 2 years</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">💰</span>
+            <span>Hit $56,000 net profit in one month</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">✅</span>
+            <span>Walked away from his 9 to 5 to run his business full time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study 2: Galin -->
+    <div class="case-study">
+      <div class="case-study__image">
+        <img src="assets/images/21-galin-case-study.png" alt="Galin">
+      </div>
+      <div class="case-study__content">
+        <h3 class="case-study__name">Galin</h3>
+        <p class="case-study__tagline">Turning Taxes Into Cash Flow and Long-Term Growth</p>
+        <p class="case-study__story">Before, Galin was working hard but watching too much of his money disappear to taxes and overhead. He wanted a smarter way to manage what he already earned, while also building a new stream of steady income. Once he started learning how to manage his money with a clear system, things changed. He now has a plan to save big on taxes, add consistent rental income, and redirect capital into assets that grow and protect against inflation.</p>
+        <div class="case-study__results">
+          <div class="case-study__result">
+            <span class="case-study__result-icon">🏦</span>
+            <span>$100K+ in tax savings and paper losses</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">🧾</span>
+            <span>1000's reimbursed tax-free through simple strategies</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">🏠</span>
+            <span>Steady new rental income added to his portfolio</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">📈</span>
+            <span>Six figures redirected into long-term investments</span>
+          </div>
+        </div>
+        <div class="case-study__roi">
+          <p class="case-study__roi-label">Estimated 12-Month ROI</p>
+          <p class="case-study__roi-amount">~$150,000+</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study 3: Abigail -->
+    <div class="case-study">
+      <div class="case-study__image">
+        <img src="assets/images/23-abigail-case-study.png" alt="Abigail">
+      </div>
+      <div class="case-study__content">
+        <h3 class="case-study__name">Abigail</h3>
+        <p class="case-study__tagline">Eliminating Taxes and Building Early Freedom</p>
+        <p class="case-study__story">Before, their household was stuck watching too much of a W-2 paycheck disappear to the IRS. Retirement felt locked away until age 59½, and every move seemed tied up with penalties or restrictions. After putting the right pieces in place, they now have a plan to legally cut taxes to zero, create penalty-free income years earlier, and move money into assets that actually grow. Instead of waiting until retirement age, they're on track to reach financial independence years ahead of schedule.</p>
+        <div class="case-study__results">
+          <div class="case-study__result">
+            <span class="case-study__result-icon">🏦</span>
+            <span>~$52,500 cash refund from tax savings</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">🧾</span>
+            <span>$30K shifted into 0% tax brackets with simple family strategies</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">🏠</span>
+            <span>Six-figure savings sheltered through new structures</span>
+          </div>
+          <div class="case-study__result">
+            <span class="case-study__result-icon">📈</span>
+            <span>New cash flow and long-term growth layered on top</span>
+          </div>
+        </div>
+        <div class="case-study__roi">
+          <p class="case-study__roi-label">Estimated 12-Month ROI</p>
+          <p class="case-study__roi-amount">$50K-$100K</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section class="about">
+  <div class="lw-container">
+    <div class="about__content">
+      <div class="about__images">
+        <div class="about__image">
+          <img src="assets/images/24-preston-about-1.png" alt="Preston">
+        </div>
+        <div class="about__image">
+          <img src="assets/images/25-preston-about-2.webp" alt="Preston">
+        </div>
+      </div>
+
+      <div class="about__text">
+        <p class="section-label">About Preston</p>
+        <h3>From Broke to $20M+ Portfolio</h3>
+        <p>I'm a 33-year-old who used to follow the same money rules as everyone else - save what's left, avoid debt, hope the 401k works out.</p>
+        <p>I was stuck in that cycle until I started learning everything I could about personal finance, investing, and real estate. My wife and I both applied what we learned. By 28, I became financially free and we built a $20M+ real estate portfolio.</p>
+        <p>I share what I've learned with over 6 million people about how money actually works and the real strategies wealthy people use.</p>
+        <p>Over the years, this work has put me in rooms with people like Pace Morby and Dean Graziosi. I've been featured alongside Ray Dalio, Robert Kiyosaki, and Daymond John.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     GUARANTEE
+     ============================================ -->
+<section class="guarantee">
+  <div class="lw-container">
+    <div class="guarantee__content">
+      <div class="guarantee__icon">🛡️</div>
+      <h3 class="guarantee__title">100% Risk-Free Guarantee</h3>
+      <p class="guarantee__text">We're confident that in just 3 days you'll walk away with a real plan to finally take control of your money. That means knowing where it's going, how to stop the leaks, and how to put it to work building wealth.</p>
+      <p class="guarantee__text" style="margin-top: var(--space-md);">Join the full challenge. Go through every session. Take the notes, do the exercises, see what your plan looks like.</p>
+      <p class="guarantee__text" style="margin-top: var(--space-md);"><strong>If you don't leave with total clarity on what to do next and the confidence to actually move forward... just email us at preston@legacyinvestingshow.com within 7 days of the challenge ending and we'll refund you.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="faq">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">Still Got Questions? We Got You!</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq__list">
+      <div class="faq-item active">
+        <button class="faq-item__question">
+          <span>Where will the event be held?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          The event is 100% online via Zoom. You can join from anywhere in the world. Once you grab your ticket, we'll send you a private link with all the details.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__question">
+          <span>How interactive is this event?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          Very interactive! You'll have opportunities to ask questions during Q&A sessions after each training. VIP ticket holders get additional dedicated roundtable time with Preston for more personalized guidance.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__question">
+          <span>How long is each day of the challenge?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          Each day runs approximately 4-6 hours, starting at 10 AM EST. VIP sessions add additional Q&A time after the main sessions.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__question">
+          <span>What if I can't make it all 3 days? Are there replays?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          VIP ticket holders get lifetime access to all replays and notes. General admission is live-only, so we recommend upgrading to VIP if your schedule is uncertain.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__question">
+          <span>Is there a money back guarantee?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          Yes! If you attend the full challenge, do the work, and don't leave with total clarity on what to do next, just email us within 7 days of the challenge ending and we'll refund you. No questions asked.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__question">
+          <span>Can I bring my spouse/partner?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          Yes! We highly encourage couples to attend together. One ticket covers you both attending from the same device/location.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__question">
+          <span>Can I still join if I don't own a business yet?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          Absolutely. Many of our students are W-2 employees who want to optimize their taxes and build additional income streams. We'll show you exactly how to get started.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__question">
+          <span>What if I'm not good at any of this finance stuff?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">
+          That's exactly why we created this challenge. We break everything down step-by-step in plain English. No finance degree required - just a willingness to learn and implement.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     COST OF WAITING
+     ============================================ -->
+<section class="cost-waiting">
+  <div class="lw-container">
+    <div class="section-header">
+      <p class="section-label">The Reality</p>
+      <h2 class="section-title">The Real Cost of Waiting</h2>
+    </div>
+
+    <div class="cost-waiting__grid">
+      <div class="cost-card">
+        <div class="cost-card__icon">💸</div>
+        <div class="cost-card__label">Taxes</div>
+        <div class="cost-card__amount">$1K-$8K/month</div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: var(--space-sm);">Every month you delay = unnecessary taxes paid</p>
+      </div>
+      <div class="cost-card">
+        <div class="cost-card__icon">📉</div>
+        <div class="cost-card__label">Interest</div>
+        <div class="cost-card__amount">$500-$2K/month</div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: var(--space-sm);">Every month you delay = interest charges</p>
+      </div>
+      <div class="cost-card">
+        <div class="cost-card__icon">⏳</div>
+        <div class="cost-card__label">Opportunity</div>
+        <div class="cost-card__amount">$5K-$15K/month</div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: var(--space-sm);">Every month you delay = income missed</p>
+      </div>
+      <div class="cost-card">
+        <div class="cost-card__icon">📊</div>
+        <div class="cost-card__label">Compound Growth</div>
+        <div class="cost-card__amount">$100K+/year</div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: var(--space-sm);">Every year you delay = future wealth lost</p>
+      </div>
+    </div>
+
+    <div class="cost-total">
+      <p class="cost-total__label">Total Cost of Waiting One Year</p>
+      <div class="cost-total__amount">$250,000+</div>
+      <p class="cost-total__cta">Or you can invest <strong>$47 today</strong> and start keeping that money instead.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FINAL CTA
+     ============================================ -->
+<section class="final-cta">
+  <div class="lw-container">
+    <h2 class="final-cta__title">So, What Are You Waiting For?</h2>
+
+    <a href="https://managemoney101.com/ticket" class="btn-primary">
+      Claim Your Ticket Now
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+    <span class="btn-subtitle">Jan 30th - Feb 1st | 10 AM - 4 PM EST</span>
+
+    <div class="countdown" style="margin-top: 48px; border-top: none; padding-top: 0; display: flex; flex-direction: column; align-items: center;">
+      <p class="countdown__label">Early Bird Pricing Expires In...</p>
+      <div class="countdown__timer">
+        <div class="countdown__block">
+          <div class="countdown__number">6</div>
+          <div class="countdown__unit">Days</div>
+        </div>
+        <div class="countdown__block">
+          <div class="countdown__number">20</div>
+          <div class="countdown__unit">Hours</div>
+        </div>
+        <div class="countdown__block">
+          <div class="countdown__number">11</div>
+          <div class="countdown__unit">Min</div>
+        </div>
+        <div class="countdown__block">
+          <div class="countdown__number">11</div>
+          <div class="countdown__unit">Sec</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="lw-container">
+    <div class="footer__content">
+      <p class="footer__disclaimer">
+        This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+      </p>
+      <p class="footer__disclaimer">
+        INCOME DISCLAIMER: Although we make every effort to accurately represent the services and/or products presented on this website, Preston Seo makes no assurance, representation or promise regarding future earnings or income, or that you will make any specific amount of money, or any money at all, or that you will not lose money. Earnings or income statements, or examples of earnings or income, represent estimates of what you may earn; however, there is no promise or guarantee that you may experience the same level of earnings or income. There is no assurance that any prior success or past results regarding earnings or income may be an indication of your future success or results.
+      </p>
+      <div class="footer__links">
+        <a href="https://www.firstairbnb.com/contactus" class="footer__link">Contact Us</a>
+        <a href="https://www.firstairbnb.com/privacypolicy" class="footer__link">Privacy Policy</a>
+        <a href="https://managemoney101.com/challengeterms" class="footer__link">Terms & Conditions</a>
+      </div>
+      <p class="footer__company">
+        Legacy Investing Show LLC | 1993 Dewar Dr, Suite 256, Rock Springs, WY 82901
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-item__question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const isActive = item.classList.contains('active');
+
+      // Close all items
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+      // Open clicked item if it wasn't active
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // Countdown Timer (set your target date)
+  const targetDate = new Date('2026-01-30T10:00:00-05:00').getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance > 0) {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.querySelectorAll('#days, .countdown__number:nth-child(1)').forEach(el => {
+        if (el.id === 'days' || el.closest('.countdown__block:first-child')) {
+          el.textContent = days;
+        }
+      });
+      document.querySelectorAll('#hours').forEach(el => el.textContent = hours);
+      document.querySelectorAll('#mins').forEach(el => el.textContent = mins);
+      document.querySelectorAll('#secs').forEach(el => el.textContent = secs);
+    }
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Observe elements for scroll animation
+  document.querySelectorAll('.testimonial-card, .pyramid__step, .day-card, .case-study, .pricing-card, .cost-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
