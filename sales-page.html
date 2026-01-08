@@ -6,7 +6,7 @@
   <title>Tax-Free Income Challenge | Preston Seo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <style>
     /* ============================================
        LIGHT MODE DIRECT RESPONSE DESIGN SYSTEM
@@ -70,6 +70,7 @@
 
     body {
       font-family: var(--font-body);
+      font-weight: 600;
       background: var(--white);
       color: var(--text-primary);
       line-height: 1.7;
@@ -133,7 +134,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: var(--space-3xl) 0;
+      padding: var(--space-lg) 0;
       position: relative;
       background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
     }
@@ -142,14 +143,14 @@
       display: inline-flex;
       align-items: center;
       gap: var(--space-sm);
-      padding: var(--space-sm) var(--space-md);
+      padding: 6px var(--space-md);
       background: var(--white);
       border: 1px solid var(--gold-border);
       border-radius: 100px;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 700;
       color: var(--gold-dark);
-      margin-bottom: var(--space-xl);
+      margin-bottom: var(--space-md);
       text-transform: uppercase;
       letter-spacing: 1.5px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -165,22 +166,22 @@
 
     .hero__preheadline {
       font-family: var(--font-body);
-      font-size: clamp(15px, 2vw, 18px);
+      font-size: clamp(14px, 1.8vw, 17px);
       color: var(--text-secondary);
       max-width: 650px;
-      margin-bottom: var(--space-lg);
-      line-height: 1.7;
-      font-weight: 500;
+      margin-bottom: var(--space-md);
+      line-height: 1.6;
+      font-weight: 600;
     }
 
     .hero__headline {
       font-family: var(--font-display);
-      font-size: clamp(32px, 6vw, 64px);
-      font-weight: 600;
-      line-height: 1.15;
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.12;
       letter-spacing: -0.02em;
-      max-width: 900px;
-      margin-bottom: var(--space-md);
+      max-width: 600px;
+      margin-bottom: var(--space-sm);
       color: var(--text-primary);
     }
 
@@ -191,76 +192,87 @@
 
     .hero__subheadline {
       font-family: var(--font-body);
-      font-size: clamp(18px, 2.5vw, 24px);
-      font-weight: 500;
+      font-size: clamp(15px, 2vw, 19px);
+      font-weight: 600;
       color: var(--text-secondary);
-      margin-bottom: var(--space-sm);
+      margin-bottom: 0;
       max-width: 800px;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     .hero__subheadline-emphasis {
       display: block;
       font-style: italic;
       color: var(--gold-dark);
-      margin-top: var(--space-sm);
+      margin-top: var(--space-xs);
     }
 
     .hero__proof {
       display: flex;
       align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-2xl);
-      margin-top: var(--space-lg);
-      padding: var(--space-md) var(--space-lg);
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+      margin-top: var(--space-md);
+      padding: var(--space-sm) var(--space-md);
       background: var(--white);
-      border-left: 4px solid var(--gold);
+      border-left: 3px solid var(--gold);
       max-width: fit-content;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 0 6px 6px 0;
     }
 
     .hero__proof-number {
       font-family: var(--font-display);
-      font-size: 36px;
+      font-size: 28px;
       font-weight: 700;
       color: var(--gold);
     }
 
     .hero__proof-text {
-      font-size: 15px;
+      font-size: 13px;
       color: var(--text-secondary);
-      line-height: 1.4;
+      line-height: 1.35;
+      max-width: 280px;
     }
 
     .hero__content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--space-3xl);
-      align-items: center;
+      gap: var(--space-xl);
+      align-items: start;
     }
 
-    @media (max-width: 968px) {
-      .hero__content {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
-      }
+    .hero__text {
+      padding-top: var(--space-md);
+    }
 
-      .hero {
-        padding: var(--space-2xl) 0;
-        min-height: auto;
-      }
+    .hero__video-col {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
     }
 
     .hero__video {
       position: relative;
     }
 
+    @media (max-width: 968px) {
+      .hero__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+
+      .hero {
+        padding: var(--space-xl) 0;
+        min-height: auto;
+      }
+    }
+
     .hero__video-wrapper {
       position: relative;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
       border: 1px solid var(--border-light);
     }
 
@@ -271,7 +283,36 @@
     }
 
     .hero__cta-group {
-      margin-top: var(--space-xl);
+      margin-top: 0;
+    }
+
+    .hero__cta-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-sm);
+    }
+
+    .hero__cta-row .btn-primary {
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+
+    .hero__cta-row .btn-subtitle {
+      margin-top: var(--space-xs);
+      font-size: 13px;
+    }
+
+    .hero__video-col .countdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero__video-col .countdown__timer {
+      justify-content: center;
     }
 
     /* Primary CTA Button */
@@ -322,59 +363,59 @@
       margin-top: var(--space-md);
       font-size: 14px;
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     /* Countdown */
     .countdown {
-      margin-top: var(--space-2xl);
-      padding-top: var(--space-xl);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
       border-top: 1px solid var(--border-light);
     }
 
     .countdown__label {
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
       color: var(--danger);
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: var(--space-md);
+      letter-spacing: 1.5px;
+      margin-bottom: var(--space-sm);
     }
 
     .countdown__timer {
       display: flex;
-      gap: var(--space-lg);
+      gap: var(--space-sm);
     }
 
     @media (max-width: 480px) {
       .countdown__timer {
-        gap: var(--space-md);
+        gap: var(--space-xs);
       }
     }
 
     .countdown__block {
       text-align: center;
       background: var(--white);
-      padding: var(--space-md);
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      min-width: 70px;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      min-width: 56px;
     }
 
     .countdown__number {
       font-family: var(--font-display);
-      font-size: 32px;
+      font-size: 24px;
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1;
     }
 
     .countdown__unit {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: var(--space-xs);
+      letter-spacing: 0.5px;
+      margin-top: 2px;
       font-weight: 600;
     }
 
@@ -442,7 +483,7 @@
     .section-title {
       font-family: var(--font-display);
       font-size: clamp(28px, 5vw, 48px);
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.2;
       max-width: 800px;
       margin: 0 auto;
@@ -549,7 +590,7 @@
     .target-audience__headline {
       font-family: var(--font-display);
       font-size: clamp(22px, 4vw, 36px);
-      font-weight: 500;
+      font-weight: 600;
       max-width: 900px;
       margin: 0 auto;
       line-height: 1.4;
@@ -651,7 +692,7 @@
 
     .problem__emphasis p {
       margin-bottom: 0;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--text-primary);
     }
 
@@ -702,22 +743,51 @@
       background: var(--white);
     }
 
-    .pyramid__intro {
-      max-width: 800px;
-      margin: 0 auto var(--space-3xl);
+    .pyramid__header {
       text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .pyramid__grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2xl);
+    }
+
+    .pyramid__left {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .pyramid__intro {
+      margin-bottom: var(--space-xl);
     }
 
     .pyramid__intro p {
-      font-size: 18px;
+      font-size: 17px;
       color: var(--text-secondary);
       line-height: 1.8;
-      margin-bottom: var(--space-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    .pyramid__image {
+      text-align: center;
+    }
+
+    .pyramid__image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .pyramid__right {
+      width: 100%;
+      max-width: 600px;
     }
 
     .pyramid__steps {
-      max-width: 800px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: var(--space-md);
@@ -760,7 +830,7 @@
 
     .pyramid__result {
       max-width: 600px;
-      margin: var(--space-3xl) auto 0;
+      margin: var(--space-xl) auto 0;
       text-align: center;
       padding: var(--space-2xl);
       background: linear-gradient(135deg, var(--gold-glow) 0%, var(--cream) 100%);
@@ -848,7 +918,7 @@
     .picture-this__tagline {
       font-family: var(--font-display);
       font-size: clamp(20px, 3vw, 28px);
-      font-weight: 500;
+      font-weight: 600;
       color: var(--gold-dark);
       font-style: italic;
       margin-top: var(--space-xl);
@@ -886,6 +956,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: var(--space-md);
+      position: sticky;
+      top: var(--space-xl);
     }
 
     .story__image {
@@ -896,7 +968,7 @@
 
     .story__image img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
       transition: all 0.3s ease;
     }
@@ -910,7 +982,19 @@
     }
 
     .story__image--large img {
-      height: 220px;
+      height: 280px;
+    }
+
+    @media (max-width: 868px) {
+      .story__images {
+        position: static;
+      }
+      .story__image img {
+        height: 180px;
+      }
+      .story__image--large img {
+        height: 220px;
+      }
     }
 
     .story__text p {
@@ -1162,7 +1246,7 @@
     .session-detail__outcome {
       font-size: 16px;
       color: var(--text-primary);
-      font-weight: 500;
+      font-weight: 600;
       padding: var(--space-md);
       background: var(--success-light);
       border-radius: 8px;
@@ -1370,6 +1454,7 @@
       gap: var(--space-xl);
       max-width: 900px;
       margin: var(--space-3xl) auto 0;
+      padding-top: var(--space-lg);
     }
 
     @media (max-width: 768px) {
@@ -1382,7 +1467,7 @@
       background: var(--white);
       border: 2px solid var(--border-light);
       border-radius: 20px;
-      overflow: hidden;
+      overflow: visible;
       transition: all 0.3s ease;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
@@ -1395,14 +1480,15 @@
     .pricing-card--featured {
       border-color: var(--gold);
       position: relative;
+      overflow: visible;
     }
 
     .pricing-card--featured::before {
       content: 'Most Popular';
       position: absolute;
-      top: 0;
+      top: -14px;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%);
       background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
       color: var(--white);
       font-size: 12px;
@@ -1411,6 +1497,8 @@
       border-radius: 100px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      z-index: 10;
+      white-space: nowrap;
     }
 
     .pricing-card__header {
@@ -1503,6 +1591,10 @@
       .case-study {
         grid-template-columns: 1fr;
       }
+    }
+
+    .case-study--no-image {
+      grid-template-columns: 1fr;
     }
 
     .case-study__image {
@@ -1614,8 +1706,8 @@
     }
 
     .about__images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: var(--space-md);
     }
 
@@ -1627,16 +1719,8 @@
 
     .about__image img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .about__image--large {
-      grid-column: span 2;
-    }
-
-    .about__image--large img {
-      height: 220px;
+      height: auto;
+      object-fit: contain;
     }
 
     .about__text h3 {
@@ -1676,6 +1760,16 @@
     .guarantee__icon {
       font-size: 56px;
       margin-bottom: var(--space-lg);
+    }
+
+    .guarantee__badge {
+      max-width: 150px;
+      margin: 0 auto var(--space-lg);
+    }
+
+    .guarantee__badge img {
+      width: 100%;
+      height: auto;
     }
 
     .guarantee__title {
@@ -1822,7 +1916,7 @@
       font-size: 15px;
       color: var(--text-muted);
       margin-bottom: var(--space-md);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .cost-total__amount {
@@ -1970,20 +2064,28 @@
 
         <div class="hero__proof animate-fade-up delay-4">
           <span class="hero__proof-number">4,400+</span>
-          <span class="hero__proof-text">high-income earners used this system to stop losing<br>money to taxes and start building real wealth.</span>
+          <span class="hero__proof-text">high-income earners used this system to cut taxes and build real wealth.</span>
+        </div>
+      </div>
+
+      <div class="hero__video-col">
+        <div class="hero__video">
+          <div class="hero__video-wrapper">
+            <iframe src="https://player.vimeo.com/video/1151508707?autoplay=0&title=0&byline=0&wmode=transparent&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
 
-        <div class="hero__cta-group animate-fade-up delay-5">
-          <a href="https://managemoney101.com/ticket" class="btn-primary">
+        <div class="hero__cta-row animate-fade-up delay-4">
+          <a href="#choose-ticket" class="btn-primary">
             Claim Your Ticket Now
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
           <span class="btn-subtitle">Jan 30th - Feb 1st | 10 AM - 4 PM EST</span>
         </div>
 
-        <div class="countdown">
+        <div class="countdown animate-fade-up delay-5">
           <p class="countdown__label">Early Bird Pricing Ends Soon</p>
           <div class="countdown__timer">
             <div class="countdown__block">
@@ -2002,16 +2104,10 @@
               <div class="countdown__number" id="secs">11</div>
               <div class="countdown__unit">Sec</div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__video">
-        <div class="hero__video-wrapper">
-          <iframe src="https://player.vimeo.com/video/1151508707?autoplay=0&title=0&byline=0&wmode=transparent&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -2098,17 +2194,6 @@
 </section>
 
 <!-- ============================================
-     TARGET AUDIENCE
-     ============================================ -->
-<section class="target-audience">
-  <div class="lw-container">
-    <h2 class="target-audience__headline">
-      Whether you're making <span class="target-audience__highlight">$60K, $150K, or $300K/year</span>... this challenge is for YOU... because it was built by people like YOU!
-    </h2>
-  </div>
-</section>
-
-<!-- ============================================
      PROBLEM SECTION
      ============================================ -->
 <section class="problem">
@@ -2181,16 +2266,27 @@
      ============================================ -->
 <section class="pyramid">
   <div class="lw-container">
-    <div class="pyramid__intro">
+    <div class="pyramid__header">
       <p class="section-label">The System</p>
       <h2 class="section-title">The 5-Pillar Wealth Building Framework</h2>
-      <p>If it's 2026 and you still don't have a complete wealth plan, you're not behind. <strong>You're exactly where the system wants you.</strong></p>
-      <p>The IRS isn't worried about you learning these strategies. They're counting on you never implementing them. Your bank loves that you keep money sitting there "until you figure out what to do with it."</p>
-      <p>The financial industry profits when you stay confused about which moves to make first. Confused people procrastinate. And procrastination keeps you exactly where you are.</p>
-      <p><strong>I've broken wealth building into specific pillars that stack on each other.</strong> For each one, we'll teach you exactly how to do it step by step. Think of it like a pyramid...</p>
     </div>
 
-    <div class="pyramid__steps">
+    <div class="pyramid__grid">
+      <div class="pyramid__left">
+        <div class="pyramid__intro">
+          <p>If it's 2026 and you still don't have a complete wealth plan, you're not behind. <strong>You're exactly where the system wants you.</strong></p>
+          <p>The IRS isn't worried about you learning these strategies. They're counting on you never implementing them. Your bank loves that you keep money sitting there "until you figure out what to do with it."</p>
+          <p>The financial industry profits when you stay confused about which moves to make first. Confused people procrastinate. And procrastination keeps you exactly where you are.</p>
+          <p><strong>I've broken wealth building into specific pillars that stack on each other.</strong> For each one, we'll teach you exactly how to do it step by step. Think of it like a pyramid...</p>
+        </div>
+
+        <div class="pyramid__image">
+          <img src="assets/images/06-preston-basement.png" alt="Wealth Building Pyramid - Tax-Free Investment Vehicle" loading="lazy">
+        </div>
+      </div>
+
+      <div class="pyramid__right">
+        <div class="pyramid__steps">
       <div class="pyramid__step">
         <span class="pyramid__step-icon">🏦</span>
         <div class="pyramid__step-content">
@@ -2226,6 +2322,8 @@
           <p>And finally, you protect it all through the right entity structures so you can pass it across generations like the wealthy!</p>
         </div>
       </div>
+        </div>
+      </div>
     </div>
 
     <div class="pyramid__result">
@@ -2254,7 +2352,7 @@
       <p class="picture-this__tagline">...all WITHOUT having to quit your job and risk your family's financial stability!</p>
 
       <div style="margin-top: var(--space-xl);">
-        <a href="https://managemoney101.com/ticket" class="btn-primary">
+        <a href="#choose-ticket" class="btn-primary">
           Claim Your Ticket Now
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -2279,13 +2377,13 @@
     <div class="story__content">
       <div class="story__images">
         <div class="story__image">
-          <img src="assets/images/06-preston-basement.png" alt="Preston in parents' basement">
+          <img src="assets/images/08-preston-bridget-early.png" alt="Preston in parents' basement" loading="lazy">
         </div>
         <div class="story__image">
-          <img src="assets/images/07-preston-wife-bridget.png" alt="Preston with wife Bridget">
+          <img src="assets/images/07-preston-wife-bridget.png" alt="Preston with wife Bridget" loading="lazy">
         </div>
         <div class="story__image story__image--large">
-          <img src="assets/images/10-preston-family.png" alt="Preston family">
+          <img src="assets/images/10-preston-family.png" alt="Preston family" loading="lazy">
         </div>
       </div>
 
@@ -2452,12 +2550,12 @@
     </div>
 
     <div class="screenshots__grid">
-      <div class="screenshot"><img src="assets/images/11-social-proof-1.png" alt="Testimonial"></div>
-      <div class="screenshot"><img src="assets/images/12-social-proof-2.png" alt="Testimonial"></div>
-      <div class="screenshot"><img src="assets/images/13-social-proof-3.png" alt="Testimonial"></div>
-      <div class="screenshot"><img src="assets/images/14-social-proof-4.png" alt="Testimonial"></div>
-      <div class="screenshot"><img src="assets/images/15-social-proof-5.png" alt="Testimonial"></div>
-      <div class="screenshot"><img src="assets/images/16-social-proof-6.png" alt="Testimonial"></div>
+      <div class="screenshot"><img src="assets/images/11-social-proof-1.png" alt="Testimonial" loading="lazy"></div>
+      <div class="screenshot"><img src="assets/images/12-social-proof-2.png" alt="Testimonial" loading="lazy"></div>
+      <div class="screenshot"><img src="assets/images/13-social-proof-3.png" alt="Testimonial" loading="lazy"></div>
+      <div class="screenshot"><img src="assets/images/14-social-proof-4.png" alt="Testimonial" loading="lazy"></div>
+      <div class="screenshot"><img src="assets/images/15-social-proof-5.png" alt="Testimonial" loading="lazy"></div>
+      <div class="screenshot"><img src="assets/images/16-social-proof-6.png" alt="Testimonial" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -2530,7 +2628,7 @@
 <!-- ============================================
      PRICING
      ============================================ -->
-<section class="pricing">
+<section class="pricing" id="choose-ticket">
   <div class="lw-container">
     <div class="section-header">
       <p class="section-label">Choose Your Ticket</p>
@@ -2603,7 +2701,7 @@
     <!-- Case Study 1: Dustin -->
     <div class="case-study">
       <div class="case-study__image">
-        <img src="assets/images/20-dustin-cotten.png" alt="Dustin Cotten">
+        <img src="assets/images/20-dustin-cotten.png" alt="Dustin Cotten" loading="lazy">
       </div>
       <div class="case-study__content">
         <h3 class="case-study__name">Dustin Cotten</h3>
@@ -2633,7 +2731,7 @@
     <!-- Case Study 2: Galin -->
     <div class="case-study">
       <div class="case-study__image">
-        <img src="assets/images/21-galin-case-study.png" alt="Galin">
+        <img src="assets/images/21-galin-icon.png" alt="Galin" loading="lazy">
       </div>
       <div class="case-study__content">
         <h3 class="case-study__name">Galin</h3>
@@ -2665,10 +2763,7 @@
     </div>
 
     <!-- Case Study 3: Abigail -->
-    <div class="case-study">
-      <div class="case-study__image">
-        <img src="assets/images/23-abigail-case-study.png" alt="Abigail">
-      </div>
+    <div class="case-study case-study--no-image">
       <div class="case-study__content">
         <h3 class="case-study__name">Abigail</h3>
         <p class="case-study__tagline">Eliminating Taxes and Building Early Freedom</p>
@@ -2708,10 +2803,10 @@
     <div class="about__content">
       <div class="about__images">
         <div class="about__image">
-          <img src="assets/images/24-preston-about-1.png" alt="Preston">
+          <img src="assets/images/24-preston-about-1.png" alt="Preston featured alongside Ray Dalio, Robert Kiyosaki, Daymond John" loading="lazy">
         </div>
         <div class="about__image">
-          <img src="assets/images/25-preston-about-2.webp" alt="Preston">
+          <img src="assets/images/23-abigail-case-study.png" alt="Preston with Pace Morby and Dean Graziosi" loading="lazy">
         </div>
       </div>
 
@@ -2733,7 +2828,9 @@
 <section class="guarantee">
   <div class="lw-container">
     <div class="guarantee__content">
-      <div class="guarantee__icon">🛡️</div>
+      <div class="guarantee__badge">
+        <img src="assets/images/25-preston-about-2.webp" alt="Money Back Guarantee Badge" loading="lazy">
+      </div>
       <h3 class="guarantee__title">100% Risk-Free Guarantee</h3>
       <p class="guarantee__text">We're confident that in just 3 days you'll walk away with a real plan to finally take control of your money. That means knowing where it's going, how to stop the leaks, and how to put it to work building wealth.</p>
       <p class="guarantee__text" style="margin-top: var(--space-md);">Join the full challenge. Go through every session. Take the notes, do the exercises, see what your plan looks like.</p>
@@ -2888,7 +2985,7 @@
   <div class="lw-container">
     <h2 class="final-cta__title">So, What Are You Waiting For?</h2>
 
-    <a href="https://managemoney101.com/ticket" class="btn-primary">
+    <a href="#choose-ticket" class="btn-primary">
       Claim Your Ticket Now
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M5 12h14M12 5l7 7-7 7"/>
