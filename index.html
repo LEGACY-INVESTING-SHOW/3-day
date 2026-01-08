@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,500;0,600;0,700;1,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"></noscript>
+  <!-- Prevent Flash of Unstyled Content (FOUC) for dark mode -->
+  <script>
+    (function(){var t=localStorage.getItem('legacy-wealth-theme');if(t==='dark'||(t==null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}})();
+  </script>
   <style>
     /* ============================================
        LIGHT MODE DIRECT RESPONSE DESIGN SYSTEM
@@ -18,10 +22,23 @@
     :root {
       /* Light Mode Core Palette */
       --white: #ffffff;
-      --cream: #faf9f6;
-      --cream-dark: #f5f3ef;
+      --cream: #f3ede4;
+      --cream-dark: #ebe5da;
       --warm-gray: #e8e5e0;
       --border-light: #d4d0c8;
+
+      /* Shadow System (Josh W. Comeau technique) */
+      --shadow-color: 220deg 60% 10%;
+      --shadow-card:
+        0 1px 1px hsl(var(--shadow-color) / 0.04),
+        0 2px 2px hsl(var(--shadow-color) / 0.04),
+        0 4px 4px hsl(var(--shadow-color) / 0.04),
+        0 8px 8px hsl(var(--shadow-color) / 0.04);
+      --shadow-card-hover:
+        0 2px 2px hsl(var(--shadow-color) / 0.04),
+        0 4px 4px hsl(var(--shadow-color) / 0.04),
+        0 8px 8px hsl(var(--shadow-color) / 0.04),
+        0 16px 16px hsl(var(--shadow-color) / 0.04);
 
       /* Text Colors */
       --text-primary: #1a1a1a;
@@ -56,6 +73,289 @@
       --space-2xl: 64px;
       --space-3xl: 96px;
       --space-4xl: 128px;
+    }
+
+    /* ============================================
+       DARK MODE - "Midnight Vault" Theme
+       Luxurious, refined, wealth-focused
+       ============================================ */
+    [data-theme="dark"] {
+      /* Dark Mode Core Palette */
+      --white: #0f0f12;
+      --cream: #161619;
+      --cream-dark: #1a1a1e;
+      --warm-gray: #1e1e22;
+      --border-light: #2a2a30;
+
+      /* Shadow System - softer for dark mode */
+      --shadow-color: 220deg 80% 2%;
+      --shadow-card:
+        0 1px 2px hsl(var(--shadow-color) / 0.3),
+        0 2px 4px hsl(var(--shadow-color) / 0.25),
+        0 4px 8px hsl(var(--shadow-color) / 0.2),
+        0 8px 16px hsl(var(--shadow-color) / 0.15);
+      --shadow-card-hover:
+        0 2px 4px hsl(var(--shadow-color) / 0.3),
+        0 4px 8px hsl(var(--shadow-color) / 0.25),
+        0 8px 16px hsl(var(--shadow-color) / 0.2),
+        0 16px 32px hsl(var(--shadow-color) / 0.15),
+        0 0 40px rgba(212, 160, 23, 0.08);
+
+      /* Text Colors - warm cream tones */
+      --text-primary: #f5f2ed;
+      --text-secondary: #c4c0b8;
+      --text-muted: #8f8b83;
+      --text-light: #6b6860;
+
+      /* Accent Colors - more luminous gold */
+      --gold: #d4a817;
+      --gold-dark: #e8bc2a;
+      --gold-light: #f0d04a;
+      --gold-glow: rgba(212, 168, 23, 0.15);
+      --gold-border: rgba(212, 168, 23, 0.35);
+
+      /* Functional Colors - adjusted for dark */
+      --success: #3cb043;
+      --success-light: rgba(60, 176, 67, 0.15);
+      --danger: #e85d6f;
+      --danger-light: rgba(232, 93, 111, 0.12);
+      --navy: #0a0f16;
+    }
+
+    /* Dark mode transitions */
+    body,
+    .hero,
+    .testimonials,
+    .problem,
+    .pyramid,
+    .picture-this,
+    .story,
+    .challenge,
+    .pricing,
+    .guarantee,
+    .faq,
+    .cost-waiting,
+    .warning,
+    .final-cta,
+    .social-proof-bar,
+    .target-audience,
+    .case-studies,
+    .footer,
+    .testimonial-card,
+    .pricing-card,
+    .day-card,
+    .cost-card,
+    .guru-card,
+    .pyramid__step,
+    .countdown__block,
+    .hero__badge,
+    .hero__proof,
+    .problem__emphasis,
+    .case-study,
+    .guarantee__box,
+    .cost-total,
+    .warning__content {
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    /* Dark Mode Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 9999;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-border);
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.08);
+      border-color: var(--gold);
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2), 0 0 20px var(--gold-glow);
+    }
+
+    .theme-toggle__icon {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+
+    .theme-toggle__sun,
+    .theme-toggle__moon {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+
+    .theme-toggle__sun {
+      color: var(--gold);
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+
+    .theme-toggle__moon {
+      color: var(--gold-light);
+      opacity: 0;
+      transform: rotate(-90deg) scale(0.5);
+    }
+
+    [data-theme="dark"] .theme-toggle__sun {
+      opacity: 0;
+      transform: rotate(90deg) scale(0.5);
+    }
+
+    [data-theme="dark"] .theme-toggle__moon {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+
+    /* Mobile toggle position */
+    @media (max-width: 768px) {
+      .theme-toggle {
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+      }
+
+      .theme-toggle__sun,
+      .theme-toggle__moon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    /* Dark mode specific overrides */
+    [data-theme="dark"] .hero {
+      background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+    }
+
+    [data-theme="dark"] .hero__video-wrapper {
+      border-color: var(--border-light);
+      box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 168, 23, 0.05);
+    }
+
+    [data-theme="dark"] .btn-primary {
+      background: linear-gradient(135deg, var(--gold) 0%, #a67c00 100%);
+      box-shadow: 0 4px 24px rgba(212, 168, 23, 0.4);
+    }
+
+    [data-theme="dark"] .btn-primary:hover {
+      box-shadow: 0 8px 36px rgba(212, 168, 23, 0.55), 0 0 20px rgba(212, 168, 23, 0.2);
+    }
+
+    [data-theme="dark"] .testimonial-card,
+    [data-theme="dark"] .pricing-card,
+    [data-theme="dark"] .day-card,
+    [data-theme="dark"] .cost-card,
+    [data-theme="dark"] .guru-card,
+    [data-theme="dark"] .pyramid__step,
+    [data-theme="dark"] .case-study {
+      background: #1a1a1e;
+      border-color: #2a2a30;
+    }
+
+    [data-theme="dark"] .countdown__block {
+      background: #1a1a1e;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    [data-theme="dark"] .hero__badge {
+      background: #1a1a1e;
+      border-color: var(--gold-border);
+    }
+
+    [data-theme="dark"] .hero__proof {
+      background: #1a1a1e;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    [data-theme="dark"] .problem__emphasis {
+      background: #1a1a1e;
+    }
+
+    [data-theme="dark"] .guru-card__icon {
+      background: #0f0f12;
+    }
+
+    [data-theme="dark"] .pyramid__result {
+      background: linear-gradient(135deg, rgba(212, 168, 23, 0.12) 0%, rgba(22, 22, 25, 0.9) 100%);
+      border-color: var(--gold-border);
+    }
+
+    [data-theme="dark"] .guarantee__box {
+      background: #1a1a1e;
+      border-color: var(--success);
+      box-shadow: 0 8px 32px rgba(60, 176, 67, 0.12);
+    }
+
+    [data-theme="dark"] .cost-total {
+      background: #1a1a1e;
+      border-color: var(--danger);
+    }
+
+    [data-theme="dark"] .warning__content {
+      background: #1a1a1e;
+      border-color: #2a2a30;
+    }
+
+    [data-theme="dark"] .final-cta {
+      background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+    }
+
+    [data-theme="dark"] .social-proof-bar {
+      background: var(--white);
+      border-color: var(--border-light);
+    }
+
+    [data-theme="dark"] .social-proof-bar__logos {
+      filter: invert(1) brightness(0.85);
+    }
+
+    [data-theme="dark"] .faq-item {
+      border-color: var(--border-light);
+    }
+
+    [data-theme="dark"] .faq-item__question {
+      color: var(--text-primary);
+    }
+
+    [data-theme="dark"] .footer {
+      background: #06080a;
+    }
+
+    [data-theme="dark"] .pricing-card--featured {
+      background: linear-gradient(180deg, #1e1e24 0%, #161619 100%);
+      border-color: var(--gold);
+      box-shadow: 0 8px 40px rgba(212, 168, 23, 0.2), 0 0 30px rgba(212, 168, 23, 0.08);
+    }
+
+    [data-theme="dark"] .pricing-card--featured::before {
+      background: linear-gradient(135deg, var(--gold) 0%, #a67c00 100%);
+    }
+
+    /* Subtle gold glow effects in dark mode */
+    [data-theme="dark"] .section-label {
+      text-shadow: 0 0 20px rgba(212, 168, 23, 0.3);
+    }
+
+    [data-theme="dark"] .hero__headline em {
+      text-shadow: 0 0 30px rgba(212, 168, 23, 0.4);
+    }
+
+    [data-theme="dark"] .pyramid__result-amount {
+      text-shadow: 0 0 40px rgba(212, 168, 23, 0.5);
     }
 
     /* Reset & Base */
@@ -191,11 +491,12 @@
       font-family: var(--font-display);
       font-size: clamp(26px, 4vw, 44px);
       font-weight: 700;
-      line-height: 1.12;
+      line-height: 1.1;
       letter-spacing: -0.02em;
       max-width: 600px;
       margin-bottom: var(--space-sm);
       color: var(--text-primary);
+      text-wrap: balance;
     }
 
     .hero__headline em {
@@ -477,6 +778,7 @@
       padding: var(--space-4xl) 0;
       background: var(--cream);
       position: relative;
+      contain: layout style;
     }
 
     .section-header {
@@ -497,10 +799,12 @@
       font-family: var(--font-display);
       font-size: clamp(28px, 5vw, 48px);
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
       max-width: 800px;
       margin: 0 auto;
       color: var(--text-primary);
+      text-wrap: balance;
     }
 
     .section-subtitle {
@@ -528,18 +832,32 @@
     .testimonial-card {
       background: var(--white);
       border: 1px solid var(--border-light);
-      border-radius: 12px;
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
       padding: var(--space-xl);
+      padding-top: calc(var(--space-xl) + 8px);
       display: flex;
       flex-direction: column;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      left: var(--space-lg);
+      top: var(--space-md);
+      font-family: var(--font-display);
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--gold);
+      opacity: 0.25;
     }
 
     .testimonial-card:hover {
-      border-color: var(--gold-border);
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      box-shadow: var(--shadow-card-hover);
     }
 
     .testimonial-card__stars {
@@ -625,6 +943,7 @@
     .problem {
       padding: var(--space-4xl) 0;
       background: var(--cream);
+      contain: layout style;
     }
 
     .problem__content {
@@ -754,6 +1073,7 @@
     .pyramid {
       padding: var(--space-4xl) 0;
       background: var(--white);
+      contain: layout style;
     }
 
     .pyramid__header {
@@ -811,16 +1131,17 @@
       align-items: flex-start;
       gap: var(--space-lg);
       padding: var(--space-lg) var(--space-xl);
-      background: var(--cream);
-      border-radius: 12px;
+      background: var(--white);
+      border-radius: 8px;
       border: 1px solid var(--border-light);
-      transition: all 0.3s ease;
+      border-left: 3px solid var(--gold);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-card);
     }
 
     .pyramid__step:hover {
-      border-color: var(--gold-border);
-      background: var(--white);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card-hover);
     }
 
     .pyramid__step-icon {
@@ -1479,15 +1800,15 @@
     .pricing-card {
       background: var(--white);
       border: 2px solid var(--border-light);
-      border-radius: 20px;
+      border-radius: 12px;
       overflow: visible;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-card);
     }
 
     .pricing-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
     }
 
     .pricing-card--featured {
@@ -2046,9 +2367,66 @@
       font-size: 13px;
       color: rgba(255,255,255,0.5);
     }
+
+    /* ============================================
+       PERFORMANCE: Mobile Shadow Optimization
+       ============================================ */
+    @media (max-width: 768px) {
+      .testimonial-card,
+      .pricing-card,
+      .pyramid__step,
+      .case-study,
+      .day-card {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      }
+
+      .testimonial-card:hover,
+      .pricing-card:hover,
+      .pyramid__step:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      }
+    }
+
+    /* ============================================
+       ACCESSIBILITY: Reduced Motion
+       ============================================ */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .scroll-animate {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
 <body>
+
+<!-- Dark Mode Toggle -->
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+  <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+  <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
 
 <!-- ============================================
      HERO SECTION
@@ -3070,6 +3448,55 @@
      JAVASCRIPT
      ============================================ -->
 <script>
+  // Dark Mode Toggle with localStorage and system preference detection
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    const STORAGE_KEY = 'legacy-wealth-theme';
+
+    // Get stored preference or system preference
+    function getPreferredTheme() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) return stored;
+
+      // Check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    }
+
+    // Apply theme
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+      } else {
+        html.removeAttribute('data-theme');
+      }
+    }
+
+    // Initialize theme on page load
+    const initialTheme = getPreferredTheme();
+    applyTheme(initialTheme);
+
+    // Toggle handler
+    toggle?.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      applyTheme(newTheme);
+      localStorage.setItem(STORAGE_KEY, newTheme);
+    });
+
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      // Only auto-switch if user hasn't set a preference
+      if (!localStorage.getItem(STORAGE_KEY)) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  })();
+
   // FAQ Accordion
   document.querySelectorAll('.faq-item__question').forEach(button => {
     button.addEventListener('click', () => {
