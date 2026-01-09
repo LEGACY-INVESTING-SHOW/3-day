@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+/* ============================================
+   PREMIUM FINANCE DESIGN SYSTEM
+   "Obsidian Wealth" Theme
+   Clean, Minimalistic, High-Trust Finance
+   ============================================ */
+
+@theme {
+  /* Color System - Sophisticated Finance Palette */
+
+  /* Base Neutrals - Warm undertones */
+  --color-slate-50: #f8f9fa;
+  --color-slate-100: #f1f3f5;
+  --color-slate-200: #e9ecef;
+  --color-slate-300: #dee2e6;
+  --color-slate-400: #adb5bd;
+  --color-slate-500: #6c757d;
+  --color-slate-600: #495057;
+  --color-slate-700: #343a40;
+  --color-slate-800: #212529;
+  --color-slate-900: #16191d;
+  --color-slate-950: #0d0f12;
+
+  /* Primary - Deep Navy (Trust, Authority) */
+  --color-primary-50: #f0f4f8;
+  --color-primary-100: #d9e2ec;
+  --color-primary-200: #bcccdc;
+  --color-primary-300: #9fb3c8;
+  --color-primary-400: #829ab1;
+  --color-primary-500: #627d98;
+  --color-primary-600: #486581;
+  --color-primary-700: #334e68;
+  --color-primary-800: #243b53;
+  --color-primary-900: #102a43;
+  --color-primary-950: #0a1929;
+
+  /* Accent - Champagne Gold (Wealth, Premium) */
+  --color-accent-50: #fdfcf9;
+  --color-accent-100: #faf6ed;
+  --color-accent-200: #f5edda;
+  --color-accent-300: #ebe0c0;
+  --color-accent-400: #d4c494;
+  --color-accent-500: #bda76d;
+  --color-accent-600: #a08b4d;
+  --color-accent-700: #7d6b3a;
+  --color-accent-800: #5c4f2c;
+  --color-accent-900: #3d341e;
+  --color-accent-950: #231e11;
+
+  /* Success - Muted Emerald */
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+
+  /* Warning - Warm Amber */
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+
+  /* Error - Soft Coral */
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+
+  /* Typography */
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+
+  /* Spacing - Refined scale */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+
+  /* Border Radius */
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  /* Custom Shadows - Layered depth */
+  --shadow-soft: 0 2px 8px -2px rgba(0, 0, 0, 0.05), 0 4px 16px -4px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 8px 24px -4px rgba(0, 0, 0, 0.12);
+  --shadow-floating: 0 8px 24px -4px rgba(0, 0, 0, 0.1), 0 16px 48px -8px rgba(0, 0, 0, 0.15);
+  --shadow-glow-gold: 0 0 40px rgba(189, 167, 109, 0.15);
+
+  /* Animation */
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-fade-in: fade-in 0.4s ease-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-slate-50);
+  color: var(--color-slate-800);
+  line-height: 1.6;
+}
+
+/* ============================================
+   DARK MODE - "Obsidian Wealth"
+   Deep, luxurious, warm undertones
+   ============================================ */
+
+.dark body {
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-200);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Dark mode surface layers */
+.dark .surface-base {
+  background-color: var(--color-slate-950);
+}
+
+.dark .surface-card {
+  background-color: var(--color-slate-900);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark .surface-elevated {
+  background-color: var(--color-slate-800);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text gradient */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-400) 50%, var(--color-accent-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect for cards */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(22, 25, 29, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle border */
+.border-subtle {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.dark .border-subtle {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Premium card hover effect */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-floating);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(189, 167, 109, 0.08);
+}
+
+/* Scroll animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
