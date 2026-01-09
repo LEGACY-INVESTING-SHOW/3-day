@@ -6,13 +6,21 @@
   <title>Tax-Free Income Challenge | Preston Seo</title>
   <meta name="description" content="Join the 3-Day Tax-Free Income Challenge with Preston Seo. Learn how to legally reduce your taxes, build tax-free wealth, and create monthly cash flow using proven strategies.">
 
-  <!-- Fonts -->
+  <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://vumbnail.com" crossorigin>
+  <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+
+  <!-- Preload LCP image for faster initial render -->
+  <link rel="preload" as="image" href="https://vumbnail.com/1151508707.jpg" fetchpriority="high">
 
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="dist/output.css">
+
+  <!-- Fonts - Load asynchronously to prevent render blocking -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet"></noscript>
 
 
   <style>
@@ -24,18 +32,24 @@
       background-clip: text;
     }
 
-    .font-display { font-family: 'Newsreader', Georgia, serif; }
-    .font-body { font-family: 'Inter', system-ui, sans-serif; }
+    /* System font stack fallbacks for immediate text rendering */
+    .font-display { font-family: 'Newsreader', Georgia, 'Times New Roman', serif; }
+    .font-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
 
-    /* Scroll animations */
+    /* Ensure fonts don't cause layout shift */
+    html { font-size: 16px; }
+    body { font-synthesis: none; text-rendering: optimizeSpeed; }
+
+    /* Scroll animations - GPU accelerated */
     .reveal {
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translate3d(0, 30px, 0);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      will-change: opacity, transform;
     }
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
 
     /* Glass effect */
@@ -166,6 +180,30 @@
         display: none;
       }
 
+      /* Reduce animations on mobile for better performance */
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+      }
+      .reveal.visible {
+        transform: none;
+      }
+
+      /* Disable hover animations on mobile */
+      .group-hover\:scale-105,
+      .group-hover\:scale-110,
+      .hover\:scale-\[1\.02\] {
+        transform: none !important;
+      }
+
+      /* Simplify pulse animations */
+      .animate-pulse {
+        animation: none;
+        opacity: 1;
+      }
+
       /* Testimonial cards */
       .space-y-8 > * {
         margin-top: 1.25rem;
@@ -179,6 +217,24 @@
       /* Fix text gradient on mobile */
       .text-gradient-gold {
         display: inline;
+      }
+    }
+
+    /* Respect user preference for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+      }
+      .animate-pulse {
+        animation: none;
+      }
+      * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
       }
     }
 
@@ -288,7 +344,7 @@
       <div class="space-y-6">
         <!-- Video -->
         <div id="vimeo-facade" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-2xl cursor-pointer group">
-          <img src="https://vumbnail.com/1151508707.jpg" alt="Watch the Tax-Free Income Challenge video" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="eager">
+          <img src="https://vumbnail.com/1151508707.jpg" alt="Watch the Tax-Free Income Challenge video" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="640" height="360" fetchpriority="high" decoding="async">
           <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -344,8 +400,8 @@
     <div class="flex flex-col items-center gap-6 md:gap-8">
       <span class="text-sm font-medium text-slate-400 uppercase tracking-wider">As Featured In</span>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12 w-full">
-        <img src="assets/images/04-as-featured-in-logos.webp" alt="Featured publications" class="h-16 sm:h-20 md:h-24 object-contain brightness-90 contrast-125" loading="lazy">
-        <img src="trustpilot.png" alt="Trustpilot Rating" class="h-12 sm:h-14 md:h-16 object-contain brightness-90" loading="lazy">
+        <img src="assets/images/04-as-featured-in-logos.webp" alt="Featured publications" class="h-16 sm:h-20 md:h-24 object-contain brightness-90 contrast-125" width="400" height="96" loading="lazy" decoding="async">
+        <img src="trustpilot.png" alt="Trustpilot Rating" class="h-12 sm:h-14 md:h-16 object-contain brightness-90" width="200" height="64" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -379,7 +435,7 @@
           "We're both full-time & have a daughter. We didn't wanna just stumble around in the dark. If you wanna get out of the 9-to-5, here's how to do it. It's such a blessing."
         </p>
         <div class="flex items-center gap-4">
-          <img src="assets/images/01-testimonial-stephen-ellie.webp" alt="Stephen & Ellie" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" loading="lazy">
+          <img src="assets/images/01-testimonial-stephen-ellie.webp" alt="Stephen & Ellie" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
           <div>
             <div class="font-semibold text-white">Stephen & Ellie</div>
             <div class="text-sm text-slate-400">Full-time Nurses, Kansas City</div>
@@ -400,7 +456,7 @@
           "When we talk about Preston doing an absolute masterclass on how to do this... I couldn't give it a bigger endorsement. It's about as legit as it gets."
         </p>
         <div class="flex items-center gap-4">
-          <img src="assets/images/02-testimonial-rob.webp" alt="Rob" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" loading="lazy">
+          <img src="assets/images/02-testimonial-rob.webp" alt="Rob" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
           <div>
             <div class="font-semibold text-white">Rob</div>
             <div class="text-sm text-slate-400">Marketing Director, Louisville</div>
@@ -421,7 +477,7 @@
           "I've never been someone who just 'gets it' the first time. It has been leaps and bounds, and worth it. Every step is well thought out."
         </p>
         <div class="flex items-center gap-4">
-          <img src="assets/images/03-testimonial-kristopher.webp" alt="Kristopher" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" loading="lazy">
+          <img src="assets/images/03-testimonial-kristopher.webp" alt="Kristopher" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
           <div>
             <div class="font-semibold text-white">Kristopher Bamford</div>
             <div class="text-sm text-slate-400">Husband & Dad, Louisiana</div>
@@ -489,13 +545,13 @@
       <!-- Images -->
       <div class="reveal grid grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img src="assets/images/08-preston-bridget-early.webp" alt="Preston in parents' basement" class="w-full h-48 object-cover" loading="lazy">
+          <img src="assets/images/08-preston-bridget-early.webp" alt="Preston in parents' basement" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
         </div>
         <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img src="assets/images/07-preston-wife-bridget.webp" alt="Preston with wife Bridget" class="w-full h-48 object-cover" loading="lazy">
+          <img src="assets/images/07-preston-wife-bridget.webp" alt="Preston with wife Bridget" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
         </div>
         <div class="col-span-2 rounded-2xl overflow-hidden shadow-lg">
-          <img src="assets/images/10-preston-family.webp" alt="Preston family" class="w-full h-64 object-cover" loading="lazy">
+          <img src="assets/images/10-preston-family.webp" alt="Preston family" class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -657,7 +713,7 @@
           This framework gives you the exact order of operations - which moves to make first, second, and third.
         </p>
         <div class="rounded-2xl overflow-hidden shadow-xl">
-          <img src="assets/images/06-preston-basement.webp" alt="Preston Seo" class="w-full" loading="lazy">
+          <img src="assets/images/06-preston-basement.webp" alt="Preston Seo" class="w-full" width="500" height="400" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -874,22 +930,22 @@
     <!-- Screenshots Grid -->
     <div class="reveal grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="assets/images/11-social-proof-1.webp" alt="Testimonial" class="w-full h-auto" loading="lazy">
+        <img src="assets/images/11-social-proof-1.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="assets/images/12-social-proof-2.webp" alt="Testimonial" class="w-full h-auto" loading="lazy">
+        <img src="assets/images/12-social-proof-2.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="assets/images/13-social-proof-3.webp" alt="Testimonial" class="w-full h-auto" loading="lazy">
+        <img src="assets/images/13-social-proof-3.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="assets/images/14-social-proof-4.webp" alt="Testimonial" class="w-full h-auto" loading="lazy">
+        <img src="assets/images/14-social-proof-4.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="assets/images/15-social-proof-5.webp" alt="Testimonial" class="w-full h-auto" loading="lazy">
+        <img src="assets/images/15-social-proof-5.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="assets/images/16-social-proof-6.webp" alt="Testimonial" class="w-full h-auto" loading="lazy">
+        <img src="assets/images/16-social-proof-6.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -1168,7 +1224,7 @@
     <!-- Case Study 1 -->
     <div class="reveal grid md:grid-cols-2 gap-12 items-center mb-20">
       <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="assets/images/20-dustin-cotten.webp" alt="Dustin Cotten" class="w-full" loading="lazy">
+        <img src="assets/images/20-dustin-cotten.webp" alt="Dustin Cotten" class="w-full" width="500" height="400" loading="lazy" decoding="async">
       </div>
       <div>
         <h3 class="text-2xl font-semibold text-white mb-2">Dustin Cotten</h3>
@@ -1200,7 +1256,7 @@
     <!-- Case Study 2 -->
     <div class="reveal grid md:grid-cols-2 gap-12 items-center">
       <div class="md:order-2 rounded-2xl overflow-hidden shadow-xl">
-        <img src="assets/images/21-galin-icon.webp" alt="Galin" class="w-full" loading="lazy">
+        <img src="assets/images/21-galin-icon.webp" alt="Galin" class="w-full" width="500" height="400" loading="lazy" decoding="async">
       </div>
       <div class="md:order-1">
         <h3 class="text-2xl font-semibold text-white mb-2">Galin</h3>
@@ -1267,10 +1323,10 @@
       <!-- Images -->
       <div class="reveal space-y-4">
         <div class="img-zoom rounded-2xl overflow-hidden shadow-lg border border-slate-700/50 hover:border-amber-500/30 transition-colors duration-300">
-          <img src="assets/images/24-preston-about-1.webp" alt="Preston featured alongside Ray Dalio, Robert Kiyosaki, Daymond John" class="w-full" loading="lazy">
+          <img src="assets/images/24-preston-about-1.webp" alt="Preston featured alongside Ray Dalio, Robert Kiyosaki, Daymond John" class="w-full" width="500" height="350" loading="lazy" decoding="async">
         </div>
         <div class="img-zoom rounded-2xl overflow-hidden shadow-lg border border-slate-700/50 hover:border-amber-500/30 transition-colors duration-300">
-          <img src="assets/images/23-abigail-case-study.webp" alt="Preston with Pace Morby and Dean Graziosi" class="w-full" loading="lazy">
+          <img src="assets/images/23-abigail-case-study.webp" alt="Preston with Pace Morby and Dean Graziosi" class="w-full" width="500" height="350" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -1511,63 +1567,76 @@
 </footer>
 
 <!-- ═══════════════════════════════════════════════════
-     JAVASCRIPT
+     JAVASCRIPT - Optimized for mobile performance
      ═══════════════════════════════════════════════════ -->
 <script>
-  // Vimeo Facade
+  // Check if mobile for performance optimizations
+  const isMobile = window.innerWidth < 640 || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  // Vimeo Facade - Lazy load video only when clicked
   document.getElementById('vimeo-facade')?.addEventListener('click', function() {
-    this.innerHTML = '<iframe src="https://player.vimeo.com/video/1151508707?autoplay=1&title=0&byline=0&wmode=transparent&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="w-full h-full absolute inset-0"></iframe>';
+    this.innerHTML = '<iframe src="https://player.vimeo.com/video/1151508707?autoplay=1&title=0&byline=0&wmode=transparent&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="w-full h-full absolute inset-0" loading="lazy"></iframe>';
   });
 
-  // Countdown Timer
+  // Countdown Timer - Optimized with requestAnimationFrame
   (function() {
     const target = new Date('2026-01-30T10:00:00-05:00').getTime();
+    const elements = {};
+    ['days', 'hours', 'mins', 'secs'].forEach(id => {
+      elements[id] = document.getElementById(id);
+      elements[id + '2'] = document.getElementById(id + '2');
+    });
+
+    let lastValues = {};
     function update() {
-      const now = Date.now();
-      const diff = target - now;
+      const diff = target - Date.now();
       if (diff <= 0) return;
 
       const d = Math.floor(diff / 86400000);
       const h = Math.floor((diff % 86400000) / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
+      const vals = { days: d, hours: h, mins: m, secs: s };
 
-      ['days', 'hours', 'mins', 'secs'].forEach((id, i) => {
-        const val = [d, h, m, s][i];
-        const el = document.getElementById(id);
-        const el2 = document.getElementById(id + '2');
-        if (el) el.textContent = val;
-        if (el2) el2.textContent = val;
-      });
+      // Only update DOM if value changed
+      for (const key in vals) {
+        if (lastValues[key] !== vals[key]) {
+          if (elements[key]) elements[key].textContent = vals[key];
+          if (elements[key + '2']) elements[key + '2'].textContent = vals[key];
+          lastValues[key] = vals[key];
+        }
+      }
     }
     update();
     setInterval(update, 1000);
   })();
 
-  // Sticky Header
-  (function() {
-    const header = document.getElementById('sticky-header');
-    const hero = document.querySelector('section');
-    if (!header || !hero) return;
+  // Sticky Header - Only init if not on mobile (saves resources)
+  if (!isMobile) {
+    (function() {
+      const header = document.getElementById('sticky-header');
+      const hero = document.querySelector('section');
+      if (!header || !hero) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        header.classList.add('-translate-y-full', 'opacity-0');
-      } else {
-        header.classList.remove('-translate-y-full', 'opacity-0');
-      }
-    }, { threshold: 0 });
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          header.classList.add('-translate-y-full', 'opacity-0');
+        } else {
+          header.classList.remove('-translate-y-full', 'opacity-0');
+        }
+      }, { threshold: 0 });
 
-    observer.observe(hero);
+      observer.observe(hero);
 
-    // Update sticky countdown
-    setInterval(() => {
-      const d = document.getElementById('days')?.textContent || '0';
-      const h = document.getElementById('hours')?.textContent || '0';
-      const el = document.getElementById('sticky-countdown');
-      if (el) el.textContent = `${d}d ${h}h`;
-    }, 1000);
-  })();
+      // Update sticky countdown less frequently
+      setInterval(() => {
+        const d = document.getElementById('days')?.textContent || '0';
+        const h = document.getElementById('hours')?.textContent || '0';
+        const el = document.getElementById('sticky-countdown');
+        if (el) el.textContent = `${d}d ${h}h`;
+      }, 2000);
+    })();
+  }
 
   // FAQ Accordion
   document.querySelectorAll('.faq-question').forEach(btn => {
@@ -1589,16 +1658,22 @@
     });
   });
 
-  // Scroll Reveal
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  // Scroll Reveal - Skip on mobile for performance (animations disabled in CSS)
+  if (!isMobile) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target); // Stop observing once revealed
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  } else {
+    // On mobile, just show everything immediately
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
 
 </script>
 
