@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="dark scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,8 +87,17 @@
 
     @media (max-width: 640px) {
       .blur-3xl { display: none; }
-      .countdown-number { min-width: 48px; }
+      .countdown-number { min-width: 40px; }
       .btn-glow { width: 100%; justify-content: center; }
+      /* Prevent any element from causing horizontal overflow */
+      img, video, iframe { max-width: 100%; height: auto; }
+      table { display: block; overflow-x: auto; }
+    }
+
+    /* Global overflow prevention */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -98,7 +107,7 @@
   </style>
 </head>
 
-<body class="font-body bg-[#0a0a0f] text-slate-200 antialiased">
+<body class="font-body bg-[#0a0a0f] text-slate-200 antialiased overflow-x-hidden">
 
 <!-- SVG Sprite Definitions (hidden) -->
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
@@ -1342,26 +1351,26 @@
     <p class="text-slate-400 mt-4">Jan 30th - Feb 1st | 10 AM - 4 PM EST</p>
 
     <!-- Countdown -->
-    <div class="mt-12 inline-flex items-center gap-6 px-8 py-4 bg-white/5 rounded-2xl border border-amber-500/20 shadow-[0_0_30px_rgba(245,158,11,0.1)]">
+    <div class="mt-12 inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-6 px-4 sm:px-8 py-4 bg-white/5 rounded-2xl border border-amber-500/20 shadow-[0_0_30px_rgba(245,158,11,0.1)] max-w-full">
       <span class="text-slate-400 text-sm">Early Bird Ends:</span>
-      <div class="flex gap-4 text-white">
+      <div class="flex gap-2 sm:gap-4 text-white">
         <div class="text-center countdown-number">
-          <div id="days2" class="text-2xl font-bold text-amber-400">6</div>
+          <div id="days2" class="text-xl sm:text-2xl font-bold text-amber-400">6</div>
           <div class="text-xs text-slate-500">Days</div>
         </div>
         <span class="text-slate-600">:</span>
         <div class="text-center countdown-number">
-          <div id="hours2" class="text-2xl font-bold text-amber-400">20</div>
+          <div id="hours2" class="text-xl sm:text-2xl font-bold text-amber-400">20</div>
           <div class="text-xs text-slate-500">Hrs</div>
         </div>
         <span class="text-slate-600">:</span>
         <div class="text-center countdown-number">
-          <div id="mins2" class="text-2xl font-bold text-amber-400">11</div>
+          <div id="mins2" class="text-xl sm:text-2xl font-bold text-amber-400">11</div>
           <div class="text-xs text-slate-500">Min</div>
         </div>
         <span class="text-slate-600">:</span>
         <div class="text-center countdown-number">
-          <div id="secs2" class="text-2xl font-bold text-amber-400">11</div>
+          <div id="secs2" class="text-xl sm:text-2xl font-bold text-amber-400">11</div>
           <div class="text-xs text-slate-500">Sec</div>
         </div>
       </div>
