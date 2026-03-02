@@ -1,6 +1,98 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/challenge",
+      "destination": "/challenge/index.html"
+    },
+    {
+      "source": "/challenge/",
+      "destination": "/challenge/index.html"
+    },
+    {
+      "source": "/challenge2",
+      "destination": "/challenge2/index.html"
+    },
+    {
+      "source": "/challenge2/",
+      "destination": "/challenge2/index.html"
+    },
+    {
+      "source": "/challengeconfirmation",
+      "destination": "/challengeconfirmation.html"
+    },
+    {
+      "source": "/regularticket26",
+      "destination": "/regularticket26.html"
+    },
+    {
+      "source": "/vipticket26",
+      "destination": "/vipticket26.html"
+    },
+    {
+      "source": "/taxreport",
+      "destination": "/taxreport.html"
+    },
+    {
+      "source": "/taxreportvip",
+      "destination": "/taxreportvip.html"
+    },
+    {
+      "source": "/prepkit",
+      "destination": "/prepkit.html"
+    },
+    {
+      "source": "/prepkitvip",
+      "destination": "/prepkitvip.html"
+    },
+    {
+      "source": "/upgradevip",
+      "destination": "/upgradevip.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/challengeconfirmation.html",
+      "destination": "/challengeconfirmation",
+      "permanent": false
+    },
+    {
+      "source": "/regularticket26.html",
+      "destination": "/regularticket26",
+      "permanent": false
+    },
+    {
+      "source": "/vipticket26.html",
+      "destination": "/vipticket26",
+      "permanent": false
+    },
+    {
+      "source": "/taxreport.html",
+      "destination": "/taxreport",
+      "permanent": false
+    },
+    {
+      "source": "/taxreportvip.html",
+      "destination": "/taxreportvip",
+      "permanent": false
+    },
+    {
+      "source": "/prepkit.html",
+      "destination": "/prepkit",
+      "permanent": false
+    },
+    {
+      "source": "/prepkitvip.html",
+      "destination": "/prepkitvip",
+      "permanent": false
+    },
+    {
+      "source": "/upgradevip.html",
+      "destination": "/upgradevip",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*).webp",
