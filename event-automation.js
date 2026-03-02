@@ -11,8 +11,8 @@
 
   // Configuration
   const CONFIG = {
-    eventStartIso: '2026-02-27T10:00:00-05:00',
-    eventEndIso: '2026-03-01T16:00:00-05:00',
+    eventStartIso: '2026-03-27T10:00:00-04:00',
+    eventEndIso: '2026-03-29T16:00:00-04:00',
     timezone: 'EST'
   };
 
@@ -33,7 +33,7 @@
   }
 
   /**
-   * Format date as "Month Day" (e.g., "February 27")
+   * Format date as "Month Day" (e.g., "March 27")
    * @param {Date} date - Date to format
    * @returns {string} Formatted date string
    */
@@ -43,7 +43,7 @@
   }
 
   /**
-   * Format date as "Month Dayth" (e.g., "February 27th")
+   * Format date as "Month Dayth" (e.g., "March 27th")
    * @param {Date} date - Date to format
    * @returns {string} Formatted date string with ordinal
    */
