@@ -939,15 +939,25 @@
       <div class="checkout-grid">
         <!-- Left: Checkout Form -->
         <div class="checkout-form">
-          <div style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 0; padding: 0;">
+          <div style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 0; padding: 0; position: relative;">
             <iframe
               id="spiffy-inline-checkout"
               title="Secure VIP Checkout"
-              style="width: 100%; height: 1050px; border: 0; min-height: 760px; border-radius: var(--radius-lg); background: #ffffff;"
+              data-checkout-url="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip1234"
+              style="width: 100%; height: 1050px; border: 0; min-height: 760px; border-radius: var(--radius-lg); background: #ffffff; opacity: 0; transition: opacity 0.25s ease;"
               loading="eager"
               allow="payment"
               referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
+            <div id="spiffy-checkout-status" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 24px; border-radius: var(--radius-lg); background: rgba(18, 18, 20, 0.86); color: var(--text-secondary); font-size: 0.9rem;">
+              Loading secure checkout...
+            </div>
+            <div id="spiffy-checkout-error" style="position: absolute; inset: 0; display: none; align-items: center; justify-content: center; text-align: center; padding: 0 24px; border-radius: var(--radius-lg); background: rgba(18, 18, 20, 0.92); color: #fca5a5; font-size: 0.9rem;">
+              <span>
+                Having trouble loading checkout?
+                <a id="spiffy-checkout-open" href="#" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold-light); text-decoration: underline;">Open secure checkout in a new tab</a>.
+              </span>
+            </div>
           </div>
         </div>
 
@@ -1272,8 +1282,15 @@
         const iframe = document.getElementById('spiffy-inline-checkout');
         if (!iframe) return;
 
-        const checkoutBase = 'https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip1234';
+        const checkoutBase = iframe.dataset.checkoutUrl;
+        if (!checkoutBase) return;
+
+        const statusEl = document.getElementById('spiffy-checkout-status');
+        const errorEl = document.getElementById('spiffy-checkout-error');
+        const fallbackLinkEl = document.getElementById('spiffy-checkout-open');
+
         const url = new URL(checkoutBase);
+        const allowedOrigin = url.origin;
         const pageParams = new URLSearchParams(window.location.search);
         pageParams.forEach((value, key) => {
           if (key !== 'elements') url.searchParams.set(key, value);
@@ -1294,27 +1311,102 @@
           // Fall back to plain checkout URL if encoding fails.
         }
 
-        iframe.src = url.toString();
+        const resolvedCheckoutUrl = url.toString();
+        if (fallbackLinkEl) fallbackLinkEl.href = resolvedCheckoutUrl;
+
+        let hasLoaded = false;
+        let hasStarted = false;
+        let loadTimeoutId = null;
+
+        function setLoadingState(isLoading) {
+          if (!statusEl) return;
+          statusEl.style.display = isLoading ? 'flex' : 'none';
+        }
+
+        function showErrorState() {
+          if (errorEl) errorEl.style.display = 'flex';
+        }
+
+        function hideErrorState() {
+          if (errorEl) errorEl.style.display = 'none';
+        }
+
+        function markLoaded() {
+          if (hasLoaded) return;
+          hasLoaded = true;
+          if (loadTimeoutId !== null) {
+            window.clearTimeout(loadTimeoutId);
+            loadTimeoutId = null;
+          }
+          iframe.style.opacity = '1';
+          setLoadingState(false);
+          hideErrorState();
+        }
+
+        function startEmbed() {
+          if (hasStarted) return;
+          hasStarted = true;
+          iframe.src = resolvedCheckoutUrl;
+        }
+
+        iframe.addEventListener('load', markLoaded, { once: true });
+        iframe.addEventListener('error', () => {
+          if (loadTimeoutId !== null) {
+            window.clearTimeout(loadTimeoutId);
+            loadTimeoutId = null;
+          }
+          setLoadingState(false);
+          showErrorState();
+          iframe.style.opacity = '1';
+        });
+
+        setLoadingState(true);
+        loadTimeoutId = window.setTimeout(() => {
+          if (!hasLoaded) {
+            setLoadingState(false);
+            showErrorState();
+            iframe.style.opacity = '1';
+          }
+        }, 15000);
+
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries, obs) => {
+            const [entry] = entries;
+            if (!entry || !entry.isIntersecting) return;
+            startEmbed();
+            obs.disconnect();
+          }, { rootMargin: '350px 0px' });
+          observer.observe(iframe);
+        } else {
+          startEmbed();
+        }
 
         window.addEventListener('message', (event) => {
-          if (typeof event.origin === 'string' && !event.origin.includes('spiffy.co')) return;
+          if (typeof event.origin !== 'string') return;
+          if (event.origin !== allowedOrigin && !event.origin.endsWith('.spiffy.co')) return;
 
-          try {
-            const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
-            const height = Number(message?.data?.height);
-            if (message?.event === 'form:size' && Number.isFinite(height) && height > 0) {
-              iframe.style.height = `${Math.max(700, height)}px`;
+          let message = event.data;
+          if (typeof message === 'string') {
+            try {
+              message = JSON.parse(message);
+            } catch (err) {
+              return;
             }
+          }
 
-            // Respect Spiffy-directed navigation for custom upsell/thank-you flow.
-            if (message?.event === 'navigate' || message?.event === 'redirect') {
-              const navUrl = message?.data?.url || message?.url;
-              if (typeof navUrl === 'string' && navUrl.trim()) {
-                window.location.href = navUrl;
-              }
+          const eventName = message?.event || message?.type;
+          const height = Number(message?.data?.height ?? message?.height);
+          if (eventName === 'form:size' && Number.isFinite(height) && height > 0) {
+            iframe.style.height = `${Math.max(700, Math.ceil(height))}px`;
+            markLoaded();
+          }
+
+          // Respect Spiffy-directed navigation for custom upsell/thank-you flow.
+          if (eventName === 'navigate' || eventName === 'redirect') {
+            const navUrl = message?.data?.url || message?.url;
+            if (typeof navUrl === 'string' && /^https?:\/\//i.test(navUrl)) {
+              window.location.href = navUrl;
             }
-          } catch (err) {
-            // Ignore non-JSON postMessage events.
           }
         });
       })();
