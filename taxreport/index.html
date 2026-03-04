@@ -540,8 +540,16 @@
     <!-- Upsell Alert Bar -->
     <section class="pt-20 pb-4 px-6 bg-[#0a0a0b]">
         <div class="max-w-6xl mx-auto">
-            <div class="data-card rounded-xl border border-[#dc2626]/30 px-5 py-4 text-center">
-                <p class="font-mono text-xs sm:text-sm uppercase tracking-wider text-[#dc2626]">
+            <div class="data-card rounded-xl border border-[#dc2626]/30 px-5 py-5 text-center space-y-3">
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#fafafa]">⚠️ STOP! Watch This Video Before You Exit</h2>
+                <p class="text-[#a1a1aa] text-sm sm:text-base"><span class="text-[#fafafa] font-semibold">ATTENTION:</span> Once You Leave This Page, The Video Below Disappears...</p>
+                <div class="max-w-xl mx-auto">
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-[#71717a] mb-2">Order Processing</p>
+                    <div class="w-full h-2 rounded-full bg-[#1f1f23] overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-[#c9a962] to-[#e0c078]" style="width:56%"></div>
+                    </div>
+                </div>
+                <p class="font-mono text-[10px] sm:text-xs uppercase tracking-wider text-[#dc2626]">
                     IMPORTANT! Don't close this window or tap the back button or it might mess with your order.
                 </p>
             </div>
@@ -594,58 +602,13 @@
                     </div>
                 </div>
                 
-                <!-- Visual element -->
-                <div class="relative hidden lg:block reveal" style="animation-delay: 0.3s">
-                    <div class="data-card rounded-2xl p-8 space-y-6">
-                        <div class="flex items-center justify-between">
-                            <span class="font-mono text-xs uppercase tracking-widest text-[#71717a]">Tax Leakage Analysis</span>
-                            <span class="font-mono text-xs text-[#dc2626]">● ACTIVE</span>
-                        </div>
-                        
-                        <div class="space-y-4">
-                            <div class="flex justify-between items-center py-3 border-b border-[#c9a962]/10">
-                                <span class="text-[#a1a1aa]">Current Annual Overpayment</span>
-                                <span class="font-serif text-2xl text-[#dc2626]">$34,200</span>
-                            </div>
-                            <div class="flex justify-between items-center py-3 border-b border-[#c9a962]/10">
-                                <span class="text-[#a1a1aa]">20-Year Compound Loss</span>
-                                <span class="font-serif text-2xl text-[#dc2626]">$1.2M</span>
-                            </div>
-                            <div class="flex justify-between items-center py-3">
-                                <span class="text-[#a1a1aa]">Potential Recovery</span>
-                                <span class="font-serif text-2xl text-gold-gradient">$43,500/yr</span>
-                            </div>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-[#c9a962]/10">
-                            <div class="flex items-center gap-2 text-sm text-[#71717a]">
-                                <i data-lucide="clock" class="w-4 h-4"></i>
-                                <span>Analysis complete in 2 minutes</span>
-                            </div>
+                <!-- Video moved above the fold -->
+                <div class="relative reveal" style="animation-delay: 0.3s">
+                    <div id="vsl" class="relative rounded-2xl overflow-hidden border border-[#c9a962]/20 shadow-2xl">
+                        <div class="aspect-video bg-black">
+                            <iframe class="w-full h-full" src="https://player.vimeo.com/video/1151644607?autoplay=0&title=0&byline=0" title="Upsell Video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ManageMoney VSL Section -->
-    <section id="vsl" class="py-16 bg-[#121214]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-[#fafafa] reveal">⚠️ STOP! Watch This Video Before You Exit</h2>
-                <p class="text-[#a1a1aa] text-xl mt-4 reveal"><span class="text-[#fafafa] font-semibold">ATTENTION:</span> Once You Leave This Page, The Video Below Disappears...</p>
-                <div class="max-w-xl mx-auto mt-6 reveal">
-                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-[#71717a] mb-2">Order Processing</p>
-                    <div class="w-full h-2 rounded-full bg-[#1f1f23] overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-[#c9a962] to-[#e0c078]" style="width:56%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative rounded-2xl overflow-hidden border border-[#c9a962]/20 shadow-2xl reveal">
-                <div class="aspect-video bg-black">
-                    <iframe class="w-full h-full" src="https://player.vimeo.com/video/1151644607?autoplay=0&title=0&byline=0" title="Upsell Video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
