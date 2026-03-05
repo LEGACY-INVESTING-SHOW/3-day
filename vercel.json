@@ -47,6 +47,18 @@
       "destination": "/prepkitvip.html"
     },
     {
+      "source": "/legacy-wealth-blueprint",
+      "destination": "/legacy-wealth-blueprint.html"
+    },
+    {
+      "source": "/legacy-wealth-blueprint-ascension",
+      "destination": "/legacy-wealth-blueprint-ascension.html"
+    },
+    {
+      "source": "/legacy-wealth-blueprint-concierge",
+      "destination": "/legacy-wealth-blueprint-concierge.html"
+    },
+    {
       "source": "/upgradevip",
       "destination": "/upgradevip.html"
     }
@@ -88,6 +100,21 @@
       "permanent": false
     },
     {
+      "source": "/legacy-wealth-blueprint.html",
+      "destination": "/legacy-wealth-blueprint",
+      "permanent": false
+    },
+    {
+      "source": "/legacy-wealth-blueprint-ascension.html",
+      "destination": "/legacy-wealth-blueprint-ascension",
+      "permanent": false
+    },
+    {
+      "source": "/legacy-wealth-blueprint-concierge.html",
+      "destination": "/legacy-wealth-blueprint-concierge",
+      "permanent": false
+    },
+    {
       "source": "/upgradevip.html",
       "destination": "/upgradevip",
       "permanent": false
@@ -114,6 +141,24 @@
     },
     {
       "source": "/challenge",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/legacy-wealth-blueprint",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/legacy-wealth-blueprint-ascension",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/legacy-wealth-blueprint-concierge",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
