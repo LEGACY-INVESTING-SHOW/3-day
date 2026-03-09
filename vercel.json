@@ -19,6 +19,14 @@
       "destination": "/challenge2/index.html"
     },
     {
+      "source": "/challenge3",
+      "destination": "/challenge3/index.html"
+    },
+    {
+      "source": "/challenge3/",
+      "destination": "/challenge3/index.html"
+    },
+    {
       "source": "/challengeconfirmation",
       "destination": "/challengeconfirmation.html"
     },
@@ -141,6 +149,12 @@
     },
     {
       "source": "/challenge",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/challenge3",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]

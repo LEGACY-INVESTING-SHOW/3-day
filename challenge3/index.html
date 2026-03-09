@@ -1,0 +1,3932 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before You File | Preston Seo</title>
+  <meta name="description" content="Before You File is a 3-day live event to understand what your 2025 return is really costing you and build the plan that changes 2026.">
+
+  <script>
+  (function () {
+    let trackingBooted = false;
+
+    function appendScript(src, attrs) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      Object.entries(attrs || {}).forEach(function (entry) {
+        script.setAttribute(entry[0], entry[1]);
+      });
+      document.head.appendChild(script);
+    }
+
+    function bootTracking() {
+      if (trackingBooted) return;
+      trackingBooted = true;
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      appendScript('https://tracking.managemoney101.com/gtm.js?id=GTM-KQ4R2LKP');
+
+      appendScript(
+        'https://t.managemoney101.com/v1/lst/universal-script?ph=99701b257ae8a5117ba5d7b516261da603bc86a49c0c42f398c619e251026c05&tag=!clicked&ref_url=' + encodeURI(document.URL),
+        { type: 'text/javascript' }
+      );
+
+      "use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
+      if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
+      ;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
+      return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
+      f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
+      spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
+      e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
+      ;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window);
+      spiffy.SNIPPET_VERSION="1.1.0";
+      spiffy.config({
+          hideSidebar: false,
+      });
+      spiffy.load("legacyinvestingshow");
+    }
+
+    window.__bootManageMoneyTracking = bootTracking;
+
+    const startBoot = function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(bootTracking, { timeout: 4000 });
+      } else {
+        setTimeout(bootTracking, 2500);
+      }
+    };
+
+    window.addEventListener('load', startBoot, { once: true });
+    ['pointerdown', 'keydown', 'touchstart'].forEach(function (eventName) {
+      window.addEventListener(eventName, bootTracking, { once: true, passive: true });
+    });
+  })();
+  </script>
+
+  <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../dist/output.css">
+
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('../assets/fonts/inter-latin.woff2') format('woff2');
+    }
+
+    :root {
+      --bg-dark: #07080b;
+      --bg-darker: #040507;
+      --bg-panel: rgba(15, 17, 24, 0.86);
+      --bg-panel-strong: #0e1218;
+      --line-dark: rgba(255, 255, 255, 0.12);
+      --line-light: rgba(17, 24, 39, 0.12);
+      --text-soft: #cbd5e1;
+      --text-muted: #94a3b8;
+      --ink: #101521;
+      --paper: #f5f2ea;
+      --paper-line: rgba(16, 21, 33, 0.08);
+      --amber: #f3b33e;
+      --amber-deep: #d58b17;
+      --emerald: #3dd39a;
+      --rose: #fb7185;
+      --red: #ff3b30;
+      --red-deep: #d61f16;
+      --green: #44df7e;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 59, 48, 0.12), transparent 26%),
+        radial-gradient(circle at 90% 100%, rgba(68, 223, 126, 0.08), transparent 24%),
+        linear-gradient(180deg, #040507 0%, #07080b 100%);
+      color: #fff;
+      overflow-x: hidden;
+      font-synthesis: none;
+      text-rendering: optimizeSpeed;
+    }
+
+    img,
+    iframe {
+      max-width: 100%;
+    }
+
+    .font-display {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #ffe2a6 0%, #f3b33e 45%, #b66d12 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-shell {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .grid-dots,
+    .light-dots {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid-dots::before,
+    .light-dots::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-size: 16px 16px;
+      opacity: 0.45;
+    }
+
+    .grid-dots::before {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.11) 1px, transparent 1px);
+    }
+
+    .light-dots::before {
+      background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+    }
+
+    .section-dark {
+      position: relative;
+      background:
+        radial-gradient(circle at top left, rgba(255, 59, 48, 0.08), transparent 22%),
+        radial-gradient(circle at bottom right, rgba(68, 223, 126, 0.07), transparent 20%),
+        linear-gradient(180deg, rgba(8, 10, 14, 0.98), rgba(5, 7, 10, 1));
+    }
+
+    .section-dark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: auto, 18px 18px, 18px 18px;
+      opacity: 0.25;
+    }
+
+    .section-light {
+      position: relative;
+      background:
+        radial-gradient(circle at top right, rgba(255, 59, 48, 0.06), transparent 26%),
+        linear-gradient(180deg, #fbfaf7 0%, #f3f1ea 100%);
+      color: var(--ink);
+    }
+
+    .section-light::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(15, 23, 42, 0.06) 0.8px, transparent 0.8px);
+      background-size: 12px 12px;
+      opacity: 0.5;
+    }
+
+    .section-pad {
+      padding: 88px 0;
+    }
+
+    .topbar {
+      background: rgba(7, 8, 11, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition:
+        transform 220ms ease,
+        opacity 220ms ease,
+        background 220ms ease,
+        box-shadow 220ms ease,
+        border-color 220ms ease;
+    }
+
+    .topbar.is-visible {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .topbar.scrolled {
+      background: rgba(7, 8, 11, 0.92);
+      border-color: rgba(255, 59, 48, 0.16);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
+    }
+
+    .brandline {
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .mono-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(5, 8, 12, 0.88);
+      border: 1px solid rgba(255, 59, 48, 0.35);
+      box-shadow: 0 0 0 1px rgba(255, 59, 48, 0.08) inset;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #f8fafc;
+    }
+
+    .mono-pill .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--red);
+      box-shadow: 0 0 14px rgba(255, 59, 48, 0.8);
+      animation: pulse-dot 1.8s ease-in-out infinite;
+    }
+
+    .mono-pill-light {
+      background: #0b0c0f;
+      border-color: rgba(255, 59, 48, 0.24);
+      color: #fff;
+    }
+
+    .mono-pill-green {
+      border-color: rgba(68, 223, 126, 0.34);
+      box-shadow: 0 0 0 1px rgba(68, 223, 126, 0.08) inset;
+    }
+
+    .mono-pill-green .dot {
+      background: var(--green);
+      box-shadow: 0 0 14px rgba(68, 223, 126, 0.7);
+    }
+
+    .hero-frame {
+      position: relative;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(180deg, rgba(13, 17, 24, 0.94), rgba(8, 11, 17, 0.96));
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+      overflow: hidden;
+    }
+
+    .hero-frame::after {
+      content: "";
+      position: absolute;
+      inset: auto 24px 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 59, 48, 0.92), transparent);
+    }
+
+    .hero-frame::before {
+      content: "";
+      position: absolute;
+      inset: auto -8% -18% -8%;
+      height: 45%;
+      background:
+        linear-gradient(180deg, transparent, rgba(255, 59, 48, 0.08)),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: auto, 34px 34px, 34px 34px;
+      transform: perspective(700px) rotateX(78deg);
+      transform-origin: top;
+      opacity: 0.45;
+    }
+
+    .hero-section {
+      overflow: hidden;
+    }
+
+    .page-shell > section:not(.hero-section) {
+      content-visibility: auto;
+      contain-intrinsic-size: 1000px;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      width: 46vw;
+      height: 46vw;
+      left: -12vw;
+      top: 6vh;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255, 59, 48, 0.18), transparent 60%);
+      filter: blur(24px);
+      pointer-events: none;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      width: 38vw;
+      height: 38vw;
+      right: -10vw;
+      bottom: -8vw;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(68, 223, 126, 0.1), transparent 60%);
+      filter: blur(28px);
+      pointer-events: none;
+    }
+
+    .hero-copy {
+      max-width: 900px;
+      margin: 0 auto 24px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.25rem, 3.6vw, 4.15rem);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+      margin: 16px 0 12px;
+      text-wrap: balance;
+    }
+
+    .hero-copy p {
+      max-width: 820px;
+      margin: 0 auto;
+      font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+      line-height: 1.58;
+      color: rgba(226, 232, 240, 0.84);
+    }
+
+    .hero-stage {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+      gap: 24px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-shell {
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #050608;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.34);
+    }
+
+    .video-shell iframe {
+      aspect-ratio: 16 / 9;
+      display: block;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    .video-note {
+      padding: 18px 20px 0;
+      color: #cbd5e1;
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .video-note strong {
+      color: #fff;
+    }
+
+    .hero-mini-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 14px 20px 20px;
+    }
+
+    .hero-mini-points span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 0.8rem;
+      color: #dbe5f3;
+    }
+
+    .hero-mini-points span::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--emerald);
+      box-shadow: 0 0 10px rgba(61, 211, 154, 0.65);
+    }
+
+    .order-card {
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.97), rgba(9, 12, 17, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .order-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255, 59, 48, 0.05), rgba(255, 59, 48, 0.9), rgba(255, 59, 48, 0.05));
+    }
+
+    .order-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at top right, rgba(255, 59, 48, 0.14), transparent 26%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 22%);
+    }
+
+    .order-card h3 {
+      font-size: 1.8rem;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+
+    .order-card .intro-block {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .micro-copy {
+      color: rgba(203, 213, 225, 0.82);
+      font-size: 0.9rem;
+      line-height: 1.62;
+    }
+
+    .ticket-picker {
+      display: grid;
+      gap: 14px;
+    }
+
+    .ticket-option {
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      text-align: left;
+      transition: border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .ticket-option:hover {
+      transform: translateY(-1px);
+    }
+
+    .ticket-option.is-selected {
+      border-color: rgba(243, 179, 62, 0.42);
+      background: rgba(243, 179, 62, 0.08);
+      box-shadow: 0 12px 26px rgba(217, 139, 28, 0.12);
+    }
+
+    .ticket-option-marker {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0 0 0 3px transparent;
+      transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      flex: 0 0 18px;
+    }
+
+    .ticket-option.is-selected .ticket-option-marker {
+      border-color: rgba(243, 179, 62, 0.95);
+      box-shadow: inset 0 0 0 4px rgba(243, 179, 62, 0.95);
+      background: rgba(243, 179, 62, 0.18);
+    }
+
+    .ticket-option-copy strong {
+      display: block;
+      color: #fff;
+      font-size: 0.96rem;
+      margin-bottom: 4px;
+    }
+
+    .ticket-option-copy span {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+
+    .ticket-price {
+      text-align: right;
+      line-height: 1;
+    }
+
+    .ticket-price small {
+      display: block;
+      color: #94a3b8;
+      font-size: 0.82rem;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+
+    .ticket-price b {
+      font-size: 1.9rem;
+      color: #fff;
+      letter-spacing: -0.05em;
+    }
+
+    .ticket-price b.vip {
+      color: var(--amber);
+    }
+
+    .cta-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-cta-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #94a3b8;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      text-align: center;
+      flex-wrap: wrap;
+      padding-top: 2px;
+    }
+
+    .hero-card-section-label {
+      display: block;
+      margin-bottom: 12px;
+      color: #94a3b8;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .hero-cta-meta a {
+      color: #e2e8f0;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 54px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      font-weight: 800;
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ffcc6f 0%, #f3b33e 48%, #d98b1c 100%);
+      color: #111827;
+      box-shadow: 0 18px 35px rgba(217, 139, 28, 0.28);
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      inset: -150% auto -150% -30%;
+      width: 32%;
+      transform: rotate(18deg);
+      background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      animation: cta-sheen 4.2s linear infinite;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .countdown-box {
+      padding: 14px 10px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      text-align: center;
+    }
+
+    .countdown-box b {
+      display: block;
+      font-size: 1.55rem;
+      letter-spacing: -0.05em;
+      color: var(--amber);
+    }
+
+    .countdown-box span {
+      display: block;
+      font-size: 0.66rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(203, 213, 225, 0.7);
+      margin-top: 4px;
+    }
+
+    .trust-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-frame .trust-chip {
+      margin: 0 20px 20px;
+    }
+
+    .hero-frame .trust-chip {
+      padding: 0;
+      overflow: hidden;
+      min-height: 54px;
+      justify-content: center;
+    }
+
+    .trust-chip .text-sm {
+      line-height: 1.35;
+    }
+
+    .trust-chip img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .hero-frame .trust-chip img {
+      width: 100%;
+      height: auto;
+      min-height: 54px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .order-proof-line {
+      margin-top: 16px;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 3.3vw, 3.35rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+      margin-top: 16px;
+    }
+
+    .section-title p {
+      margin-top: 14px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: inherit;
+      opacity: 0.78;
+    }
+
+    .rule {
+      width: 172px;
+      height: 3px;
+      border-radius: 999px;
+      margin: 18px auto 0;
+      background: linear-gradient(90deg, transparent, var(--amber), transparent);
+    }
+
+    .section-light .rule {
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+    }
+
+    .section-dark .rule {
+      background: linear-gradient(90deg, transparent, var(--green), transparent);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .proof-shot,
+    .proof-stat,
+    .quote-card,
+    .day-card,
+    .pattern-card,
+    .broken-card,
+    .step-card,
+    .fit-card,
+    .burn-card,
+    .price-card,
+    .schedule-card,
+    .authority-card,
+    .result-card {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.18);
+      transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+    }
+
+    .proof-shot:hover,
+    .proof-stat:hover,
+    .quote-card:hover,
+    .day-card:hover,
+    .pattern-card:hover,
+    .broken-card:hover,
+    .step-card:hover,
+    .fit-card:hover,
+    .burn-card:hover,
+    .price-card:hover,
+    .schedule-card:hover,
+    .authority-card:hover,
+    .result-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 55px rgba(0, 0, 0, 0.24);
+    }
+
+    .proof-shot {
+      display: block;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .proof-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center top;
+      transition: transform 700ms ease;
+      border-radius: 24px;
+    }
+
+    .proof-shot:hover img,
+    .result-card:hover .media img,
+    .mini-photo-stack img:hover {
+      transform: scale(1.035);
+    }
+
+    .proof-shot.tall {
+      grid-row: span 1;
+      min-height: auto;
+    }
+
+    .proof-stat {
+      padding: 24px;
+      border: 1px solid var(--line-light);
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--ink);
+      position: relative;
+    }
+
+    .proof-stat::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red), var(--green));
+    }
+
+    .proof-stat b {
+      display: block;
+      font-size: 2.2rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+    }
+
+    .trustpilot-proof {
+      max-width: var(--copy-column);
+      margin: 26px auto 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .trustpilot-proof-intro {
+      display: grid;
+      gap: 8px;
+    }
+
+    .trustpilot-proof-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .trustpilot-proof-card {
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .trustpilot-proof-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .trustpilot-proof-note {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #64748b;
+    }
+
+    .program-shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    .vip-ribbon {
+      max-width: 980px;
+      margin: 0 auto 28px;
+      padding: 18px 22px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, rgba(68, 223, 126, 0.12), rgba(68, 223, 126, 0.03));
+      border: 1px solid rgba(68, 223, 126, 0.28);
+      color: #fff4d4;
+      display: grid;
+      gap: 6px;
+    }
+
+    .day-grid {
+      position: relative;
+      display: grid;
+      gap: 26px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 78px;
+    }
+
+    .day-grid::before {
+      content: "";
+      position: absolute;
+      left: 26px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(68, 223, 126, 0.7), rgba(68, 223, 126, 0.08));
+      box-shadow: 0 0 0 1px rgba(68, 223, 126, 0.08);
+    }
+
+    .day-grid-progress {
+      position: absolute;
+      left: 26px;
+      top: 0;
+      width: 2px;
+      height: 0;
+      background: linear-gradient(180deg, rgba(68, 223, 126, 1), rgba(68, 223, 126, 0.55));
+      box-shadow: 0 0 12px rgba(68, 223, 126, 0.28);
+      transition: height 120ms linear;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .day-card {
+      background: linear-gradient(180deg, rgba(18, 21, 29, 0.98), rgba(10, 13, 19, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    .day-card::before {
+      content: "";
+      position: absolute;
+      left: -66px;
+      top: 56px;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: #07110c;
+      border: 2px solid rgba(68, 223, 126, 0.9);
+      box-shadow: 0 0 0 6px rgba(68, 223, 126, 0.08);
+      z-index: 2;
+    }
+
+    .day-card::after {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 63px;
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(68, 223, 126, 0.85), rgba(68, 223, 126, 0.15));
+    }
+
+    .day-top {
+      padding: 18px 22px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(90deg, rgba(68, 223, 126, 0.12), transparent);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .day-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .day-top b {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -0.06em;
+      color: #fff;
+      margin: 0;
+    }
+
+    .day-top span {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #c4ffd9;
+    }
+
+    .day-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(68, 223, 126, 0.34);
+      background: rgba(11, 18, 14, 0.9);
+      color: #d6ffe4;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .day-body {
+      padding: 22px;
+      display: grid;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .day-body h3 {
+      font-size: 1.45rem;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin: 0;
+    }
+
+    .day-body p {
+      color: rgba(203, 213, 225, 0.84);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .day-media {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      aspect-ratio: 16 / 9;
+    }
+
+    .day-media img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .day-learn-label {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f8fafc;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+
+    .bullet-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: learn-item;
+    }
+
+    .bullet-list li {
+      position: relative;
+      color: #e5edf7;
+      line-height: 1.6;
+      min-width: 0;
+      padding: 18px 18px 18px 64px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      counter-increment: learn-item;
+    }
+
+    .bullet-list li::before {
+      content: counter(learn-item, decimal-leading-zero);
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      min-width: 34px;
+      height: 34px;
+      padding: 0 8px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(243, 179, 62, 0.12);
+      border: 1px solid rgba(243, 179, 62, 0.28);
+      color: #ffd789;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .leave-box {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .mini-order {
+      max-width: 430px;
+      margin: 34px auto 0;
+    }
+
+    .mini-order .brandline {
+      margin-bottom: 10px;
+    }
+
+    .mini-order h3 {
+      font-size: clamp(2rem, 3vw, 2.55rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin: 0;
+    }
+
+    .mini-order .micro-copy {
+      max-width: 30ch;
+      margin: 12px auto 0;
+    }
+
+    .mini-order .cta-stack {
+      gap: 12px;
+    }
+
+    .mini-order-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #94a3b8;
+      font-size: 0.82rem;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .mini-order-meta a {
+      color: #e2e8f0;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .diagnosis-copy {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      text-align: center;
+      color: #334155;
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+    }
+
+    .diagnosis-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 26px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .diagnosis-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--line-light);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .diagnosis-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), rgba(255, 59, 48, 0.1));
+    }
+
+    .diagnosis-card h3 {
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .diagnosis-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: #334155;
+    }
+
+    .diagnosis-list li {
+      display: flex;
+      gap: 10px;
+      line-height: 1.6;
+      min-width: 0;
+    }
+
+    .diagnosis-list li::before {
+      content: "•";
+      flex: 0 0 16px;
+      color: var(--red);
+      font-weight: 800;
+    }
+
+    .returns-shell {
+      display: grid;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .return-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+      color: #e5e7eb;
+    }
+
+    .return-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .return-name {
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .return-income {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .return-value {
+      flex: 0 0 auto;
+      text-align: right;
+      padding: 10px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .return-value .label {
+      display: block;
+      color: #94a3b8;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 4px;
+    }
+
+    .return-value .amount {
+      color: var(--amber);
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .return-copy {
+      display: grid;
+      gap: 12px;
+      color: rgba(203, 213, 225, 0.86);
+      line-height: 1.65;
+    }
+
+    .practical-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .practical-copy h2 {
+      font-size: clamp(2.2rem, 3.3vw, 3.7rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      color: #fff;
+      margin: 0 0 22px;
+      text-wrap: balance;
+    }
+
+    .practical-copy p {
+      color: rgba(203, 213, 225, 0.86);
+      line-height: 1.7;
+    }
+
+    .practical-list {
+      display: grid;
+      gap: 16px;
+      margin: 28px 0 32px;
+    }
+
+    .practical-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      color: rgba(203, 213, 225, 0.88);
+      line-height: 1.6;
+    }
+
+    .practical-item-badge {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(127, 29, 29, 0.28);
+      border: 1px solid rgba(255, 59, 48, 0.24);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fb7185;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    .practical-callout {
+      padding: 18px 22px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid var(--amber);
+      border-radius: 18px;
+      color: rgba(226, 232, 240, 0.9);
+      line-height: 1.65;
+    }
+
+    .guru-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .guru-col {
+      display: grid;
+      gap: 18px;
+    }
+
+    .guru-col.offset {
+      margin-top: 36px;
+    }
+
+    .guru-card {
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(25, 30, 40, 0.95), rgba(18, 22, 31, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18);
+      transform: rotate(var(--rotate, 0deg));
+    }
+
+    .guru-card .emoji {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    .guru-card span:last-child {
+      color: rgba(203, 213, 225, 0.84);
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .pattern-grid,
+    .broken-grid,
+    .step-grid,
+    .fit-grid,
+    .burn-grid,
+    .pricing-grid,
+    .schedule-grid,
+    .results-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .pattern-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 26px;
+    }
+
+    .pattern-card {
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line-light);
+      color: var(--ink);
+      position: relative;
+    }
+
+    .pattern-card::before,
+    .burn-card::before,
+    .quote-card::before,
+    .faq-item::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), rgba(255, 59, 48, 0.12));
+    }
+
+    .pattern-card h3 {
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .broken-grid,
+    .step-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .broken-card,
+    .step-card {
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(11, 13, 19, 0.98));
+      color: #fff;
+    }
+
+    .broken-card b,
+    .step-card b {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #fde68a;
+      margin-bottom: 12px;
+    }
+
+    .broken-card h3,
+    .step-card h3 {
+      font-size: 1.35rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+
+    .broken-card p,
+    .step-card p {
+      color: rgba(226, 232, 240, 0.82);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .math-box {
+      max-width: 880px;
+      margin: 28px auto 0;
+      padding: 22px 24px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line-light);
+      color: var(--ink);
+      display: grid;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .math-box b {
+      font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .fit-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      position: relative;
+      z-index: 1;
+    }
+
+    .fit-card {
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 2px solid rgba(15, 23, 42, 0.08);
+      color: var(--ink);
+    }
+
+    .fit-card.good {
+      box-shadow: 0 18px 36px rgba(12, 74, 45, 0.16);
+      border-color: rgba(68, 223, 126, 0.55);
+    }
+
+    .fit-card.bad {
+      box-shadow: 0 18px 36px rgba(127, 29, 29, 0.14);
+      border-color: rgba(255, 59, 48, 0.5);
+    }
+
+    .fit-card h3 {
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+    }
+
+    .fit-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .fit-list li {
+      display: flex;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 16px;
+      border-radius: 18px;
+      line-height: 1.55;
+      color: #1f2937;
+      background: rgba(15, 23, 42, 0.03);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      min-width: 0;
+    }
+
+    .fit-list li::before {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+
+    .fit-card.good .fit-list li::before {
+      content: "✓";
+      color: #0f172a;
+      background: var(--emerald);
+    }
+
+    .fit-card.bad .fit-list li::before {
+      content: "✕";
+      color: #fff;
+      background: var(--rose);
+    }
+
+    .burn-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .root-cause-shell {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .root-cause-shell h2 {
+      font-size: clamp(2.2rem, 3.2vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: #0f172a;
+      margin: 18px 0 14px;
+    }
+
+    .root-cause-shell p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #475569;
+      line-height: 1.75;
+    }
+
+    .root-cause-card {
+      margin-top: 28px;
+      padding: 26px 28px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .root-cause-card strong {
+      display: block;
+      font-size: 1.55rem;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .burn-card {
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line-light);
+      color: var(--ink);
+      position: relative;
+    }
+
+    .burn-card h3 {
+      font-size: 1.12rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .pricing-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+      position: relative;
+      z-index: 1;
+    }
+
+    .price-card {
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+    }
+
+    .price-card.featured {
+      border-color: rgba(243, 179, 62, 0.42);
+      box-shadow: 0 24px 50px rgba(217, 139, 28, 0.16);
+    }
+
+    .price-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255, 59, 48, 0.08), rgba(255, 59, 48, 0.92), rgba(255, 59, 48, 0.08));
+    }
+
+    .price-tag {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+    }
+
+    .price-tag s {
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+
+    .price-tag b {
+      font-size: 3rem;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      line-height: 1.55;
+      color: #e2e8f0;
+      min-width: 0;
+    }
+
+    .feature-list li::before {
+      content: "•";
+      flex: 0 0 20px;
+      display: block;
+      color: var(--amber);
+      font-size: 1.2rem;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .pricing-compare {
+      max-width: 760px;
+      margin: 32px auto 0;
+      padding: 4px 0 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pricing-compare table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.96rem;
+    }
+
+    .pricing-compare thead tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .pricing-compare th,
+    .pricing-compare td {
+      padding: 16px 8px;
+    }
+
+    .pricing-compare th {
+      text-align: left;
+      color: #9ca3af;
+      font-weight: 500;
+    }
+
+    .pricing-compare th:nth-child(2),
+    .pricing-compare td:nth-child(2),
+    .pricing-compare th:nth-child(3),
+    .pricing-compare td:nth-child(3) {
+      text-align: center;
+      width: 88px;
+    }
+
+    .pricing-compare th:last-child {
+      color: var(--amber);
+      font-weight: 800;
+    }
+
+    .pricing-compare tbody tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .pricing-compare tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-compare td:first-child {
+      color: #e5e7eb;
+    }
+
+    .pricing-compare .yes {
+      color: var(--emerald);
+      font-weight: 700;
+    }
+
+    .pricing-compare .no {
+      color: #6b7280;
+    }
+
+    .schedule-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .schedule-card {
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line-light);
+      color: var(--ink);
+      position: relative;
+    }
+
+    .schedule-card.dark {
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      border-color: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .schedule-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .schedule-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .schedule-card:not(.dark) .schedule-row {
+      border-bottom-color: var(--line-light);
+    }
+
+    .faq-stack {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .faq-item {
+      border-radius: 22px;
+      border: 1px solid var(--line-light);
+      background: rgba(255, 255, 255, 0.96);
+      overflow: hidden;
+      color: var(--ink);
+      position: relative;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 24px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--amber-deep);
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item p {
+      margin: 0;
+      padding: 0 24px 22px;
+      line-height: 1.7;
+      color: #334155;
+    }
+
+    .authority-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items: stretch;
+      position: relative;
+      z-index: 1;
+      max-width: var(--copy-column);
+      margin: 0 auto;
+    }
+
+    .authority-card {
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      position: relative;
+    }
+
+    .authority-card::before,
+    .result-card::before,
+    .final-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(68, 223, 126, 0.12), rgba(68, 223, 126, 0.9), rgba(68, 223, 126, 0.12));
+    }
+
+    .authority-hero {
+      display: grid;
+      grid-template-columns: 124px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .authority-hero img {
+      width: 124px;
+      height: 124px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid rgba(243, 179, 62, 0.28);
+    }
+
+    .authority-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .story-stack {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .story-block {
+      display: grid;
+      gap: 10px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .story-block:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .story-label {
+      color: #f3b33e;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .story-media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .story-media-grid.single {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+    }
+
+    .story-media-card {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .story-media-card.wide {
+      grid-column: 1 / -1;
+    }
+
+    .story-media-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #0a0d12;
+    }
+
+    .story-media-caption {
+      padding: 9px 11px 11px;
+      color: rgba(203, 213, 225, 0.84);
+      font-size: 0.76rem;
+      line-height: 1.4;
+    }
+
+    .authority-stat {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .authority-stat b {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 6px;
+    }
+
+    .mini-photo-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .mini-photo-stack img {
+      width: 100%;
+      height: 100%;
+      min-height: 212px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .results-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      position: relative;
+      z-index: 1;
+    }
+
+    .result-card {
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      position: relative;
+    }
+
+    .result-card .media {
+      overflow: hidden;
+      border-radius: 22px;
+      margin-bottom: 18px;
+    }
+
+    .result-card .media img {
+      width: 100%;
+      display: block;
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-card {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--line-light);
+      color: var(--ink);
+      position: relative;
+    }
+
+    .quote-card p {
+      margin: 0 0 18px;
+      line-height: 1.65;
+    }
+
+    .quote-card strong {
+      display: block;
+      font-size: 0.98rem;
+    }
+
+    .legacy-case-shell {
+      display: grid;
+      gap: 58px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .legacy-case {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 42px;
+      align-items: center;
+    }
+
+    .legacy-case.alt .legacy-case-media {
+      order: 2;
+    }
+
+    .legacy-case.alt .legacy-case-copy {
+      order: 1;
+    }
+
+    .legacy-case-media {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 24px 42px rgba(0, 0, 0, 0.26);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .legacy-case-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .legacy-case-copy h3 {
+      font-size: 1.9rem;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin: 0 0 10px;
+    }
+
+    .legacy-case-kicker {
+      color: var(--amber);
+      margin-bottom: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .legacy-case-copy > p {
+      color: rgba(203, 213, 225, 0.84);
+      line-height: 1.7;
+      margin: 0 0 20px;
+    }
+
+    .legacy-case-copy .brandline {
+      color: rgba(243, 179, 62, 0.92);
+      margin-bottom: 12px;
+    }
+
+    .legacy-metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .legacy-metric-card,
+    .legacy-inline-metric {
+      padding: 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #e5e7eb;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .legacy-metric-card .emoji,
+    .legacy-inline-metric .emoji {
+      font-size: 1.25rem;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+
+    .legacy-metric-card p,
+    .legacy-inline-metric p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .legacy-inline-metrics {
+      display: grid;
+      gap: 12px;
+    }
+
+    .legacy-roi {
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: rgba(6, 95, 70, 0.18);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 18px;
+    }
+
+    .legacy-roi .label {
+      display: block;
+      color: #6ee7b7;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .legacy-roi .value {
+      display: block;
+      color: #a7f3d0;
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .final-panel {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 34px 28px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.98), rgba(10, 13, 19, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.34);
+      position: relative;
+      z-index: 1;
+    }
+
+    .final-panel h2 {
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.25); opacity: 0.85; }
+    }
+
+    @keyframes cta-sheen {
+      0% { transform: translateX(-220%) rotate(18deg); }
+      100% { transform: translateX(480%) rotate(18deg); }
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    /* Shift the layout toward a tighter, direct-response reading column. */
+    body {
+      --page-column: 860px;
+      --copy-column: 720px;
+    }
+
+    #sticky-header > div,
+    main > section > div,
+    footer > div {
+      max-width: var(--page-column) !important;
+    }
+
+    .section-pad {
+      padding: 76px 0;
+    }
+
+    .hero-copy,
+    .section-title,
+    .diagnosis-copy,
+    .root-cause-shell,
+    .faq-stack {
+      max-width: var(--copy-column);
+    }
+
+    .hero-copy {
+      margin-bottom: 28px;
+    }
+
+    .hero-copy p,
+    .section-title p,
+    .root-cause-shell p,
+    .diagnosis-copy p {
+      max-width: 62ch;
+    }
+
+    .section-title {
+      margin-bottom: 34px;
+      text-align: left;
+    }
+
+    .rule {
+      width: 112px;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .hero-stage,
+    .proof-grid,
+    .practical-shell,
+    .diagnosis-grid,
+    .pattern-grid,
+    .broken-grid,
+    .step-grid,
+    .fit-grid,
+    .burn-grid,
+    .pricing-grid,
+    .schedule-grid,
+    .results-grid,
+    .quote-grid,
+    .authority-grid,
+    .legacy-case {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-stage,
+    .proof-grid,
+    .day-grid,
+    .program-shell,
+    .practical-shell,
+    .guru-grid,
+    .returns-shell,
+    .pricing-grid,
+    .pricing-compare,
+    .schedule-grid,
+    .authority-grid,
+    .legacy-case-shell,
+    .results-grid,
+    .quote-grid,
+    .final-panel {
+      max-width: var(--copy-column);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-stage,
+    .practical-shell,
+    .authority-grid,
+    .legacy-case {
+      gap: 22px;
+    }
+
+    .proof-grid {
+      gap: 16px;
+    }
+
+    .vip-ribbon,
+    .mini-order,
+    .math-box,
+    .mini-photo-stack {
+      max-width: var(--copy-column);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .day-grid {
+      max-width: var(--copy-column);
+      padding-left: 0;
+      gap: 20px;
+    }
+
+    .day-grid::before,
+    .day-grid-progress,
+    .day-card::before,
+    .day-card::after {
+      display: none;
+    }
+
+    .guru-grid,
+    .legacy-case-shell {
+      gap: 36px;
+    }
+
+    .guru-col {
+      gap: 14px;
+    }
+
+    .guru-col.offset {
+      margin-top: 0;
+    }
+
+    .legacy-case.alt .legacy-case-media,
+    .legacy-case.alt .legacy-case-copy {
+      order: initial;
+    }
+
+    .mini-photo-stack img {
+      min-height: 220px;
+    }
+
+    .final-panel {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media (max-width: 1100px) {
+      .practical-shell,
+      .hero-stage,
+      .authority-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .burn-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .legacy-case {
+        grid-template-columns: 1fr;
+      }
+
+      .legacy-case.alt .legacy-case-media,
+      .legacy-case.alt .legacy-case-copy {
+        order: initial;
+      }
+
+      .day-grid {
+        max-width: 760px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .section-pad {
+        padding: 74px 0;
+      }
+
+      .day-grid,
+      .diagnosis-grid,
+      .pattern-grid,
+      .broken-grid,
+      .step-grid,
+      .fit-grid,
+      .pricing-grid,
+      .schedule-grid,
+      .results-grid,
+      .quote-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .day-grid {
+        padding-left: 54px;
+      }
+
+      .day-grid::before {
+        left: 18px;
+      }
+
+      .day-grid-progress {
+        left: 18px;
+      }
+
+      .day-card::before {
+        left: -42px;
+      }
+
+      .day-card::after {
+        left: -30px;
+        width: 24px;
+      }
+
+      .authority-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .authority-hero img {
+        width: 100%;
+        max-width: 180px;
+        height: 180px;
+      }
+
+      .guru-grid {
+        max-width: 620px;
+        margin: 0 auto;
+      }
+
+      .guru-col.offset {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section-pad {
+        padding: 58px 0;
+      }
+
+      .hero-section.section-pad {
+        padding-top: 0 !important;
+      }
+
+      .hero-copy {
+        margin-bottom: 18px;
+      }
+
+      .hero-copy h1,
+      .section-title h2,
+      .final-panel h2 {
+        font-size: clamp(1.95rem, 10vw, 3rem);
+        line-height: 1.03;
+      }
+
+      .hero-copy p {
+        font-size: 0.98rem;
+        line-height: 1.52;
+      }
+
+      .hero-stage {
+        gap: 16px;
+      }
+
+      .hero-frame,
+      .order-card,
+      .day-card,
+      .final-panel,
+      .price-card,
+      .schedule-card,
+      .fit-card,
+      .pattern-card,
+      .diagnosis-card,
+      .result-card,
+      .quote-card {
+        border-radius: 20px;
+      }
+
+      .day-top {
+        align-items: flex-start;
+        padding: 14px 16px;
+      }
+
+      .day-kicker {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .topbar .max-w-6xl {
+        align-items: center;
+        gap: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .topbar .text-sm {
+        max-width: 155px;
+        font-size: 0.72rem;
+        line-height: 1.3;
+      }
+
+      .topbar .btn-primary {
+        width: auto !important;
+        min-height: 40px;
+        padding: 8px 12px !important;
+        border-radius: 14px;
+        font-size: 0.88rem;
+      }
+
+      .section-title {
+        margin-bottom: 26px;
+      }
+
+      .section-title p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+      }
+
+      .rule {
+        width: 120px;
+        margin-top: 14px;
+      }
+
+      .proof-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .practical-shell {
+        gap: 28px;
+      }
+
+      .practical-copy h2 {
+        font-size: clamp(2rem, 9vw, 2.9rem);
+        margin-bottom: 18px;
+      }
+
+      .practical-copy p,
+      .practical-item,
+      .practical-callout {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .guru-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .guru-col {
+        gap: 12px;
+      }
+
+      .guru-card {
+        padding: 14px;
+        border-radius: 16px;
+      }
+
+      .guru-card span:last-child {
+        font-size: 0.86rem;
+      }
+
+      .proof-shot,
+      .proof-stat {
+        padding: 0;
+      }
+
+      .proof-stat {
+        padding: 18px;
+      }
+
+      .proof-shot img {
+        border-radius: 20px;
+      }
+
+      .burn-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .countdown-grid {
+        gap: 8px;
+      }
+
+      .countdown-box b {
+        font-size: 1.2rem;
+      }
+
+      .video-note {
+        padding: 14px 16px 0;
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
+
+      .hero-mini-points {
+        gap: 6px;
+        padding: 12px 16px 16px;
+      }
+
+      .hero-mini-points span {
+        font-size: 0.76rem;
+        padding: 7px 10px;
+      }
+
+      .ticket-option {
+        grid-template-columns: 1fr;
+        padding: 11px 12px;
+      }
+
+      .ticket-price {
+        text-align: left;
+      }
+
+      .order-card {
+        padding: 18px;
+      }
+
+      .order-card h3 {
+        font-size: 1.7rem;
+      }
+
+      .micro-copy {
+        font-size: 0.88rem;
+      }
+
+      .cta-stack {
+        gap: 8px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        min-height: 50px;
+        font-size: 0.95rem;
+      }
+
+      .hero-cta-meta,
+      .mini-order-meta {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .countdown-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .pricing-compare {
+        margin-top: 24px;
+        overflow: visible;
+      }
+
+      .pricing-compare table {
+        min-width: 0;
+        font-size: 0.9rem;
+      }
+
+      .pricing-compare thead {
+        display: none;
+      }
+
+      .pricing-compare table,
+      .pricing-compare tbody,
+      .pricing-compare tr,
+      .pricing-compare td {
+        display: block;
+        width: 100%;
+      }
+
+      .pricing-compare tbody {
+        display: grid;
+        gap: 12px;
+      }
+
+      .pricing-compare tbody tr {
+        padding: 14px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .pricing-compare td {
+        padding: 0;
+        border: none;
+        text-align: left !important;
+      }
+
+      .pricing-compare td:first-child {
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .pricing-compare td:nth-child(2),
+      .pricing-compare td:nth-child(3) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 6px;
+      }
+
+      .pricing-compare td:nth-child(2)::before {
+        content: "General";
+        color: #94a3b8;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .pricing-compare td:nth-child(3)::before {
+        content: "VIP";
+        color: #f3b33e;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .trust-chip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .trust-chip img {
+        height: 22px;
+      }
+
+      .vip-ribbon,
+      .math-box,
+      .root-cause-card {
+        padding: 16px 18px;
+        border-radius: 18px;
+      }
+
+      .day-grid {
+        padding-left: 0;
+      }
+
+      .day-grid::before,
+      .day-grid-progress,
+      .day-card::before,
+      .day-card::after {
+        display: none;
+      }
+
+      .day-body {
+        padding: 16px;
+        gap: 14px;
+      }
+
+      .day-body h3 {
+        font-size: 1.25rem;
+      }
+
+      .day-body p,
+      .bullet-list li,
+      .fit-list li,
+      .feature-list li,
+      .schedule-card p,
+      .quote-card p {
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+
+      .day-media {
+        aspect-ratio: 1.45 / 1;
+      }
+
+      .day-learn-label {
+        width: 100%;
+      }
+
+      .leave-box {
+        padding: 14px 16px;
+      }
+
+      .diagnosis-copy {
+        margin-bottom: 18px;
+      }
+
+      .diagnosis-copy p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .diagnosis-card,
+      .pattern-card,
+      .broken-card,
+      .step-card,
+      .fit-card,
+      .burn-card,
+      .price-card,
+      .schedule-card,
+      .authority-card,
+      .result-card,
+      .quote-card,
+      .faq-item,
+      .final-panel {
+        padding: 18px;
+      }
+
+      .fit-card h3,
+      .price-tag b,
+      .authority-hero h3 {
+        font-size: 1.8rem;
+      }
+
+      .schedule-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .authority-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .authority-stat b {
+        font-size: 1.45rem;
+      }
+
+      .legacy-case-shell {
+        gap: 34px;
+      }
+
+      .story-media-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .legacy-case {
+        gap: 18px;
+      }
+
+      .legacy-case-copy h3 {
+        font-size: 1.6rem;
+      }
+
+      .legacy-metric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .legacy-metric-card,
+      .legacy-inline-metric {
+        padding: 14px;
+      }
+
+      .legacy-roi .value {
+        font-size: 1.65rem;
+      }
+
+      .return-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .return-value {
+        text-align: left;
+      }
+
+      .mini-photo-stack img {
+        min-height: 180px;
+      }
+
+      .result-card .media {
+        margin-bottom: 14px;
+      }
+
+      .final-panel {
+        padding: 24px 18px;
+      }
+
+      .footer-links {
+        gap: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <header id="sticky-header" class="topbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div>
+        <div class="text-sm text-slate-300">March 27-29, 2026</div>
+      </div>
+      <a href="#pricing" class="btn-primary" style="width:auto; min-height:auto; padding:12px 18px;">Get Your Seat</a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="section-dark grid-dots section-pad hero-section" style="padding-top: 0;">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="hero-copy">
+          <div class="brandline mb-6">3-Day Challenge | March 27-29, 2026 | Fri-Sun</div>
+          <h1 class="font-display text-gradient-gold">Before you file, see what your tax bill is really costing you and how to fix it.</h1>
+          <p>In 3 days, I&apos;ll show you exactly what your 2025 return is costing you, which strategies in the tax code apply to your income, and we&apos;ll build your 2026 plan together so this is the last year your money disappears without you knowing where it went.</p>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hero-frame">
+            <div class="video-shell">
+              <iframe src="https://player.vimeo.com/video/1169555561?autoplay=0&title=0&byline=0&wmode=transparent&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Challenge preview video" loading="eager"></iframe>
+            </div>
+            <div class="trust-chip">
+              <img src="../assets/images/trustpilot.webp" alt="Trustpilot rating" width="600" height="120" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <aside class="order-card">
+            <div class="intro-block">
+              <p class="micro-copy">3 live days to understand what your 2025 return is costing you and build the plan that changes 2026.</p>
+            </div>
+
+            <div class="ticket-picker" role="radiogroup" aria-label="Ticket options">
+              <button type="button" class="ticket-option" data-ticket="general" data-href="/regularticket26" data-cta="Get General Ticket">
+                <span class="ticket-option-marker" aria-hidden="true"></span>
+                <div class="ticket-option-copy">
+                  <strong>General Admission</strong>
+                  <span>Core event access and the full 3-day implementation plan.</span>
+                </div>
+                <div class="ticket-price">
+                  <small>$97</small>
+                  <b>$47</b>
+                </div>
+              </button>
+              <button type="button" class="ticket-option is-selected" data-ticket="vip" data-href="/vipticket26" data-cta="Get VIP Access" aria-checked="true">
+                <span class="ticket-option-marker" aria-hidden="true"></span>
+                <div class="ticket-option-copy">
+                  <strong>VIP Access</strong>
+                  <span>Event, masterclass, roundtables, and replay access.</span>
+                </div>
+                <div class="ticket-price">
+                  <small>$197</small>
+                  <b class="vip">$147</b>
+                </div>
+              </button>
+            </div>
+
+            <div class="mt-6 cta-stack">
+              <a href="/vipticket26" class="btn-primary" id="hero-ticket-cta">Get VIP Access</a>
+              <div class="hero-cta-meta">
+                <span id="hero-ticket-meta">Selected: VIP Access</span>
+                <a href="/regularticket26">Get General Ticket</a>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <div class="countdown-grid">
+                <div class="countdown-box"><b id="days">0</b><span>Days</span></div>
+                <div class="countdown-box"><b id="hours">0</b><span>Hours</span></div>
+                <div class="countdown-box"><b id="mins">0</b><span>Min</span></div>
+                <div class="countdown-box"><b id="secs">0</b><span>Sec</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light light-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display text-slate-950">Here&apos;s what people who attended the last 3-day challenge said about it.</h2>
+          <div class="rule"></div>
+        </div>
+
+        <div class="proof-grid">
+          <div class="proof-shot tall"><img src="../assets/images/11-social-proof-1.webp" alt="Challenge social proof screenshot" width="400" height="540" loading="lazy" decoding="async"></div>
+          <div class="proof-shot"><img src="../assets/images/12-social-proof-2.webp" alt="Challenge social proof screenshot" width="400" height="300" loading="lazy" decoding="async"></div>
+          <div class="proof-shot"><img src="../assets/images/13-social-proof-3.webp" alt="Challenge social proof screenshot" width="400" height="300" loading="lazy" decoding="async"></div>
+          <div class="proof-shot tall"><img src="../assets/images/14-social-proof-4.webp" alt="Challenge social proof screenshot" width="400" height="540" loading="lazy" decoding="async"></div>
+          <div class="proof-shot"><img src="../assets/images/15-social-proof-5.webp" alt="Challenge social proof screenshot" width="400" height="300" loading="lazy" decoding="async"></div>
+          <div class="proof-shot"><img src="../assets/images/16-social-proof-6.webp" alt="Challenge social proof screenshot" width="400" height="300" loading="lazy" decoding="async"></div>
+        </div>
+
+        <div class="trustpilot-proof">
+            <div class="trustpilot-proof-grid">
+            <div class="trustpilot-proof-card">
+              <img src="../assets/images/trustpilot-rachel-tight.png" alt="Trustpilot review screenshot from Rachel Ramirez, a CPA, about learning from the 3-day seminar and the entity structure and PTET benefits" width="640" height="255" loading="lazy" decoding="async">
+              </div>
+              <div class="trustpilot-proof-card">
+              <img src="../assets/images/trustpilot-ellen-tight.png" alt="Trustpilot review screenshot from Ellen Schooler about real-life examples and the teaching being worth the time" width="640" height="255" loading="lazy" decoding="async">
+              </div>
+              <div class="trustpilot-proof-card">
+              <img src="../assets/images/trustpilot-ann-tight.png" alt="Trustpilot review screenshot from Ann Jensen Warren about the webinar being useful, applicable, and highly valuable" width="640" height="255" loading="lazy" decoding="async">
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display">What You&apos;ll Learn In The 3 Days</h2>
+          <div class="rule"></div>
+        </div>
+
+        <div class="program-shell">
+          <div class="day-grid">
+            <div class="day-grid-progress" aria-hidden="true"></div>
+            <article class="day-card">
+              <div class="day-top">
+                <div class="day-kicker">
+                  <b>Day 1</b>
+                  <span>Friday, March 27</span>
+                </div>
+                <div class="day-date">10 AM-4 PM EST | 6 Hours</div>
+              </div>
+              <div class="day-body">
+                <h3 class="font-display">Read Your Return: Find Out Where Your Money Is Actually Going</h3>
+                <p>You&apos;ve never actually read your tax return. Not really. Most people look at one number, sign it, and move on. But every other line on that return is telling you where your money went and why it&apos;s not coming back. Day 1 is about seeing the full picture for the first time.</p>
+                <div class="day-learn-label">You&apos;ll Learn</div>
+                <ul class="bullet-list">
+                  <li>The middle-class money trap: why every raise comes with a bigger tax bill and why earning more can still leave you with less.</li>
+                  <li>Why your 401(k) may be bleeding money through fees, limits, and a tax bill waiting for you later.</li>
+                  <li>How to eliminate high-interest debt and access $50K-$100K in 0% business funding without touching personal credit.</li>
+                  <li>An entity structure deep dive with a guest speaker who has helped tens of thousands of businesses get set up the right way and oversee hundreds of millions of dollars in structures and filings.</li>
+                </ul>
+                <div class="leave-box"><strong class="text-amber-300">You leave with:</strong> A clear picture of where every dollar is going, which leaks are costing you the most, and the exact order to fix them.</div>
+              </div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <div class="day-kicker">
+                  <b>Day 2</b>
+                  <span>Saturday, March 28</span>
+                </div>
+                <div class="day-date">10 AM-4 PM EST | 6 Hours</div>
+              </div>
+              <div class="day-body">
+                <h3 class="font-display">Build Your Strategy: The Exact Playbook To Keep $20K-$50K More Every Year</h3>
+                <p>Now that you know where the leaks are, Day 2 is where we build the plan that fixes them. This is the day that changes your financial life.</p>
+                <div class="day-learn-label">You&apos;ll Learn</div>
+                <ul class="bullet-list">
+                  <li>The W-2 taxes playbook: how people making $1M+ pay less in taxes than someone at $80K, and which strategies apply to your income.</li>
+                  <li>The investor playbook: how to build wealth in accounts that never get taxed, including Roth conversions, backdoor strategies, and legal ways to offset gains.</li>
+                  <li>How to start a tax-advantaged Airbnb business without buying property or quitting your job, with the potential to create $5K-$15K a month.</li>
+                  <li>The complete wealth acceleration system: how the strategies stack together and in what order so they actually work.</li>
+                </ul>
+                <div class="leave-box"><strong class="text-amber-300">You leave with:</strong> Every strategy that applies to your income identified, valued in real dollars, and prioritized. You&apos;ll know exactly what to implement first, second, and third.</div>
+              </div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <div class="day-kicker">
+                  <b>Day 3</b>
+                  <span>Sunday, March 29</span>
+                </div>
+                <div class="day-date">10 AM-4 PM EST | 6 Hours</div>
+              </div>
+              <div class="day-body">
+                <h3 class="font-display">Lock Your Plan: Walk Away With A Dated, Dollar-Valued 12-Month Roadmap</h3>
+                <p>A strategy that stays in your head is not a plan. It&apos;s a wish. Day 3 is about turning everything from the first two days into a document you can execute on starting Monday morning.</p>
+                <div class="day-learn-label">You&apos;ll Learn</div>
+                <ul class="bullet-list">
+                  <li>Advanced tax optimization with a guest speaker who has worked with complex structures across a huge number of businesses and large amounts of assets: trusts, family planning, and how to protect what you build.</li>
+                  <li>Your 12-month implementation roadmap: month 1, month 2, month 3, all the way through the year, with the moves dated and tied to dollars.</li>
+                  <li>Real case studies from working professionals who implemented these strategies, so you can see what this looks like at your income level.</li>
+                </ul>
+                <div class="leave-box"><strong class="text-amber-300">You leave with:</strong> A completed, dated, dollar-valued 12-month plan. When you file on April 15, you&apos;ll know exactly what you&apos;re doing differently for 2026. That&apos;s the last time your return looks like this.</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="vip-ribbon">
+            <strong class="text-white">VIP also gets the asset protection masterclass, plus live roundtable Q&amp;A on Day 2 and Day 3.</strong>
+            <span class="micro-copy">That is where Preston breaks down the LLC, S-Corp, trust, and holding company structure behind his own portfolio.</span>
+          </div>
+
+          <div class="mini-order order-card">
+            <div class="text-center">
+              <div class="brandline mb-2">March 27-29, 2026</div>
+              <h3 class="font-display text-white">Get Your Seat Before You File</h3>
+            </div>
+            <div class="cta-stack mt-5">
+              <a href="/vipticket26" class="btn-primary">Get VIP Access</a>
+              <div class="mini-order-meta">
+                <span>Prefer the basic option?</span>
+                <a href="/regularticket26">Get General Ticket</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="practical-shell">
+          <div class="practical-copy">
+            <h2 class="font-display">Let&apos;s Be Honest About Where You Are</h2>
+            <p class="text-lg mb-6">You are not starting from zero. You&apos;ve read the books, heard the podcasts, maybe even talked to advisors and CPAs. <strong class="text-white">The problem is not a lack of information. The problem is that none of it has turned into a clear plan.</strong></p>
+
+            <div class="practical-list">
+              <div class="practical-item">
+                <span class="practical-item-badge">✕</span>
+                <p>Every raise comes with a bigger tax bill. You work more, earn more, and still feel behind.</p>
+              </div>
+              <div class="practical-item">
+                <span class="practical-item-badge">✕</span>
+                <p>Big financial goals keep getting pushed back because you never know which move should come first.</p>
+              </div>
+              <div class="practical-item">
+                <span class="practical-item-badge">✕</span>
+                <p>Every money decision feels like a coin flip. Pay off debt or invest? Max out the 401(k) or save for the next opportunity?</p>
+              </div>
+              <div class="practical-item">
+                <span class="practical-item-badge">✕</span>
+                <p>You keep hearing smart ideas, but none of them connect into a plan you trust enough to execute.</p>
+              </div>
+            </div>
+
+            <div class="practical-callout">
+              <strong class="text-white">This challenge helps you connect the dots.</strong> You&apos;ll see the leaks, pick the moves that fit your life, and leave with the order to work through them.
+            </div>
+          </div>
+
+          <div class="guru-grid">
+            <div class="guru-col">
+              <div class="guru-card" style="--rotate: 2deg;">
+                <span class="emoji">💭</span>
+                <span>&quot;Think like a millionaire&quot;</span>
+              </div>
+              <div class="guru-card" style="--rotate: -1deg;">
+                <span class="emoji">📊</span>
+                <span>&quot;Assets vs. Liabilities&quot;</span>
+              </div>
+              <div class="guru-card" style="--rotate: 1deg;">
+                <span class="emoji">💰</span>
+                <span>&quot;Make your money work&quot;</span>
+              </div>
+            </div>
+            <div class="guru-col offset">
+              <div class="guru-card" style="--rotate: -2deg;">
+                <span class="emoji">📚</span>
+                <span>&quot;Read Rich Dad Poor Dad&quot;</span>
+              </div>
+              <div class="guru-card" style="--rotate: 2deg;">
+                <span class="emoji">☕</span>
+                <span>&quot;Cut your daily coffee&quot;</span>
+              </div>
+              <div class="guru-card" style="--rotate: -1deg;">
+                <span class="emoji">🏃</span>
+                <span>&quot;Quit your job&quot;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light light-dots section-pad" style="padding-top: 0;">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display text-slate-950">The Patterns That Keep Repeating</h2>
+          <div class="rule"></div>
+          <p class="text-slate-700">If these feel familiar, that&apos;s the point. The problem usually is not effort. It&apos;s that the same broken money pattern keeps replaying every year.</p>
+        </div>
+
+        <div class="pattern-grid">
+          <article class="pattern-card">
+            <h3>You keep paying more taxes every year.</h3>
+            <p class="text-slate-700 leading-7">Every raise, every promotion, every side hustle dollar pushes you into a higher bracket. You&apos;re earning more and keeping less. And nobody around you can explain why.</p>
+          </article>
+          <article class="pattern-card">
+            <h3>Your CPA files your return but never calls you with a plan.</h3>
+            <p class="text-slate-700 leading-7">They&apos;re good at what they do. But when&apos;s the last time they called you in June and said you had $40,000 exposed and showed you how to keep it? That call never comes.</p>
+          </article>
+          <article class="pattern-card">
+            <h3>You&apos;ve Googled it, watched YouTube videos, and saved reels. And you still haven&apos;t made a move.</h3>
+            <p class="text-slate-700 leading-7">S-Corp. LLC. Solo 401(k). Cost segregation. You know bits and pieces. But you still do not know what fits your income, what comes first, or what any of it is worth. So nothing changes.</p>
+          </article>
+          <article class="pattern-card">
+            <h3>You keep saying &quot;next year.&quot;</h3>
+            <p class="text-slate-700 leading-7">Next year I&apos;ll set up the LLC. Next year I&apos;ll look into real estate. Next year I&apos;ll figure out the tax side. Then next year comes and you file the same return with the same pit in your stomach.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light light-dots section-pad" style="padding-top: 0;">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="root-cause-shell">
+          <h2 class="font-display">The Problem Isn&apos;t Your Income. The Problem Is That Your Money Is Structured Wrong.</h2>
+          <p>The way your paycheck flows from your employer to your bank account to the IRS was set up once, years ago, and never touched again. Smart people stay stuck because the money is moving through a system that was never designed to help them keep more of it.</p>
+
+          <div class="root-cause-card">
+            <strong>And every year you don&apos;t fix it, the gap gets wider.</strong>
+            <p>The W-4, the 401(k) percentage, the debt decisions, the side income, the tax return, the entity structure. None of the pieces are talking to each other. That&apos;s the real problem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display">Why Most High Earners Stay Stuck</h2>
+          <div class="rule"></div>
+          <p>What breaks is the model. The default playbook was written for average earners, the planning starts too late, and nobody in your financial life is paid to orchestrate the whole thing.</p>
+        </div>
+
+        <div class="broken-grid">
+          <article class="broken-card">
+            <b>Broken Model #1</b>
+            <h3>You&apos;re following rules designed for people who make $50K.</h3>
+            <p>Max out the 401(k). Build a 6-month emergency fund. Pay off your mortgage early. At $150K+, the math changes. The strategies change. The tax code treats you differently.</p>
+          </article>
+          <article class="broken-card">
+            <b>Broken Model #2</b>
+            <h3>Your tax strategy is &quot;file and hope.&quot;</h3>
+            <p>You earn money all year, then hand everything to your CPA in April and hope the number isn&apos;t too bad. The people who pay the least in taxes planned in January for December.</p>
+          </article>
+          <article class="broken-card">
+            <b>Broken Model #3</b>
+            <h3>Nobody connects the dots for you.</h3>
+            <p>You have a CPA who files, an advisor who sells products, and a bank that holds your money. None of them talk to each other, and none of them are paid to save you money.</p>
+          </article>
+          <article class="broken-card">
+            <b>Broken Model #4</b>
+            <h3>There is no one in your financial life whose job is to make all the pieces work together.</h3>
+            <p>That&apos;s what this event does. It gives you the structure, the order, and the real numbers so you stop guessing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light light-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display text-slate-950">The Tax Code Changed. Your Return Hasn&apos;t Caught Up Yet.</h2>
+          <div class="rule"></div>
+          <p class="text-slate-700">Last July, the government passed the biggest tax code rewrite since 2017. Fifteen provisions changed. Some are permanent. Some expire in four years. Some are retroactive to 2025, which means they affect the return you&apos;re about to file right now.</p>
+          <p class="text-slate-700">Your CPA updated the software. The brackets are correct. But did anyone sit down with you and show you which of these changes actually apply to your income, which ones you should act on now, and which ones you lose if you wait?</p>
+          <p class="text-slate-700">This is the first year you&apos;re filing under the new law. And for several of these provisions, the clock is already ticking. Before You File is built around this exact moment and what to do before April 15.</p>
+        </div>
+
+        <div class="step-grid">
+          <article class="step-card">
+            <b>Step 1</b>
+            <h3>Keep More Of Your Current Income</h3>
+            <p>You look at legal tax strategies first so more money stays in your control before you try to build anything new.</p>
+          </article>
+          <article class="step-card">
+            <b>Step 2</b>
+            <h3>Free Up Monthly Cash Flow</h3>
+            <p>High-interest debt and bad financial structure get cleaned up so your household has breathing room again.</p>
+          </article>
+          <article class="step-card">
+            <b>Step 3</b>
+            <h3>Redirect Cash Into Better Vehicles</h3>
+            <p>You stop defaulting to average-person retirement advice and start evaluating cash-flow, tax-advantaged, and business-based options more clearly.</p>
+          </article>
+          <article class="step-card">
+            <b>Step 4</b>
+            <h3>Protect And Scale The Plan</h3>
+            <p>Entity structure, protection, and order of execution keep the plan durable. This is where wealth starts to feel real instead of theoretical.</p>
+          </article>
+        </div>
+
+        <div class="mini-order order-card">
+          <div class="text-center">
+            <div class="brandline mb-2">If this already feels different, that&apos;s the point.</div>
+            <h3 class="font-display text-white">Get In The Room And Build The Plan While It&apos;s Fresh</h3>
+            <p class="micro-copy mt-3">You do not need more scattered information. You need the sequence, the numbers, and the live walkthrough before you file again on autopilot.</p>
+          </div>
+          <div class="cta-stack mt-5">
+            <a href="/vipticket26" class="btn-primary">Get VIP Access</a>
+            <div class="mini-order-meta">
+              <span>Just want the live event?</span>
+              <a href="/regularticket26">Get General Ticket</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display">What We Found When We Looked At 5 Real Returns</h2>
+          <div class="rule"></div>
+          <p>Here are a few of the returns we sat down with and what we found once we looked at the full picture. One of these will probably feel close to your situation.</p>
+        </div>
+
+        <div class="returns-shell">
+          <article class="return-card">
+            <div class="return-header">
+              <div>
+                <div class="return-name">Lauren</div>
+                <div class="return-income">$125K/year</div>
+              </div>
+              <div class="return-value">
+                <span class="label">Year 1 Value</span>
+                <span class="amount">$61K - $109K</span>
+              </div>
+            </div>
+            <div class="return-copy">
+              <p>She was losing $1,237 every single month to a W-4 she filled out in 2019. That&apos;s $14,840 a year, gone before she ever saw it.</p>
+              <p>Her plan identified 6 strategies she qualified for but wasn&apos;t using. The STR strategy alone created more tax savings than most people&apos;s entire annual 401(k) contribution.</p>
+            </div>
+          </article>
+
+          <article class="return-card">
+            <div class="return-header">
+              <div>
+                <div class="return-name">Chad</div>
+                <div class="return-income">$180K combined</div>
+              </div>
+              <div class="return-value">
+                <span class="label">Year 1 Value</span>
+                <span class="amount">$18.5K - $43.5K</span>
+              </div>
+            </div>
+            <div class="return-copy">
+              <p>His CPA does a good job and never misses a deadline. But there&apos;s a gap between filing and optimizing.</p>
+              <p>Chad&apos;s plan mapped 8 strategies to his income. Each one had a dollar value, an implementation week, and the exact documentation required.</p>
+            </div>
+          </article>
+
+          <article class="return-card">
+            <div class="return-header">
+              <div>
+                <div class="return-name">Michelle &amp; Trenton</div>
+                <div class="return-income">$300K combined</div>
+              </div>
+              <div class="return-value">
+                <span class="label">Year 1 Value</span>
+                <span class="amount">$86K - $192K</span>
+              </div>
+            </div>
+            <div class="return-copy">
+              <p>At a 46% combined bracket in San Francisco, every dollar of deductions saves 46 cents. That math changes everything.</p>
+              <p>Their plan identified 8 strategies totaling $86K-$192K in year-one value, plus the right structure for family planning and long-term protection.</p>
+            </div>
+          </article>
+
+          <article class="return-card">
+            <div class="return-header">
+              <div>
+                <div class="return-name">Daniel</div>
+                <div class="return-income">$250K/year</div>
+              </div>
+              <div class="return-value">
+                <span class="label">Year 1 Value</span>
+                <span class="amount">$55.9K - $68.3K</span>
+              </div>
+            </div>
+            <div class="return-copy">
+              <p>He&apos;d researched for years. He knew the strategies. He didn&apos;t need more information. He needed a sequence.</p>
+              <p>Do this Monday. Do this Wednesday. Apply here Thursday. Wait 14 days. Then do this next. The order matters more than the strategies.</p>
+            </div>
+          </article>
+
+          <article class="return-card">
+            <div class="return-header">
+              <div>
+                <div class="return-name">Elizabeth</div>
+                <div class="return-income">$150K/year</div>
+              </div>
+              <div class="return-value">
+                <span class="label">Year 1 Value</span>
+                <span class="amount">$28K - $62K</span>
+              </div>
+            </div>
+            <div class="return-copy">
+              <p>She was paying $43,000 a year in taxes. After restructuring: $28,500. That&apos;s $14,500 back every year.</p>
+              <p>What made her plan different: she had almost no capital. She needed strategies that cost nothing to implement. The first 5 moves cost $0.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display">Who This Is For, And Who Should Skip It</h2>
+          <div class="rule"></div>
+          <p>This event works best when you already have income, already know something is off, and are ready to finally turn that awareness into a plan.</p>
+        </div>
+
+        <div class="fit-grid">
+          <article class="fit-card good">
+            <h3 class="font-display text-slate-950">Who This Is For</h3>
+            <ul class="fit-list">
+              <li>You make roughly $100K-$500K and know there is real money leaking out of your current setup.</li>
+              <li>You have a CPA, advisor, or existing financial setup, but nobody is actually mapping your next moves in order.</li>
+              <li>You have heard about LLCs, S-Corps, Roth conversions, STRs, or tax strategies but do not know which ones actually fit you.</li>
+              <li>You are tired of filing the same kind of return every year and promising yourself you&apos;ll deal with it later.</li>
+              <li>You want a plan with dollar values, tradeoffs, and sequence, not another generic money pep talk.</li>
+              <li>You have a spouse or partner and you want to finally get on the same page about money.</li>
+              <li>You are willing to implement, ask questions, and make decisions once the right path is clear.</li>
+            </ul>
+          </article>
+          <article class="fit-card bad">
+            <h3 class="font-display text-slate-950">Who This Is Not For</h3>
+            <ul class="fit-list">
+              <li>You want a loophole, a magic trick, or a get-rich-quick pitch. This is implementation, not hype.</li>
+              <li>You make under about $75K and need beginner budgeting help more than strategy coordination.</li>
+              <li>You want somebody to do everything for you without you making any changes or decisions.</li>
+              <li>You are looking for a passive webinar to half-watch while changing nothing afterward.</li>
+              <li>You want broad theory without being challenged to pick an actual sequence and act on it.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light light-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display text-slate-950">&quot;I&apos;ve Heard This Before.&quot;</h2>
+          <div class="rule"></div>
+          <p class="text-slate-700">Fair. Here&apos;s why this is different.</p>
+        </div>
+
+        <div class="burn-grid">
+          <article class="burn-card">
+            <h3>Most financial content gives you information. This gives you a plan.</h3>
+            <p class="text-slate-700 leading-7">Not &quot;here are 10 tax strategies.&quot; Here is your plan, matched to your income, with dollar values attached, in the order you should implement it.</p>
+          </article>
+          <article class="burn-card">
+            <h3>Most events are taught by people who teach events.</h3>
+            <p class="text-slate-700 leading-7">Preston built a $20M+ portfolio, has saved over $500K in taxes personally, got audited after a $500K year and held up clean, and has had 4,400+ people go through this system.</p>
+          </article>
+          <article class="burn-card">
+            <h3>Most advice assumes you have the same situation as everyone else.</h3>
+            <p class="text-slate-700 leading-7">This event covers 40+ strategies across multiple income levels. If you make $150K with a side business, your plan should not look like someone making $300K W-2 only.</p>
+          </article>
+          <article class="burn-card">
+            <h3>This is live. You can ask questions. And the guarantee removes your risk.</h3>
+            <p class="text-slate-700 leading-7">VIP members get live roundtable Q&amp;A on Days 2 and 3. If you show up to all 3 days, take notes, ask questions, and still do not leave with clarity on what to do next, email within 7 days for a full refund.</p>
+          </article>
+        </div>
+
+        <div class="mini-order order-card">
+          <div class="text-center">
+            <div class="brandline mb-2">If you&apos;re still reading, you probably already know this is your problem.</div>
+            <h3 class="font-display text-white">Don&apos;t Wait Until After You File To Wish You Had A Plan</h3>
+            <p class="micro-copy mt-3">Get the live breakdown, the sequence, and the implementation order now, while there is still time to change what happens next.</p>
+          </div>
+          <div class="cta-stack mt-5">
+            <a href="/vipticket26" class="btn-primary">Get VIP Access</a>
+            <div class="mini-order-meta">
+              <span>Need the lower ticket?</span>
+              <a href="/regularticket26">Get General Ticket</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light light-dots section-pad" style="padding-top: 0;">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display text-slate-950">You Don&apos;t Have To Trust Us. You Can Check Right Now.</h2>
+          <div class="rule"></div>
+          <p class="text-slate-700">Here are 3 things you can verify before spending a dollar.</p>
+        </div>
+
+        <div class="pattern-grid">
+          <article class="pattern-card">
+            <h3>If you&apos;re W-2</h3>
+            <p class="text-slate-700 leading-7">Pull up your most recent paystub. Find your federal withholding. Multiply it by your pay periods. Compare that to your actual tax bill from last year. If there&apos;s a gap, that&apos;s cash flow you&apos;re handing the IRS every paycheck.</p>
+          </article>
+          <article class="pattern-card">
+            <h3>If you have business or 1099 income</h3>
+            <p class="text-slate-700 leading-7">If you&apos;re still a sole proprietor paying self-employment tax on all your profit, you may already be paying thousands more than you need to. For many people, the gap is $4,000-$10,000 or more a year.</p>
+          </article>
+          <article class="pattern-card">
+            <h3>If you have business expenses you don&apos;t track</h3>
+            <p class="text-slate-700 leading-7">Home office. Vehicle mileage. Phone. Internet. Equipment. Most people leave $2,000-$6,000 on the table simply because they don&apos;t track correctly or don&apos;t know what documentation matters.</p>
+          </article>
+          <article class="pattern-card">
+            <h3>That&apos;s before the rest of the plan</h3>
+            <p class="text-slate-700 leading-7">If even one of those applies to you, you may have already found enough value to pay for this event many times over. And those are only a few of the moves covered in Before You File.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section-dark grid-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display">General Admission vs VIP</h2>
+          <div class="rule"></div>
+          <p>Choose the level of access that fits how much support and implementation depth you want before April 15.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div>
+              <div class="brandline mb-3">General Admission</div>
+              <div class="price-tag"><s>$97</s><b>$47</b></div>
+            </div>
+            <p class="micro-copy">You&apos;ll walk away with a complete action plan.</p>
+            <ul class="feature-list">
+              <li>The middle-class money trap breakdown and your escape plan</li>
+              <li>401(k) alternatives that actually build wealth faster</li>
+              <li>Tax strategies that save high earners $20K-$50K annually</li>
+              <li>Debt elimination and access to $50K-$100K in funding</li>
+              <li>Your first $5K-$15K/month income stream blueprint</li>
+            </ul>
+            <a href="/regularticket26" class="btn-secondary mt-auto">Get General Ticket</a>
+          </article>
+
+          <article class="price-card featured">
+            <div>
+              <div class="brandline mb-3 text-amber-300">VIP Access</div>
+              <div class="price-tag"><s>$197</s><b class="text-gradient-gold">$147</b></div>
+            </div>
+            <p class="micro-copy">Everything in General Admission, plus the full implementation stack.</p>
+            <ul class="feature-list">
+              <li>Everything in General Admission</li>
+              <li>Pre-challenge access to Preston&apos;s $15M Asset Protection Masterclass</li>
+              <li>Live roundtable calls with Preston on Days 2 and 3</li>
+              <li>Lifetime access to 15+ hours of replays, slides, notes, and materials</li>
+            </ul>
+            <a href="/vipticket26" class="btn-primary mt-auto">Get VIP Access</a>
+          </article>
+        </div>
+
+        <div class="pricing-compare">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>General</th>
+                <th>VIP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>All 3 days of live training</td>
+                <td class="yes">✓</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>Pre-challenge $15M Asset Protection Masterclass with Preston</td>
+                <td class="no">—</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>Live roundtable with Preston (Days 2 &amp; 3)</td>
+                <td class="no">—</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>Ask Preston questions directly</td>
+                <td class="no">—</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>15+ hours of lifetime replay access</td>
+                <td class="no">—</td>
+                <td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td>All slides, notes &amp; materials</td>
+                <td class="no">—</td>
+                <td class="yes">✓</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light light-dots section-pad" style="padding-top: 0;">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="schedule-grid">
+          <article class="schedule-card dark">
+            <div class="brandline mb-3 text-amber-300">Guarantee</div>
+            <h3 class="font-display text-3xl text-white leading-none mb-4">Show Up, Learn, Ask Questions. If It Misses, Ask For Your Money Back.</h3>
+            <p class="micro-copy">Go through the challenge. Take notes. Build the plan. If you do not leave with more clarity on what to do next, email within 7 days and the ticket is refundable.</p>
+          </article>
+          <article class="schedule-card">
+            <div class="brandline mb-3" style="color:#7c4a00;">Schedule</div>
+            <h3 class="font-display text-3xl text-slate-950 leading-none mb-4">March 27-29, 2026</h3>
+            <div class="schedule-list">
+              <div class="schedule-row"><strong>Day 1</strong><span>Friday, March 27 | 10 AM-4 PM EST</span></div>
+              <div class="schedule-row"><strong>Day 2</strong><span>Saturday, March 28 | 10 AM-4 PM EST</span></div>
+              <div class="schedule-row" style="border-bottom:none; padding-bottom:0;"><strong>Day 3</strong><span>Sunday, March 29 | 10 AM-4 PM EST</span></div>
+            </div>
+            <p class="text-slate-700 leading-7 mt-5">VIP also gets the pre-challenge masterclass before the event starts, plus live roundtable calls on Day 2 and Day 3.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display">How I Learned This The Hard Way</h2>
+          <div class="rule"></div>
+        </div>
+
+        <div class="authority-grid">
+          <article class="authority-card">
+            <div class="authority-hero">
+              <div>
+                <h3 class="font-display text-4xl leading-none mb-4">I watched my parents work nonstop and still almost lose everything.</h3>
+                <p class="micro-copy">This is not theory for me. It came out of watching my family work hard, almost lose everything, and then spending years trying to break that same cycle in my own life.</p>
+              </div>
+            </div>
+
+            <div class="story-stack">
+              <div class="story-block">
+                <div class="story-label">What I Saw Growing Up</div>
+                <p class="micro-copy">My parents were immigrants. They came to the U.S. with nothing. They worked 12 to 16 hours a day, 7 days a week, and still almost lost everything following the same script most people still follow now.</p>
+                <p class="micro-copy">They believed hard work was the answer. More hours. Save what&apos;s left. Play it safe. They did everything right according to that script and still ended up close to foreclosure.</p>
+                <p class="micro-copy">I was in middle school when someone from the foreclosure office showed up at our house. My parents never told us how bad it had gotten. That stuck with me.</p>
+                <div class="story-media-grid">
+                  <figure class="story-media-card">
+                    <img src="../assets/images/story/parents-coming-85.webp" alt="Preston's father after coming to the United States in 1985" width="900" height="1200" loading="lazy" decoding="async">
+                    <figcaption class="story-media-caption">Preston&apos;s father coming to the U.S. in 1985.</figcaption>
+                  </figure>
+                  <figure class="story-media-card">
+                    <img src="../assets/images/story/mom-at-home-fix.webp" alt="Preston's mom at home during the years the family was grinding to get by" width="1200" height="900" loading="lazy" decoding="async">
+                    <figcaption class="story-media-caption">The grind that shaped our family.</figcaption>
+                  </figure>
+                  <figure class="story-media-card wide">
+                    <img src="../assets/images/story/grandma-raising-us-fix.webp" alt="Preston and siblings being raised by their grandma while their parents worked" width="900" height="506" loading="lazy" decoding="async">
+                    <figcaption class="story-media-caption">Grandma raising us while my parents worked.</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <div class="story-block">
+                <div class="story-label">The Loop I Fell Into</div>
+                <p class="micro-copy">By my 20s, I was following the same script. I tried random businesses. They failed. So I went corporate and thought that was the responsible move.</p>
+                <p class="micro-copy">On my first day at my corporate job, I remember thinking: I have to do this for the next 40 years? I knew right away this wasn&apos;t it. I just didn&apos;t know how to get out.</p>
+                <p class="micro-copy">Then I got married. Right after the wedding, I checked our bank account. We had $685 left. I had spent everything on the ring and the honeymoon. Bridget and I moved into my parents&apos; basement for eight months.</p>
+                <p class="micro-copy">She was working long shifts as a respiratory therapist. I was grinding through quotas. We barely saw each other. One job. One stream of income. The IRS taking 30-40%. No structure. No protection. No plan.</p>
+                <div class="story-media-grid">
+                  <figure class="story-media-card">
+                    <img src="../assets/images/story/preston-checking.webp" alt="Screenshot showing the shared account balance with $685 left after the wedding" width="677" height="231" loading="lazy" decoding="async">
+                    <figcaption class="story-media-caption">$685 left after the wedding.</figcaption>
+                  </figure>
+                  <figure class="story-media-card">
+                    <img src="../assets/images/story/basement-frame.webp" alt="The basement room Preston and Bridget moved into after the wedding" width="900" height="1600" loading="lazy" decoding="async">
+                    <figcaption class="story-media-caption">The basement room we moved into.</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <div class="story-block">
+                <div class="story-label">What Changed</div>
+                <p class="micro-copy">Then we had our first son. I was in the hospital, holding him, while my phone kept buzzing. Emails. Notifications. Work. I remember reaching for my laptop and thinking, if I stop for a day, does everything fall apart?</p>
+                <p class="micro-copy">That was the moment something broke. I started researching every night. That led me to investing. Investing led me to really looking at my tax bill. What I saw made me angry. The system was built this way and nobody was teaching people like us how it actually worked.</p>
+                <p class="micro-copy">We started fixing the leaks. Building new income streams. Learning how to separate what we earn from how it gets taxed. The first real win was a cost segregation study that saved us tens of thousands in taxes. That proved this was real.</p>
+                <p class="micro-copy">Then we started stacking strategies the right way. Used leverage the right way. Built income that didn&apos;t depend on us showing up every morning. That&apos;s how we broke the loop.</p>
+                <div class="story-media-grid single">
+                  <figure class="story-media-card">
+                    <img src="../assets/images/story/hospital-son.webp" alt="Preston holding his newborn son in the hospital" width="900" height="1200" loading="lazy" decoding="async">
+                    <figcaption class="story-media-caption">The hospital moment that changed everything.</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <div class="story-block">
+                <div class="story-label">Why This Event Exists</div>
+                <p class="micro-copy">Today Bridget and I have built a $20M+ portfolio. I became financially independent at 28. I&apos;m still actively building and still using the same strategies I teach in this event.</p>
+                <p class="micro-copy">The year I made $500K, the IRS sent me a $46 refund. They audited me after that. Everything held up because none of this is a loophole. Every strategy has a section number in the tax code.</p>
+                <p class="micro-copy">I retired my parents and bought them a rental property that covers their retirement. When I told my mom she never had to work another day, she broke down.</p>
+                <p class="micro-copy">That&apos;s why I&apos;m hosting Before You File. April 15 is coming and most people are about to file a return that costs them far more than it should. I want this to be the event that changes that for you and your family.</p>
+              </div>
+            </div>
+
+            <div class="authority-stats">
+              <div class="authority-stat">
+                <b>$20M+</b>
+                <span class="text-slate-400">Portfolio built from scratch</span>
+              </div>
+              <div class="authority-stat">
+                <b>6M+</b>
+                <span class="text-slate-400">People reached with money education</span>
+              </div>
+              <div class="authority-stat">
+                <b>28</b>
+                <span class="text-slate-400">Age Preston became financially free</span>
+              </div>
+              <div class="authority-stat">
+                <b>1 Plan</b>
+                <span class="text-slate-400">Tax, debt, cash flow, protection, all tied together</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad" style="padding-top: 0;">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="section-title">
+          <h2 class="font-display">What People Say After Going Through This</h2>
+          <div class="rule"></div>
+          <p>Not vague motivation. Real people, real starting points, and concrete outcomes they were able to tie back to the plan.</p>
+        </div>
+
+        <div class="legacy-case-shell">
+          <article class="legacy-case">
+            <div class="legacy-case-media">
+              <img src="../assets/images/20-dustin-cotten.webp" alt="Dustin Cotten" width="500" height="400" loading="lazy" decoding="async">
+            </div>
+            <div class="legacy-case-copy">
+              <div class="brandline">Case Study | Corporate sales to investor</div>
+              <h3>Dustin Cotten</h3>
+              <p class="legacy-case-kicker">&quot;I didn&apos;t want to work my whole life just to be told I couldn&apos;t use my own money.&quot;</p>
+              <p>Dustin was in corporate sales, looking for a way out. The turning point came when his girlfriend&apos;s mom passed away at 62 with savings locked up. He decided he was done building a life he couldn&apos;t actually use.</p>
+              <div class="legacy-metric-grid">
+                <div class="legacy-metric-card"><span class="emoji">🏠</span><p>First property in 30 days, $3K/month</p></div>
+                <div class="legacy-metric-card"><span class="emoji">📈</span><p>7 properties in under 2 years</p></div>
+                <div class="legacy-metric-card"><span class="emoji">💰</span><p>$56K net profit in one month</p></div>
+                <div class="legacy-metric-card"><span class="emoji">✅</span><p>Walked away from his 9 to 5</p></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="legacy-case alt">
+            <div class="legacy-case-media">
+              <img src="../assets/images/21-galin-icon.webp" alt="Galin" width="500" height="400" loading="lazy" decoding="async">
+            </div>
+            <div class="legacy-case-copy">
+              <div class="brandline">Case Study | High-income earner fixing tax drag</div>
+              <h3>Galin</h3>
+              <p class="legacy-case-kicker">Turning Taxes Into Cash Flow and Long-Term Growth</p>
+              <p>Before, Galin was working hard but watching too much disappear to taxes and overhead. The plan helped him turn that lost money into actual investment capacity and long-term growth.</p>
+              <div class="legacy-inline-metrics">
+                <div class="legacy-inline-metric"><span class="emoji">🏦</span><p>$100K+ in tax savings and paper losses</p></div>
+                <div class="legacy-inline-metric"><span class="emoji">📈</span><p>Six figures redirected into long-term investments</p></div>
+              </div>
+              <div class="legacy-roi">
+                <span class="label">Estimated 12-Month ROI</span>
+                <span class="value">~$150,000+</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="legacy-case">
+            <div class="legacy-case-copy">
+              <div class="brandline">Case Study | W-2 household building early freedom</div>
+              <h3>Abigail</h3>
+              <p class="legacy-case-kicker">Eliminating Taxes And Building Early Freedom</p>
+              <p>Before, their household was stuck watching too much of a W-2 paycheck disappear to the IRS. After putting the right pieces in place, they had a path to legally cut taxes, create earlier income access, and move money into assets that actually compound.</p>
+              <div class="legacy-inline-metrics">
+                <div class="legacy-inline-metric"><span class="emoji">🏦</span><p>~$52,500 cash refund from tax savings</p></div>
+                <div class="legacy-inline-metric"><span class="emoji">🧾</span><p>$30K shifted into 0% tax brackets</p></div>
+                <div class="legacy-inline-metric"><span class="emoji">🏠</span><p>Six-figure savings sheltered through new structures</p></div>
+                <div class="legacy-inline-metric"><span class="emoji">📈</span><p>$50K-$100K estimated 12-month ROI</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark grid-dots section-pad">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="final-panel">
+          <div class="brandline mb-4">March 27-29, 2026 | Live on Zoom</div>
+          <h2 class="font-display">This Gets Expensive To Put Off.</h2>
+          <p class="micro-copy max-w-2xl mx-auto">One more year of overpaying taxes, carrying bad debt, and making disconnected money decisions costs more than the ticket. Get the plan, build the roadmap, and decide from clarity instead of stress.</p>
+          <div class="cta-stack mt-6" style="max-width: 420px; margin-left:auto; margin-right:auto;">
+            <a href="/regularticket26" class="btn-secondary">Get General Ticket</a>
+            <a href="/vipticket26" class="btn-primary">Get VIP Access</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 bg-[#040507] border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
+      <p class="text-xs text-slate-500 max-w-4xl mx-auto leading-relaxed">
+        The information provided is for educational purposes only and should not be construed as tax, legal, or investment advice. Individual results vary based on income, debt profile, tax situation, implementation speed, market conditions, and personal circumstances. Always consult qualified professionals before making financial decisions.
+      </p>
+      <p class="text-xs text-slate-500 max-w-4xl mx-auto leading-relaxed">
+        This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+      </p>
+      <div class="footer-links pt-2">
+        <a href="https://www.firstairbnb.com/contactus" class="text-sm text-slate-400 hover:text-white transition-colors">Contact</a>
+        <a href="https://www.firstairbnb.com/privacypolicy" class="text-sm text-slate-400 hover:text-white transition-colors">Privacy</a>
+        <a href="https://managemoney101.com/challengeterms" class="text-sm text-slate-400 hover:text-white transition-colors">Terms</a>
+      </div>
+      <p class="text-xs text-slate-600 pt-2">Legacy Investing Show LLC | 1993 Dewar Dr, Suite 256, Rock Springs, WY 82901</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const target = new Date('2026-03-27T10:00:00-04:00').getTime();
+      const ids = ['days', 'hours', 'mins', 'secs'];
+      const nodes = ids.map((id) => document.getElementById(id));
+
+      function updateCountdown() {
+        const diff = Math.max(0, target - Date.now());
+        const values = [
+          Math.floor(diff / 86400000),
+          Math.floor((diff % 86400000) / 3600000),
+          Math.floor((diff % 3600000) / 60000),
+          Math.floor((diff % 60000) / 1000)
+        ];
+
+        nodes.forEach((node, index) => {
+          if (!node) return;
+          node.textContent = String(values[index]);
+        });
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    })();
+
+    (function () {
+      const topbar = document.getElementById('sticky-header');
+      const programRails = Array.from(document.querySelectorAll('.day-grid'));
+      const ticketOptions = Array.from(document.querySelectorAll('.ticket-option[data-ticket]'));
+      const ticketCta = document.getElementById('hero-ticket-cta');
+      const ticketMeta = document.getElementById('hero-ticket-meta');
+
+      function syncTopbar() {
+        if (!topbar) return;
+        topbar.classList.toggle('is-visible', window.scrollY > 140);
+        topbar.classList.toggle('scrolled', window.scrollY > 18);
+      }
+
+      function syncProgramRails() {
+        programRails.forEach(function (rail) {
+          const progress = rail.querySelector('.day-grid-progress');
+          if (!progress) return;
+
+          const rect = rail.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+          const start = viewportHeight * 0.22;
+          const end = viewportHeight * 0.72;
+          const raw = (end - rect.top) / (rect.height + end - start);
+          const clamped = Math.max(0, Math.min(1, raw));
+          progress.style.height = String(clamped * rect.height) + 'px';
+        });
+      }
+
+      function selectTicket(option) {
+        if (!option || !ticketCta || !ticketMeta) return;
+
+        ticketOptions.forEach(function (node) {
+          const selected = node === option;
+          node.classList.toggle('is-selected', selected);
+          node.setAttribute('aria-checked', selected ? 'true' : 'false');
+        });
+
+        const ctaText = option.getAttribute('data-cta') || 'Get Ticket';
+        const href = option.getAttribute('data-href') || '#pricing';
+        const label = option.querySelector('.ticket-option-copy strong')?.textContent?.trim() || ctaText;
+
+        ticketCta.textContent = ctaText;
+        ticketCta.setAttribute('href', href);
+        ticketMeta.textContent = 'Selected: ' + label;
+      }
+
+      syncTopbar();
+      syncProgramRails();
+      if (ticketOptions.length) {
+        ticketOptions.forEach(function (option) {
+          option.addEventListener('click', function () {
+            selectTicket(option);
+          });
+        });
+        selectTicket(ticketOptions.find(function (node) {
+          return node.classList.contains('is-selected');
+        }) || ticketOptions[0]);
+      }
+      window.addEventListener('scroll', syncTopbar, { passive: true });
+      window.addEventListener('scroll', syncProgramRails, { passive: true });
+      window.addEventListener('resize', syncProgramRails);
+    })();
+
+    (function () {
+      const params = window.location.search;
+      if (!params) return;
+
+      const targetDomain = 'managemoney101.com';
+      document.querySelectorAll('a[href*="' + targetDomain + '"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const href = this.getAttribute('href');
+          const separator = href.includes('?') ? '&' : '?';
+          this.setAttribute('href', href + separator + params.substring(1));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
