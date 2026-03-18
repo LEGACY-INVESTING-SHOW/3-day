@@ -143,6 +143,15 @@
       text-wrap: balance;
     }
 
+    .headline-accent {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 45%, var(--accent-gold-dark) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
     .subhead {
       margin: 1rem auto 0;
       max-width: 38rem;
@@ -232,7 +241,7 @@
 
     <main>
       <section class="hero">
-        <h1 class="headline">How We Legally Make $15M in Assets Disappear on Paper</h1>
+        <h1 class="headline">How We Legally Make <span class="headline-accent">$15M in Assets</span> Disappear on Paper</h1>
         <p class="subhead">The Complete LLC, S-Corp &amp; Asset Protection Playbook. Watch this first, then come into the challenge prepared.</p>
       </section>
 
