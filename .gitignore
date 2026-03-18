@@ -17,3 +17,5 @@ Ship Of Magic*
 # Keep sales page
 !sales-page.html
 .vercel
+.env*.local
+.DS_Store
