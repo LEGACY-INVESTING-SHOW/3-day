@@ -31,6 +31,14 @@
       "destination": "/challengeconfirmation.html"
     },
     {
+      "source": "/prechallengetraining",
+      "destination": "/prechallengetraining.html"
+    },
+    {
+      "source": "/prechallengetraining/",
+      "destination": "/prechallengetraining.html"
+    },
+    {
       "source": "/regularticket26",
       "destination": "/regularticket26.html"
     },
@@ -75,6 +83,11 @@
     {
       "source": "/challengeconfirmation.html",
       "destination": "/challengeconfirmation",
+      "permanent": false
+    },
+    {
+      "source": "/prechallengetraining.html",
+      "destination": "/prechallengetraining",
       "permanent": false
     },
     {
@@ -173,6 +186,18 @@
     },
     {
       "source": "/legacy-wealth-blueprint-concierge",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/prechallengetraining",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/prechallengetraining/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
