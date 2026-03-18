@@ -183,34 +183,6 @@
       border: 0;
     }
 
-    .video-caption {
-      padding: 1rem 1.15rem 1.1rem;
-      border-top: 1px solid rgba(201, 169, 98, 0.1);
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: center;
-      color: var(--text-secondary);
-      font-size: 0.92rem;
-    }
-
-    .video-caption .label {
-      color: var(--accent-gold-light);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .fine-print {
-      width: var(--container);
-      margin: 1.25rem auto 0;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      padding-bottom: 2rem;
-    }
-
     @media (max-width: 640px) {
       .topbar {
         padding-top: 1rem;
@@ -222,11 +194,6 @@
 
       .video-shell {
         margin-top: 1.5rem;
-      }
-
-      .video-caption {
-        flex-direction: column;
-        align-items: flex-start;
       }
     }
   </style>
@@ -255,13 +222,7 @@
             loading="eager"
           ></iframe>
         </div>
-        <div class="video-caption">
-          <span class="label">Watch now</span>
-          <span>VIP holders only. This training sets up the challenge.</span>
-        </div>
       </section>
-
-      <div class="fine-print">go.managemoney101.com/prechallengetraining</div>
     </main>
   </div>
 </body>
