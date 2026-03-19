@@ -77,6 +77,14 @@
     {
       "source": "/upgradevip",
       "destination": "/upgradevip.html"
+    },
+    {
+      "source": "/renewals",
+      "destination": "/renewals/index.html"
+    },
+    {
+      "source": "/renewals/",
+      "destination": "/renewals/index.html"
     }
   ],
   "redirects": [
@@ -88,6 +96,11 @@
     {
       "source": "/prechallengetraining.html",
       "destination": "/prechallengetraining",
+      "permanent": false
+    },
+    {
+      "source": "/renewals/index.html",
+      "destination": "/renewals",
       "permanent": false
     },
     {
@@ -206,6 +219,18 @@
       "source": "/prechallengetraining.html",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
+      ]
+    },
+    {
+      "source": "/renewals",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/renewals/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
     }
   ]
