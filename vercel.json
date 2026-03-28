@@ -99,6 +99,14 @@
       "destination": "/funnels/airbnbascension/index.html"
     },
     {
+      "source": "/programroi",
+      "destination": "/funnels/programroi/index.html"
+    },
+    {
+      "source": "/programroi/",
+      "destination": "/funnels/programroi/index.html"
+    },
+    {
       "source": "/upgradevip",
       "destination": "/upgradevip.html"
     },
@@ -188,6 +196,11 @@
       "permanent": false
     },
     {
+      "source": "/programroi/index.html",
+      "destination": "/programroi",
+      "permanent": false
+    },
+    {
       "source": "/upgradevip.html",
       "destination": "/upgradevip",
       "permanent": false
@@ -274,6 +287,18 @@
     },
     {
       "source": "/airbnbascension/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/programroi",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/programroi/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
