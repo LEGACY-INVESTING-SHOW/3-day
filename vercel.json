@@ -83,6 +83,14 @@
       "destination": "/funnels/lwbprogram/index.html"
     },
     {
+      "source": "/strconcierge",
+      "destination": "/funnels/strconcierge/index.html"
+    },
+    {
+      "source": "/strconcierge/",
+      "destination": "/funnels/strconcierge/index.html"
+    },
+    {
       "source": "/upgradevip",
       "destination": "/upgradevip.html"
     },
@@ -162,6 +170,11 @@
       "permanent": false
     },
     {
+      "source": "/strconcierge/index.html",
+      "destination": "/strconcierge",
+      "permanent": false
+    },
+    {
       "source": "/upgradevip.html",
       "destination": "/upgradevip",
       "permanent": false
@@ -224,6 +237,18 @@
     },
     {
       "source": "/lwbprogram/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/strconcierge",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/strconcierge/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
