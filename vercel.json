@@ -76,11 +76,11 @@
     },
     {
       "source": "/lwbprogram",
-      "destination": "/funnels/legacy-wealth-blueprint-program/index.html"
+      "destination": "/funnels/lwbprogram/index.html"
     },
     {
       "source": "/lwbprogram/",
-      "destination": "/funnels/legacy-wealth-blueprint-program/index.html"
+      "destination": "/funnels/lwbprogram/index.html"
     },
     {
       "source": "/upgradevip",
