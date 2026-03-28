@@ -75,6 +75,14 @@
       "destination": "/legacy-wealth-blueprint-concierge.html"
     },
     {
+      "source": "/lwbprogram",
+      "destination": "/funnels/legacy-wealth-blueprint-program/index.html"
+    },
+    {
+      "source": "/lwbprogram/",
+      "destination": "/funnels/legacy-wealth-blueprint-program/index.html"
+    },
+    {
       "source": "/upgradevip",
       "destination": "/upgradevip.html"
     },
@@ -149,6 +157,11 @@
       "permanent": false
     },
     {
+      "source": "/lwbprogram/index.html",
+      "destination": "/lwbprogram",
+      "permanent": false
+    },
+    {
       "source": "/upgradevip.html",
       "destination": "/upgradevip",
       "permanent": false
@@ -199,6 +212,18 @@
     },
     {
       "source": "/legacy-wealth-blueprint-concierge",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/lwbprogram",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/lwbprogram/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
