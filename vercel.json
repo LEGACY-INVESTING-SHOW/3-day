@@ -91,6 +91,14 @@
       "destination": "/funnels/strconcierge/index.html"
     },
     {
+      "source": "/airbnbascension",
+      "destination": "/funnels/airbnbascension/index.html"
+    },
+    {
+      "source": "/airbnbascension/",
+      "destination": "/funnels/airbnbascension/index.html"
+    },
+    {
       "source": "/upgradevip",
       "destination": "/upgradevip.html"
     },
@@ -175,6 +183,11 @@
       "permanent": false
     },
     {
+      "source": "/airbnbascension/index.html",
+      "destination": "/airbnbascension",
+      "permanent": false
+    },
+    {
       "source": "/upgradevip.html",
       "destination": "/upgradevip",
       "permanent": false
@@ -249,6 +262,18 @@
     },
     {
       "source": "/strconcierge/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/airbnbascension",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/airbnbascension/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
