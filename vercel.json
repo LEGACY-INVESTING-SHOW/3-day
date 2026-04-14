@@ -117,6 +117,14 @@
     {
       "source": "/renewals/",
       "destination": "/renewals/index.html"
+    },
+    {
+      "source": "/renewalsSuper",
+      "destination": "/renewalsSuper/index.html"
+    },
+    {
+      "source": "/renewalsSuper/",
+      "destination": "/renewalsSuper/index.html"
     }
   ],
   "redirects": [
@@ -133,6 +141,11 @@
     {
       "source": "/renewals/index.html",
       "destination": "/renewals",
+      "permanent": false
+    },
+    {
+      "source": "/renewalsSuper/index.html",
+      "destination": "/renewalsSuper",
       "permanent": false
     },
     {
@@ -329,6 +342,18 @@
     },
     {
       "source": "/renewals/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/renewalsSuper",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/renewalsSuper/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
