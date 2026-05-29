@@ -3,40 +3,40 @@
   "outputDirectory": ".",
   "rewrites": [
     {
-      "source": "/challenge",
-      "destination": "/challenge/index.html"
+      "source": "/challenge123",
+      "destination": "/challenge123/index.html"
     },
     {
-      "source": "/challenge/",
-      "destination": "/challenge/index.html"
+      "source": "/challenge123/",
+      "destination": "/challenge123/index.html"
     },
     {
-      "source": "/challenge2",
-      "destination": "/challenge2/index.html"
+      "source": "/challenge2123",
+      "destination": "/challenge2123/index.html"
     },
     {
-      "source": "/challenge2/",
-      "destination": "/challenge2/index.html"
+      "source": "/challenge2123/",
+      "destination": "/challenge2123/index.html"
     },
     {
-      "source": "/challenge3",
-      "destination": "/challenge3/index.html"
+      "source": "/challenge3123",
+      "destination": "/challenge3123/index.html"
     },
     {
-      "source": "/challenge3/",
-      "destination": "/challenge3/index.html"
+      "source": "/challenge3123/",
+      "destination": "/challenge3123/index.html"
     },
     {
-      "source": "/challengeconfirmation",
-      "destination": "/challengeconfirmation.html"
+      "source": "/challengeconfirmation123",
+      "destination": "/challengeconfirmation123.html"
     },
     {
-      "source": "/prechallengetraining",
-      "destination": "/prechallengetraining.html"
+      "source": "/prechallengetraining123",
+      "destination": "/prechallengetraining123.html"
     },
     {
-      "source": "/prechallengetraining/",
-      "destination": "/prechallengetraining.html"
+      "source": "/prechallengetraining123/",
+      "destination": "/prechallengetraining123.html"
     },
     {
       "source": "/regularticket26",
@@ -129,13 +129,13 @@
   ],
   "redirects": [
     {
-      "source": "/challengeconfirmation.html",
-      "destination": "/challengeconfirmation",
+      "source": "/challengeconfirmation123.html",
+      "destination": "/challengeconfirmation123",
       "permanent": false
     },
     {
-      "source": "/prechallengetraining.html",
-      "destination": "/prechallengetraining",
+      "source": "/prechallengetraining123.html",
+      "destination": "/prechallengetraining123",
       "permanent": false
     },
     {
@@ -239,13 +239,13 @@
       ]
     },
     {
-      "source": "/challenge",
+      "source": "/challenge123",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
     },
     {
-      "source": "/challenge3",
+      "source": "/challenge3123",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
@@ -317,19 +317,19 @@
       ]
     },
     {
-      "source": "/prechallengetraining",
+      "source": "/prechallengetraining123",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
       ]
     },
     {
-      "source": "/prechallengetraining/",
+      "source": "/prechallengetraining123/",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
       ]
     },
     {
-      "source": "/prechallengetraining.html",
+      "source": "/prechallengetraining123.html",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
       ]
