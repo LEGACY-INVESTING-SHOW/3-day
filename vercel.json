@@ -107,6 +107,14 @@
       "destination": "/funnels/programroi/index.html"
     },
     {
+      "source": "/stay",
+      "destination": "/stay/index.html"
+    },
+    {
+      "source": "/stay/",
+      "destination": "/stay/index.html"
+    },
+    {
       "source": "/upgradevip",
       "destination": "/upgradevip.html"
     },
@@ -214,6 +222,11 @@
       "permanent": false
     },
     {
+      "source": "/stay/index.html",
+      "destination": "/stay",
+      "permanent": false
+    },
+    {
       "source": "/upgradevip.html",
       "destination": "/upgradevip",
       "permanent": false
@@ -312,6 +325,18 @@
     },
     {
       "source": "/programroi/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/stay",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/stay/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
